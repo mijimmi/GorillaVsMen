@@ -71,7 +71,7 @@ if (current_state != GorillaState.SMASH) {
     y += yspd;
 }
 
-/// gorilla_take_damage(amount)
+/// === Gorilla Damage Function ===
 function gorilla_take_damage(amount) {
     hp -= amount;
 
