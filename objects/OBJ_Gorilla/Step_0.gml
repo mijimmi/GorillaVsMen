@@ -1,12 +1,22 @@
 // === Read Input Keys ===
 right_key = keyboard_check(vk_right) || keyboard_check(ord("D"));
-left_key = keyboard_check(vk_left) || keyboard_check(ord("A"));
-up_key = keyboard_check(vk_up) || keyboard_check(ord("W"));
-down_key = keyboard_check(vk_down) || keyboard_check(ord("S"));
+left_key  = keyboard_check(vk_left)  || keyboard_check(ord("A"));
+up_key    = keyboard_check(vk_up)    || keyboard_check(ord("W"));
+down_key  = keyboard_check(vk_down)  || keyboard_check(ord("S"));
 
 // === Calculate Intended Movement ===
-xspd = (right_key - left_key) * move_spd;
-yspd = (down_key - up_key) * move_spd;
+var xdir = right_key - left_key;
+var ydir = down_key - up_key;
+
+// Normalize movement to prevent faster diagonal speed
+var magnitude = point_distance(0, 0, xdir, ydir);
+if (magnitude > 0) {
+    xdir /= magnitude;
+    ydir /= magnitude;
+}
+
+xspd = xdir * move_spd;
+yspd = ydir * move_spd;
 
 // === Check for Smash Input ===
 if (mouse_check_button_pressed(mb_left) && current_state != GorillaState.SMASH) {
@@ -46,22 +56,22 @@ switch (current_state) {
         image_speed = 1;
         break;
 
-	case GorillaState.SMASH:
-	    sprite_index = SPR_Gorilla_Smash;
-	    image_speed = 1.1;
-	    image_xscale = (facing == "right") ? 1 : -1;
+    case GorillaState.SMASH:
+        sprite_index = SPR_Gorilla_Smash;
+        image_speed = 1.1;
+        image_xscale = (facing == "right") ? 1 : -1;
 
-	    // Stop animation at the last frame, then switch state
-	    if (image_index >= image_number - 1) {
-	        image_speed = 0; // Freeze at last frame to avoid looping
-	        current_state = GorillaState.IDLE;
-	        image_index = 0; // Reset for next use
-	    }
+        // Stop animation at the last frame, then switch state
+        if (image_index >= image_number - 1) {
+            image_speed = 0; // Freeze at last frame to avoid looping
+            current_state = GorillaState.IDLE;
+            image_index = 0; // Reset for next use
+        }
 
-	    // Disable movement
-	    xspd = 0;
-	    yspd = 0;
-	    break;
+        // Disable movement
+        xspd = 0;
+        yspd = 0;
+        break;
 }
 
 // === Wall Collisions & Apply Movement ===
@@ -77,7 +87,7 @@ if (current_state != GorillaState.SMASH) {
     y += yspd;
 }
 
-/// === Gorilla Damage Function ===
+// === Gorilla Damage Function ===
 function gorilla_take_damage(amount) {
     hp -= amount;
 

@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_Gorilla",
+  "%Name":"OBJ_Healthbar",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"OBJ_Gorilla",
+  "name":"OBJ_Healthbar",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"GUI Elements",
+    "path":"folders/Objects/GUI Elements.yy",
   },
-  "parentObjectId":{
-    "name":"OBJ_Parent",
-    "path":"objects/OBJ_Parent/OBJ_Parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,13 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"SPR_Gorilla_Idle",
-    "path":"sprites/SPR_Gorilla_Idle/SPR_Gorilla_Idle.yy",
-  },
-  "spriteMaskId":{
-    "name":"SPR_Gorilla_Idle",
-    "path":"sprites/SPR_Gorilla_Idle/SPR_Gorilla_Idle.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }

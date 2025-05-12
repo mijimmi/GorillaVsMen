@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
   "%Name":"OBJ_Caveman",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"OBJ_Caveman",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Enemy OBJ",
+    "path":"folders/Objects/Enemy OBJ.yy",
   },
   "parentObjectId":{
     "name":"OBJ_Parent",
