@@ -11,6 +11,6 @@ xspd = 0;
 yspd = 0;
 sprite_index = SPR_Gorilla_Idle;
 image_speed = 1;
-move_spd = 2;
+move_spd = 4;
 facing = "right"; // "left" or "right"
 hp = 20;
