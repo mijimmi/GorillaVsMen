@@ -29,10 +29,12 @@
     {"name":"OBJ_Parent","order":2,"path":"objects/OBJ_Parent/OBJ_Parent.yy",},
     {"name":"OBJ_Shadows","order":1,"path":"objects/OBJ_Shadows/OBJ_Shadows.yy",},
     {"name":"OBJ_Wall","order":3,"path":"objects/OBJ_Wall/OBJ_Wall.yy",},
+    {"name":"SPR_Decorations","order":2,"path":"sprites/SPR_Decorations/SPR_Decorations.yy",},
     {"name":"SPR_Gorilla_Right","order":2,"path":"sprites/SPR_Gorilla_Right/SPR_Gorilla_Right.yy",},
     {"name":"SPR_Gorilla_Smash","order":3,"path":"sprites/SPR_Gorilla_Smash/SPR_Gorilla_Smash.yy",},
     {"name":"SPR_Health","order":2,"path":"sprites/SPR_Health/SPR_Health.yy",},
     {"name":"SPR_HealthBorder","order":1,"path":"sprites/SPR_HealthBorder/SPR_HealthBorder.yy",},
     {"name":"SPR_Sandtiles","order":1,"path":"sprites/SPR_Sandtiles/SPR_Sandtiles.yy",},
+    {"name":"TS_Decorations","order":3,"path":"tilesets/TS_Decorations/TS_Decorations.yy",},
   ],
 }
