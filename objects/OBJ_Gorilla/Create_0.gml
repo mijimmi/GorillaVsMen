@@ -14,7 +14,7 @@ if (!variable_global_exists("initialized")) {
     image_speed = 1;
     move_spd = 120; // Pixels per second
     facing = "right"; // "left" or "right"
-    hp = 20;
-    hp_max = 20;
+    hp = 60;
+    hp_max = 60;
     global.initialized = true;
 }
