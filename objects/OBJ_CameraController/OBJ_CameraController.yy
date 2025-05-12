@@ -9,8 +9,8 @@
   "name":"OBJ_CameraController",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Invisible Tools",
+    "path":"folders/Objects/Invisible Tools.yy",
   },
   "parentObjectId":null,
   "persistent":false,
