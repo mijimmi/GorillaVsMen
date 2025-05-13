@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_Caveman",
+  "%Name":"OBJ_Roman",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"OBJ_Caveman",
+  "name":"OBJ_Roman",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemy OBJ",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_Caveman",
-    "path":"sprites/SPR_Caveman/SPR_Caveman.yy",
+    "name":"SPR_Roman",
+    "path":"sprites/SPR_Roman/SPR_Roman.yy",
   },
   "spriteMaskId":null,
   "visible":true,

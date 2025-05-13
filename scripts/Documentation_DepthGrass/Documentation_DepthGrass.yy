@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Documentation_DepthGrass",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Documentation_DepthGrass",
+  "parent":{
+    "name":"DepthGrass",
+    "path":"folders/Scripts/DepthGrass.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
