@@ -10,3 +10,5 @@ if (instance_exists(OBJ_Gorilla)) { // Check if a Gorilla exists.
 
     camera_set_view_pos(camera, cam_x, cam_y); // Set the camera's new position.
 }
+
+randomize();
