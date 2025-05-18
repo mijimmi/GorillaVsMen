@@ -1,2 +1,2 @@
 // for depth collision DO NOT REMOVE
-depth = -y;
+depth = -y - 1;

@@ -26,6 +26,7 @@
     {"name":"GUI Elements","order":7,"path":"folders/Sprites/GUI Elements.yy",},
     {"name":"Items","order":10,"path":"folders/Sprites/Items.yy",},
     {"name":"Player","order":8,"path":"folders/Sprites/Player.yy",},
+    {"name":"Effects","order":4,"path":"folders/Sprites/Player/Effects.yy",},
     {"name":"World Elements","order":9,"path":"folders/Sprites/World Elements.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
@@ -33,6 +34,7 @@
   "ResourceOrderSettings":[
     {"name":"FNT_Main_Large","order":1,"path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},
     {"name":"FNT_Main_XL","order":2,"path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},
+    {"name":"OBJ_FX_Smash","order":4,"path":"objects/OBJ_FX_Smash/OBJ_FX_Smash.yy",},
     {"name":"OBJ_Parent","order":2,"path":"objects/OBJ_Parent/OBJ_Parent.yy",},
     {"name":"OBJ_Roman","order":1,"path":"objects/OBJ_Roman/OBJ_Roman.yy",},
     {"name":"OBJ_Shadows","order":1,"path":"objects/OBJ_Shadows/OBJ_Shadows.yy",},

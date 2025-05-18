@@ -56,27 +56,34 @@ switch (current_state) {
         image_speed = 1;
         break;
 
-    case GorillaState.SMASH:
-        sprite_index = SPR_Gorilla_Smash;
-        image_speed = 1.1;
-        image_xscale = (facing == "right") ? 1 : -1;
+		case GorillaState.SMASH:
+		    sprite_index = SPR_Gorilla_Smash;
+		    image_speed = 1.1;
+		    image_xscale = (facing == "right") ? 1 : -1;
 
-        // Stop animation at the last frame, then switch state
-        if (image_index >= image_number - 1) {
-            image_speed = 0; // Freeze at last frame to avoid looping
-            current_state = GorillaState.IDLE;
-            image_index = 0; // Reset for next use
-			// === Trigger camera shake here ===
-			with (OBJ_CameraController) {
-			    shake_timer = 10;       // Duration in steps
-			    shake_magnitude = 4;    // Intensity of the shake
-			}
-        }
+		    // Stop animation at the last frame, then switch state
+		    if (image_index >= image_number - 1) {
+		        image_speed = 0; // Freeze at last frame to avoid looping
 
-        // Disable movement
-        xspd = 0;
-        yspd = 0;
-        break;
+		        // === Spawn smash effect at correct position ===
+		        var fx_x = x + (facing == "right" ? 16 : -16);
+		        var fx_y = y;
+		        instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash);
+
+		        // === Trigger camera shake ===
+		        with (OBJ_CameraController) {
+		            shake_timer = 10;
+		            shake_magnitude = 4;
+		        }
+
+		        current_state = GorillaState.IDLE;
+		        image_index = 0;
+		    }
+
+		    // Disable movement
+		    xspd = 0;
+		    yspd = 0;
+		    break;
 }
 
 // === Wall Collisions & Apply Movement ===
