@@ -1,7 +1,7 @@
 {
   "$GMFont":"",
   "%Name":"FNT_Main",
-  "AntiAlias":0,
+  "AntiAlias":1,
   "applyKerning":0,
   "ascender":13,
   "ascenderOffset":0,
@@ -107,7 +107,7 @@
     "124":{"character":124,"h":16,"offset":1,"shift":4,"w":2,"x":216,"y":2,},
     "125":{"character":125,"h":16,"offset":0,"shift":8,"w":7,"x":207,"y":2,},
     "126":{"character":126,"h":16,"offset":0,"shift":9,"w":8,"x":28,"y":56,},
-    "9647":{"character":9647,"h":16,"offset":3,"shift":16,"w":9,"x":38,"y":56,},
+    "9647":{"character":9647,"h":16,"offset":3,"shift":16,"w":10,"x":38,"y":56,},
   },
   "hinting":0,
   "includeTTF":false,
@@ -134,10 +134,7 @@
   "sdfSpread":8,
   "size":12.0,
   "styleName":"Medium",
-  "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
-  },
+  "textureGroupId":null,
   "TTFName":"",
   "usesSDF":false,
 }
