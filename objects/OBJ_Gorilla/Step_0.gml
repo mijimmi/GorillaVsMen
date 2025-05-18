@@ -66,6 +66,11 @@ switch (current_state) {
             image_speed = 0; // Freeze at last frame to avoid looping
             current_state = GorillaState.IDLE;
             image_index = 0; // Reset for next use
+			// === Trigger camera shake here ===
+			with (OBJ_CameraController) {
+			    shake_timer = 10;       // Duration in steps
+			    shake_magnitude = 4;    // Intensity of the shake
+			}
         }
 
         // Disable movement

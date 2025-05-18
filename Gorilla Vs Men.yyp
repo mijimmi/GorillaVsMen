@@ -42,6 +42,7 @@
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"Funzytoon.ttf","CopyToMask":-1,"filePath":"datafiles","name":"Funzytoon.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"SPR_Health.aseprite","CopyToMask":-1,"filePath":"datafiles","name":"SPR_Health.aseprite","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -51,6 +52,9 @@
   },
   "name":"Gorilla Vs Men",
   "resources":[
+    {"id":{"name":"FNT_Main_Large","path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},},
+    {"id":{"name":"FNT_Main_XL","path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},},
+    {"id":{"name":"FNT_Main","path":"fonts/FNT_Main/FNT_Main.yy",},},
     {"id":{"name":"OBJ_CameraController","path":"objects/OBJ_CameraController/OBJ_CameraController.yy",},},
     {"id":{"name":"OBJ_Caveman","path":"objects/OBJ_Caveman/OBJ_Caveman.yy",},},
     {"id":{"name":"OBJ_Gorilla","path":"objects/OBJ_Gorilla/OBJ_Gorilla.yy",},},
@@ -58,6 +62,7 @@
     {"id":{"name":"OBJ_Parent","path":"objects/OBJ_Parent/OBJ_Parent.yy",},},
     {"id":{"name":"OBJ_Roman","path":"objects/OBJ_Roman/OBJ_Roman.yy",},},
     {"id":{"name":"OBJ_Shadows","path":"objects/OBJ_Shadows/OBJ_Shadows.yy",},},
+    {"id":{"name":"OBJ_Timer","path":"objects/OBJ_Timer/OBJ_Timer.yy",},},
     {"id":{"name":"obj_vertexgrass","path":"objects/obj_vertexgrass/obj_vertexgrass.yy",},},
     {"id":{"name":"OBJ_Wall","path":"objects/OBJ_Wall/OBJ_Wall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},

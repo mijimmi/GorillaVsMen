@@ -31,9 +31,12 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"FNT_Main_Large","order":1,"path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},
+    {"name":"FNT_Main_XL","order":2,"path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},
     {"name":"OBJ_Parent","order":2,"path":"objects/OBJ_Parent/OBJ_Parent.yy",},
     {"name":"OBJ_Roman","order":1,"path":"objects/OBJ_Roman/OBJ_Roman.yy",},
     {"name":"OBJ_Shadows","order":1,"path":"objects/OBJ_Shadows/OBJ_Shadows.yy",},
+    {"name":"OBJ_Timer","order":1,"path":"objects/OBJ_Timer/OBJ_Timer.yy",},
     {"name":"OBJ_Wall","order":3,"path":"objects/OBJ_Wall/OBJ_Wall.yy",},
     {"name":"SPR_Decorations","order":2,"path":"sprites/SPR_Decorations/SPR_Decorations.yy",},
     {"name":"SPR_Gorilla_Right","order":2,"path":"sprites/SPR_Gorilla_Right/SPR_Gorilla_Right.yy",},
