@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"SND_Round_End.ogg",
   "type":0,
-  "volume":0.48,
+  "volume":0.57,
 }
