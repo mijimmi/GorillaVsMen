@@ -1,11 +1,13 @@
+var fs = game_get_speed(gamespeed_fps);
+
 if (round_complete) {
-    fade_alpha = clamp(fade_alpha + (1 / room_speed), 0, 1); // fade over 1 second
+    fade_alpha = clamp(fade_alpha + (1 / fs), 0, 1);
 
     wait_counter--;
 
     if (wait_counter <= 0) {
         round_num += 1;
-        time_left = 60 * room_speed;
+        time_left = 60 * fs;
         round_complete = false;
         fade_alpha = 0;
     }

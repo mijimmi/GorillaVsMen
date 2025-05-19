@@ -70,6 +70,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Documentation_DepthGrass","path":"scripts/Documentation_DepthGrass/Documentation_DepthGrass.yy",},},
     {"id":{"name":"sh_grass","path":"shaders/sh_grass/sh_grass.yy",},},
+    {"id":{"name":"SND_Round_End","path":"sounds/SND_Round_End/SND_Round_End.yy",},},
     {"id":{"name":"SPR_Bananarang","path":"sprites/SPR_Bananarang/SPR_Bananarang.yy",},},
     {"id":{"name":"SPR_Caveman","path":"sprites/SPR_Caveman/SPR_Caveman.yy",},},
     {"id":{"name":"SPR_Decorations","path":"sprites/SPR_Decorations/SPR_Decorations.yy",},},

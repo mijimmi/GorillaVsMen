@@ -1,8 +1,8 @@
 // === Read Input Keys ===
-right_key = keyboard_check(vk_right) || keyboard_check(ord("D"));
-left_key  = keyboard_check(vk_left)  || keyboard_check(ord("A"));
-up_key    = keyboard_check(vk_up)    || keyboard_check(ord("W"));
-down_key  = keyboard_check(vk_down)  || keyboard_check(ord("S"));
+var right_key = keyboard_check(vk_right) || keyboard_check(ord("D"));
+var left_key  = keyboard_check(vk_left)  || keyboard_check(ord("A"));	
+var up_key    = keyboard_check(vk_up)    || keyboard_check(ord("W"));
+var down_key  = keyboard_check(vk_down)  || keyboard_check(ord("S"));
 
 // === Calculate Intended Movement ===
 var xdir = right_key - left_key;

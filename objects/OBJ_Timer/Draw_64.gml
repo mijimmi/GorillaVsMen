@@ -1,6 +1,5 @@
 // Set font and alignment
 draw_set_font(FNT_Main_Large);
-draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
@@ -8,22 +7,42 @@ draw_set_valign(fa_middle);
 var gui_w = display_get_gui_width();
 var gui_h = display_get_gui_height();
 
+// Outline drawing helper
+function draw_text_outline(x, y, str, main_col, outline_col, outline_size) {
+    draw_set_color(outline_col);
+
+    // 8 directions (N, NE, E, SE, S, SW, W, NW)
+    draw_text(x - outline_size, y, str);
+    draw_text(x + outline_size, y, str);
+    draw_text(x, y - outline_size, str);
+    draw_text(x, y + outline_size, str);
+    draw_text(x - outline_size, y - outline_size, str);
+    draw_text(x + outline_size, y - outline_size, str);
+    draw_text(x - outline_size, y + outline_size, str);
+    draw_text(x + outline_size, y + outline_size, str);
+
+    // Main text
+    draw_set_color(main_col);
+    draw_text(x, y, str);
+}
+
 if (round_complete) {
-    // Fade in the "Round Complete" message
     draw_set_alpha(fade_alpha);
-    draw_set_font(FNT_Main_XL); // Bigger font for this message
-    draw_text(gui_w * 0.5, gui_h * 0.5, "Round Complete");
-    draw_set_alpha(1); // reset alpha for anything else
+    draw_set_font(FNT_Main_XL);
+
+    draw_text_outline(gui_w * 0.5, gui_h * 0.5, "Round Complete", c_white, c_black, 2);
+    draw_set_alpha(1);
 } else {
-    // Timer display
     var tx = gui_w * 0.5;
     var ty = 60;
 
-    var total_seconds = ceil(time_left / room_speed);
+    var fs = game_get_speed(gamespeed_fps);
+    var total_seconds = ceil(time_left / fs);
     var minutes = total_seconds div 60;
     var seconds = total_seconds mod 60;
     var seconds_str = (seconds < 10) ? "0" + string(seconds) : string(seconds);
     var time_string = string(minutes) + ":" + seconds_str;
+    var display_text = "Round " + string(round_num) + "  " + time_string;
 
-    draw_text(tx, ty, "Round " + string(round_num) + "  " + time_string);
+    draw_text_outline(tx, ty, display_text, c_white, c_black, 2);
 }
