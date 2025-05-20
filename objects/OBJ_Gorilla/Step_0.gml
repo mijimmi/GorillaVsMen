@@ -1,8 +1,8 @@
 // === Read Input Keys ===
-right_key = keyboard_check(vk_right) || keyboard_check(ord("D"));
-left_key  = keyboard_check(vk_left)  || keyboard_check(ord("A"));
-up_key    = keyboard_check(vk_up)    || keyboard_check(ord("W"));
-down_key  = keyboard_check(vk_down)  || keyboard_check(ord("S"));
+var right_key = keyboard_check(vk_right) || keyboard_check(ord("D"));
+var left_key  = keyboard_check(vk_left)  || keyboard_check(ord("A"));	
+var up_key    = keyboard_check(vk_up)    || keyboard_check(ord("W"));
+var down_key  = keyboard_check(vk_down)  || keyboard_check(ord("S"));
 
 // === Calculate Intended Movement ===
 var xdir = right_key - left_key;
@@ -56,22 +56,35 @@ switch (current_state) {
         image_speed = 1;
         break;
 
-    case GorillaState.SMASH:
-        sprite_index = SPR_Gorilla_Smash;
-        image_speed = 1.1;
-        image_xscale = (facing == "right") ? 1 : -1;
+		case GorillaState.SMASH:
+		    sprite_index = SPR_Gorilla_Smash;
+		    image_speed = 1.1;
+		    image_xscale = (facing == "right") ? 1 : -1;
 
-        // Stop animation at the last frame, then switch state
-        if (image_index >= image_number - 1) {
-            image_speed = 0; // Freeze at last frame to avoid looping
-            current_state = GorillaState.IDLE;
-            image_index = 0; // Reset for next use
-        }
+		    // Stop animation at the last frame, then switch state
+		    if (image_index >= image_number - 1) {
+		        image_speed = 0; // Freeze at last frame to avoid looping
 
-        // Disable movement
-        xspd = 0;
-        yspd = 0;
-        break;
+		        // === Spawn smash effect at correct position ===
+		        var fx_x = x + (facing == "right" ? 16 : -16);
+		        var fx_y = y;
+		        instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash);
+				instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash2);
+
+		        // === Trigger camera shake ===
+		        with (OBJ_CameraController) {
+		            shake_timer = 10;
+		            shake_magnitude = 4;
+		        }
+
+		        current_state = GorillaState.IDLE;
+		        image_index = 0;
+		    }
+
+		    // Disable movement
+		    xspd = 0;
+		    yspd = 0;
+		    break;
 }
 
 // === Wall Collisions & Apply Movement ===
