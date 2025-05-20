@@ -56,7 +56,14 @@
           -6,0,2,-2147483648,472,-14,-2147483648,-3,0,-15,-2147483648,1,0,-16,-2147483648,1,507,-30,-2147483648,
           1,471,-11,-2147483648,1,506,-22,-2147483648,1,471,-35,-2147483648,1,507,-22,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"TS_Decorations","path":"tilesets/TS_Decorations/TS_Decorations.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRTileLayer":"","%Name":"Sand_Tiles","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Sand_Tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
+    {"$GMRTileLayer":"","%Name":"Floor_Tile","depth":600,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Floor_Tile","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":23,"SerialiseWidth":40,"TileCompressedData":[
+          1,377,-3,389,4,385,389,389,385,-4,389,1,385,-17,389,1,385,-3,389,1,385,-4,389,2,393,378,-38,386,2,394,
+          378,-38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,378,-38,386,
+          2,394,378,-38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,378,
+          -38,386,2,394,378,-38,386,2,394,378,-35,386,5,390,386,386,394,378,-38,386,2,394,378,-38,386,2,394,378,
+          -38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,378,-38,386,2,394,379,-38,391,1,395,
+        ],"TileDataFormat":1,},"tilesetId":{"name":"TS_Floor","path":"tilesets/TS_Floor/TS_Floor.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"$GMRTileLayer":"","%Name":"Sand_Tiles","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Sand_Tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":20,"TileCompressedData":[
           1,1,-18,2,11,3,9,41,50,41,42,50,42,41,50,51,-3,10,3,43,41,43,-3,10,25,11,9,50,49,42,41,41,42,51,10,10,
           50,10,10,49,41,10,43,43,42,11,9,49,42,50,-3,42,-5,10,12,42,50,10,43,41,49,10,11,9,42,49,42,-3,10,-3,
           42,-2,10,15,50,10,10,43,49,41,42,11,9,10,10,42,10,10,41,-4,42,11,10,42,50,10,10,41,49,10,11,9,10,-7,
@@ -64,7 +71,7 @@
           49,42,42,10,42,42,41,41,49,41,51,49,42,10,51,10,11,9,10,51,10,49,42,49,42,42,49,10,42,49,42,41,42,51,
           10,10,11,17,-18,18,2,19,25,-18,26,1,27,
         ],"TileDataFormat":1,},"tilesetId":{"name":"TS_Sandtiles","path":"tilesets/TS_Sandtiles/TS_Sandtiles.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4289901234,"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4289901234,"depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"Room1",
   "parent":{

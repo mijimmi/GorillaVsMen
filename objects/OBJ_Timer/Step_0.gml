@@ -1,23 +1,30 @@
-var fs = game_get_speed(gamespeed_fps);
+fs = game_get_speed(gamespeed_fps);
 
-if (round_complete) {
-    fade_alpha = clamp(fade_alpha + (1 / fs), 0, 1);
+switch (state) {
+    case GameState.ROUND_ACTIVE:
+        time_left--;
 
-    wait_counter--;
+        if (time_left <= 0) {
+            time_left = 0;
+            state = GameState.ROUND_COMPLETE;
+            wait_counter = wait_timer;
+            fade_alpha = 0;
+        }
+        break;
 
-    if (wait_counter <= 0) {
+    case GameState.ROUND_COMPLETE:
+        fade_alpha = clamp(fade_alpha + (1 / fs), 0, 1);
+        wait_counter--;
+
+        if (wait_counter <= 0) {
+            state = GameState.WAITING_NEXT_ROUND;
+        }
+        break;
+
+    case GameState.WAITING_NEXT_ROUND:
         round_num += 1;
         time_left = 60 * fs;
-        round_complete = false;
         fade_alpha = 0;
-    }
-} else {
-    time_left--;
-
-    if (time_left <= 0) {
-        time_left = 0;
-        round_complete = true;
-        wait_counter = wait_timer;
-        fade_alpha = 0;
-    }
+        state = GameState.ROUND_ACTIVE;
+        break;
 }

@@ -69,6 +69,7 @@ switch (current_state) {
 		        var fx_x = x + (facing == "right" ? 16 : -16);
 		        var fx_y = y;
 		        instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash);
+				instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash2);
 
 		        // === Trigger camera shake ===
 		        with (OBJ_CameraController) {
