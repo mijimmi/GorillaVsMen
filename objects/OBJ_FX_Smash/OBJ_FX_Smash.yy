@@ -9,8 +9,8 @@
   "name":"OBJ_FX_Smash",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"VFX",
+    "path":"folders/Objects/Player/VFX.yy",
   },
   "parentObjectId":null,
   "persistent":false,
