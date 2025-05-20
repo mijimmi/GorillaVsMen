@@ -39,7 +39,7 @@ if (state == GameState.ROUND_COMPLETE) {
     var seconds = total_seconds mod 60;
     var seconds_str = (seconds < 10) ? "0" + string(seconds) : string(seconds);
     var time_string = string(minutes) + ":" + seconds_str;
-    var display_text = "Round " + string(round_num) + "  " + time_string;
+    var display_text = "Round " + string(global.round_num) + "  " + time_string;
 
     var scale = 3;
     var alpha = 0.8;
