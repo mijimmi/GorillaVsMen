@@ -27,7 +27,6 @@ if (state == GameState.ROUND_COMPLETE) {
     var tx = gui_w * 0.5;
     var ty = gui_h * 0.5;
 
-    draw_sprite(SPR_TimerBG, 0, tx, ty);
     draw_text_outline(tx, ty, "Round Complete", c_white, c_black, 4);
 
     draw_set_alpha(1);
