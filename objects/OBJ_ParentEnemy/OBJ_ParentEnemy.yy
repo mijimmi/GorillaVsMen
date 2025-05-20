@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_Parent",
-  "eventList":[],
+  "%Name":"OBJ_ParentEnemy",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"OBJ_Parent",
+  "name":"OBJ_ParentEnemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"Invisible Tools",
-    "path":"folders/Objects/Invisible Tools.yy",
+    "name":"Enemy OBJ",
+    "path":"folders/Objects/Enemy OBJ.yy",
   },
   "parentObjectId":null,
   "persistent":false,
