@@ -11,11 +11,19 @@ global.is_leveling_up = true;
 power_ups = ds_list_create();
 ds_list_add(power_ups, PowerType.HP, PowerType.ATK, PowerType.SPD); // shuffle later
 
+
 // Create buttons
+var scale = 5;
+var button_height = 36 * scale;
+
 for (var i = 0; i < 3; i++) {
-    var b = instance_create_layer(x, y + i * 36, "LevelUI", OBJ_LevelOption);
+    var b = instance_create_layer(x, y + i * button_height, "LevelUI", OBJ_LevelOption);
     b.button_id = i + 1;
     b.power_type = power_ups[| i];
+    
+    // Make the button visually bigger
+    b.image_xscale = 2; // double the width
+    b.image_yscale = 2; // double the height
 }
 
 //switch case that decides what to do deoending on the power you chose
@@ -47,7 +55,7 @@ function cleanup() {
         ds_list_destroy(power_ups);
     }
 
-    global.is_leveling_up = false;  // <-- UNPAUSE
+    global.is_leveling_up = false;  // <-- UNPAUSE 
 
     instance_destroy(); // destroys the level manager itself
 }

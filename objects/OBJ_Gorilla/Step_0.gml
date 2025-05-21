@@ -13,6 +13,11 @@ var down_key  = keyboard_check(vk_down)  || keyboard_check(ord("S"));
 var xdir = right_key - left_key;
 var ydir = down_key - up_key;
 
+//pause logic
+if (global.is_leveling_up) {
+    exit;
+}
+
 // Normalize movement to prevent faster diagonal speed
 var magnitude = point_distance(0, 0, xdir, ydir);
 if (magnitude > 0) {

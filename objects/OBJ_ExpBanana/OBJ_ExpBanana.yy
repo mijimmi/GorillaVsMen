@@ -3,13 +3,15 @@
   "%Name":"OBJ_ExpBanana",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"OBJ_Gorilla","path":"objects/OBJ_Gorilla/OBJ_Gorilla.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"OBJ_ExpBanana",
   "overriddenProperties":[],
   "parent":{
-    "name":"EXP Pickups",
-    "path":"folders/Objects/EXP Pickups.yy",
+    "name":"GUI Elements",
+    "path":"folders/Objects/GUI Elements.yy",
   },
   "parentObjectId":null,
   "persistent":false,
