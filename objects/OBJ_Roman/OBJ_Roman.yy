@@ -12,8 +12,8 @@
     "path":"folders/Objects/Enemy OBJ.yy",
   },
   "parentObjectId":{
-    "name":"OBJ_Parent",
-    "path":"objects/OBJ_Parent/OBJ_Parent.yy",
+    "name":"OBJ_EnemyAI",
+    "path":"objects/OBJ_EnemyAI/OBJ_EnemyAI.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
