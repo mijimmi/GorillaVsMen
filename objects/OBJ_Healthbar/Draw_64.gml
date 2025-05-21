@@ -15,6 +15,11 @@ if (instance_exists(OBJ_Gorilla)) {
     // Draw HP text centered in the healthbar
     var text = string(g.hp) + " / " + string(g.hp_max);
     draw_text(healthbar_x + healthbar_width / 2, healthbar_y + healthbar_height / 2, text);
+	
+
+    // Optional test output to confirm hp_max increased
+    draw_set_color(c_yellow);
+    draw_text(healthbar_x + healthbar_width / 2, healthbar_y + healthbar_height + 16, "DEBUG: Max HP = " + string(g.hp_max));
 }
 
 // Draw border stretched to match new size

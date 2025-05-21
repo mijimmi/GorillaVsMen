@@ -1,3 +1,8 @@
+//if the level manager is currently onscreen, do NOT read player input.
+//copy this text into enemy spawning logic, weapon spawning logic, and enemy animations.
+//reference vid: https://youtu.be/h5uuTQHDq90
+if(instance_exists(OBJ_LevelManager)) {exit;}
+
 // === Read Input Keys ===
 right_key = keyboard_check(vk_right) || keyboard_check(ord("D"));
 left_key  = keyboard_check(vk_left)  || keyboard_check(ord("A"));

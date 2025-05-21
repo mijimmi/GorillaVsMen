@@ -1,9 +1,14 @@
+//global gorilla ID so that stats can be easily accessed
+global.gorilla = id
+
 // Enum for states
 enum GorillaState {
     IDLE,
     MOVING,
     SMASH
 }
+
+
 
 // Initialize variables
 current_state = GorillaState.IDLE;  // Start in the idle state
@@ -35,7 +40,11 @@ function add_xp(_xp_to_add){
 }
 
 function level_up(){
-//logic for leveling up here, set up a random number generator and a menu
-//create instance of menu
-hp_max += 5;
+
+//puts it down in the UI
+var _vx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2) //puts stuff on the center
+var _vy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2)
+
+//creates an instance of the level manager
+var a = instance_create_layer(x, y, "LevelUI", OBJ_LevelManager);
 }
