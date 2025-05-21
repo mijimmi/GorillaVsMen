@@ -48,7 +48,6 @@
     {"name":"OBJ_ParentEnemy","order":3,"path":"objects/OBJ_ParentEnemy/OBJ_ParentEnemy.yy",},
     {"name":"OBJ_Pause","order":4,"path":"objects/OBJ_Pause/OBJ_Pause.yy",},
     {"name":"OBJ_LevelManager","order":1,"path":"objects/OBJ_LevelManager/OBJ_LevelManager.yy",},
-    {"name":"OBJ_Parent","order":2,"path":"objects/OBJ_Parent/OBJ_Parent.yy",},
     {"name":"OBJ_Roman","order":1,"path":"objects/OBJ_Roman/OBJ_Roman.yy",},
     {"name":"OBJ_Timer","order":1,"path":"objects/OBJ_Timer/OBJ_Timer.yy",},
     {"name":"OBJ_Wall","order":3,"path":"objects/OBJ_Wall/OBJ_Wall.yy",},
