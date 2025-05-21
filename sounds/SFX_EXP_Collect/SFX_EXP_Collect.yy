@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"SFX_EXP_Collect",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.7520181,
+  "name":"SFX_EXP_Collect",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SFX_EXP_Collect.mp3",
+  "type":0,
+  "volume":0.6,
+}
