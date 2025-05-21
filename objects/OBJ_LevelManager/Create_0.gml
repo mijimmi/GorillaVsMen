@@ -5,14 +5,17 @@ enum PowerType {
     SPD
 }
 
-var power_ups = ds_list_create() //creates an array of power ups
-ds_list_add(power_ups, PowerType.HP, PowerType.ATK, PowerType.SPD) //adds these 3 into power ups, make logic to shuffle later
+global.is_leveling_up = true;
 
-//renders 3 buttons in the menu
+// Create power-up list
+power_ups = ds_list_create();
+ds_list_add(power_ups, PowerType.HP, PowerType.ATK, PowerType.SPD); // shuffle later
+
+// Create buttons
 for (var i = 0; i < 3; i++) {
-	var b = instance_create_layer(x, y + i * 36, "LevelUI", OBJ_LevelOption)
-	b.button_id = i+1
-	b.power_type = power_ups[| i]
+    var b = instance_create_layer(x, y + i * 36, "LevelUI", OBJ_LevelOption);
+    b.button_id = i + 1;
+    b.power_type = power_ups[| i];
 }
 
 //switch case that decides what to do deoending on the power you chose
@@ -34,13 +37,19 @@ function apply_powerup(type)
     }	
 	
 }
-
 //destroys the level manager as well as the options upon picking an option
-function cleanup(){
-	with(OBJ_LevelOption){
-		instance_destroy()
-	}
-	instance_destroy()
+function cleanup() {
+    with(OBJ_LevelOption) {
+        instance_destroy();
+    }
+    
+    if (ds_exists(power_ups, ds_type_list)) {
+        ds_list_destroy(power_ups);
+    }
+
+    global.is_leveling_up = false;  // <-- UNPAUSE
+
+    instance_destroy(); // destroys the level manager itself
 }
 //add pauses
 

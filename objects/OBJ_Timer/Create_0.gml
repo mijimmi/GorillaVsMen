@@ -18,3 +18,4 @@ wait_timer = 4 * fs;
 wait_counter = 0;
 fade_alpha = 0;
 round_end_sound_played = false;
+global.is_leveling_up = false;
