@@ -10,8 +10,8 @@
   "name":"OBJ_ExpBanana",
   "overriddenProperties":[],
   "parent":{
-    "name":"EXP Pickups",
-    "path":"folders/Objects/EXP Pickups.yy",
+    "name":"GUI Elements",
+    "path":"folders/Objects/GUI Elements.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -10,7 +10,7 @@ state = GameState.ROUND_ACTIVE;
 fs = game_get_speed(gamespeed_fps);
 
 global.round_num = 1;         // Global round number for other objects
-round_num = global.round_num; // Local copy in this object (optional)
+round_num = global.round_num;
 
 time_left = 60 * fs;
 

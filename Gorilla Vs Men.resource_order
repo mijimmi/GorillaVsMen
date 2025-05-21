@@ -45,6 +45,7 @@
     {"name":"OBJ_Blood_2","order":1,"path":"objects/OBJ_Blood_2/OBJ_Blood_2.yy",},
     {"name":"OBJ_Blood_3","order":2,"path":"objects/OBJ_Blood_3/OBJ_Blood_3.yy",},
     {"name":"OBJ_Blood_4","order":3,"path":"objects/OBJ_Blood_4/OBJ_Blood_4.yy",},
+    {"name":"OBJ_ExpBanana","order":2,"path":"objects/OBJ_ExpBanana/OBJ_ExpBanana.yy",},
     {"name":"OBJ_FX_Smash2","order":1,"path":"objects/OBJ_FX_Smash2/OBJ_FX_Smash2.yy",},
     {"name":"OBJ_LevelManager","order":1,"path":"objects/OBJ_LevelManager/OBJ_LevelManager.yy",},
     {"name":"OBJ_ParentEnemy","order":3,"path":"objects/OBJ_ParentEnemy/OBJ_ParentEnemy.yy",},
