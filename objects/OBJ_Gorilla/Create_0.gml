@@ -1,9 +1,14 @@
+//global gorilla ID so that stats can be easily accessed
+global.gorilla = id
+
 // Enum for states
 enum GorillaState {
     IDLE,
     MOVING,
     SMASH
 }
+
+
 
 // Initialize variables
 current_state = GorillaState.IDLE;  // Start in the idle state
@@ -15,3 +20,31 @@ move_spd = 2;
 facing = "right"; // "left" or "right"
 hp= 20;
 hp_max = 20;
+attack = 5;
+
+
+//levels
+level = 1;
+xp = 0;
+required_xp= 100;
+
+function add_xp(_xp_to_add){
+	xp += _xp_to_add;
+	if (xp >= required_xp){
+		level ++;
+		effect_create_above(ef_flare, x, y, 1 , c_orange);
+		level_up();
+		xp -= required_xp;
+		required_xp *= 1.2 //just change this value, this is how much the required EXP scales per level
+	}
+}
+
+function level_up(){
+
+//puts it down in the UI
+var _vx = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2) //puts stuff on the center
+var _vy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2)
+
+//creates an instance of the level manager
+var a = instance_create_layer(x, y, "LevelUI", OBJ_LevelManager);
+}
