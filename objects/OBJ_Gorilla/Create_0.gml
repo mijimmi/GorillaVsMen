@@ -22,6 +22,9 @@ hp= 20;
 hp_max = 20;
 attack = 5;
 
+// Hitbox Variable
+hitbox_spawned = false;
+
 
 //levels
 level = 1;
