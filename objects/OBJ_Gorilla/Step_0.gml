@@ -80,7 +80,13 @@ switch (current_state) {
 		        var fx_y = y;
 		        instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash);
 				instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash2);
+				
+				// === Spawn smash hitbox at correct position ===
+				var hitbox_x = x + (facing == "right" ? 16 : -16);
+				var hitbox_y = y;
+				instance_create_layer(hitbox_x, hitbox_y, "Hitboxes", OBJ_Gorilla_Hitbox);
 
+				
 		        // === Trigger camera shake ===
 		        with (OBJ_CameraController) {
 		            shake_timer = 10;
@@ -95,6 +101,7 @@ switch (current_state) {
 		    xspd = 0;
 		    yspd = 0;
 		    break;
+
 }
 
 // === Wall Collisions & Apply Movement ===
