@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Weapons",
-    "path":"folders/Sprites/Enemies/Weapons.yy",
+    "name":"Roman",
+    "path":"folders/Sprites/Enemies/Roman.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

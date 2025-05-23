@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Enemies.yy",
+    "name":"Caveman",
+    "path":"folders/Sprites/Enemies/Caveman.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
