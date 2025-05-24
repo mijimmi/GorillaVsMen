@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"check_for_player",
+  "%Name":"entity_processes",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"check_for_player",
+  "name":"entity_processes",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

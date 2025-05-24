@@ -1,3 +1,5 @@
+event_inherited();
+
 //chasing the player
 alert = false;
 alert_dis = 160;
