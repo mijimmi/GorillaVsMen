@@ -6,7 +6,12 @@ if (knockback_timer > 0) {
     x += knockback_x;
     y += knockback_y;
 
-    // Stop pathing while knocked back
+    // Clamp to room bounds (center origin version)
+    var half_w = sprite_width * 0.5;
+    var half_h = sprite_height * 0.5;
+    x = clamp(x, half_w, room_width - half_w);
+    y = clamp(y, half_h, room_height - half_h);
+
     path_end();
-    exit; // Skip chasing logic
+    exit;
 }
