@@ -21,6 +21,7 @@ facing = "right"; // "left" or "right"
 hp= 20;
 hp_max = 20;
 attack = 5;
+smash_cooldown = 0;
 
 // Hitbox Variable
 hitbox_spawned = false;

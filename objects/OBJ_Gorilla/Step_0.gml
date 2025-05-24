@@ -28,8 +28,13 @@ if (magnitude > 0) {
 xspd = xdir * move_spd;
 yspd = ydir * move_spd;
 
-// === Check for Smash Input ===
-if (mouse_check_button_pressed(mb_left) && current_state != GorillaState.SMASH) {
+// === Cooldown Timer ===
+if (smash_cooldown > 0) {
+    smash_cooldown--;
+}
+
+// === Check for Smash Input with Cooldown ===
+if (mouse_check_button_pressed(mb_left) && current_state != GorillaState.SMASH && smash_cooldown <= 0) {
     current_state = GorillaState.SMASH;
     image_index = 0; // Start animation from the beginning
 }
@@ -92,6 +97,8 @@ switch (current_state) {
 		            shake_timer = 10;
 		            shake_magnitude = 4;
 		        }
+				
+				smash_cooldown = 20;
 
 		        current_state = GorillaState.IDLE;
 		        image_index = 0;
