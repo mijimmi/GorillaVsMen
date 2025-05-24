@@ -1,5 +1,9 @@
 check_for_player();
 
+if (global.is_leveling_up) {
+    path_end();
+}
+
 // Knockback handling
 if (knockback_timer > 0) {
     knockback_timer--;
