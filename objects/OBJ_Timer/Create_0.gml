@@ -9,12 +9,13 @@ state = GameState.ROUND_ACTIVE;
 
 fs = game_get_speed(gamespeed_fps);
 
+global.state = GameState.ROUND_ACTIVE;
 global.round_num = 1;         // Global round number for other objects
 round_num = global.round_num;
 
 time_left = 60 * fs;
 
-wait_timer = 4 * fs;
+wait_timer = 2 * fs;
 wait_counter = 0;
 fade_alpha = 0;
 round_end_sound_played = false;

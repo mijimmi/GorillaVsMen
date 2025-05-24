@@ -3,7 +3,7 @@ spawn_delay = 120; // 2 seconds default (60 = 1 sec)
 
 enemy_tiers = [
     [OBJ_Caveman],                                          // Round 1–2
-    [OBJ_Caveman, OBJ_Roman],                               // Round 3–4
+    [OBJ_Caveman, OBJ_Roman, OBJ_Roman_Archer],                               // Round 3–4
     [OBJ_Caveman, OBJ_Roman, OBJ_Knight],                   // Round 5–6
     [OBJ_Caveman, OBJ_Roman, OBJ_Knight, OBJ_Musketeer],    // Round 7–8
     [OBJ_Caveman, OBJ_Roman, OBJ_Knight, OBJ_Musketeer, OBJ_Soldier] // Round 9–10

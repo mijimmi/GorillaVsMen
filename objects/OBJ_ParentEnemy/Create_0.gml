@@ -2,7 +2,7 @@ event_inherited();
 
 //chasing the player
 alert = false;
-alert_dis = 160;
+alert_dis = 1000;
 //distance from player
 attack_dis = 1;
 //create path resource

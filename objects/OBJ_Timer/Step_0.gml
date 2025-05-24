@@ -8,6 +8,7 @@ if (global.is_leveling_up) {
 switch (state) {
     // 1. Round is active
     case GameState.ROUND_ACTIVE:
+		global.state = GameState.ROUND_ACTIVE;
         time_left--;
 
         if (time_left <= 0) {
@@ -22,7 +23,8 @@ switch (state) {
     // 2. Round just ended
     case GameState.ROUND_COMPLETE:
         fade_alpha = clamp(fade_alpha + (1 / fs), 0, 1);
-
+		
+		global.state = GameState.ROUND_COMPLETE;
         if (!round_end_sound_played) {
             audio_play_sound(SND_Round_End, 1, false);
             round_end_sound_played = true;
@@ -35,6 +37,7 @@ switch (state) {
         wait_counter--;
 
         if (wait_counter <= 0) {
+			global.state =  GameState.WAITING_NEXT_ROUND;
             state = GameState.WAITING_NEXT_ROUND;
         }
         break;

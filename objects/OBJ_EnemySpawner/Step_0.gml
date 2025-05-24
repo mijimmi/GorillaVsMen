@@ -1,3 +1,9 @@
+// Only spawn during active rounds
+if (global.state != GameState.ROUND_ACTIVE) {
+    exit;
+}
+
+
 // Recalculate frames per second (in case it changes)
 var fs = game_get_speed(gamespeed_fps);
 
