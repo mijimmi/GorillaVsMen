@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_Caveman",
+  "%Name":"OBJ_Soldier",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"OBJ_Caveman",
+  "name":"OBJ_Soldier",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemy OBJ",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_Caveman",
-    "path":"sprites/SPR_Caveman/SPR_Caveman.yy",
+    "name":"SPR_Soldier",
+    "path":"sprites/SPR_Soldier/SPR_Soldier.yy",
   },
   "spriteMaskId":null,
   "visible":true,

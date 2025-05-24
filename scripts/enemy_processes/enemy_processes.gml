@@ -1,3 +1,9 @@
+function check_facing(){
+	var _facing = sign(x - xp);
+	if _facing != 0 facing = _facing;
+	
+}
+
 function check_for_player(){
 // check if player is close to start chasing
 	var _dis = distance_to_object(OBJ_Gorilla);
@@ -20,4 +26,25 @@ function check_for_player(){
 			path_end();
 		}
 	}
+}
+
+function enemy_anim(){
+	switch(state){
+		case states.IDLE:
+			sprite_index = s_moveORidle;
+		break;
+	}
+	switch(state){
+		case states.MOVE:
+			sprite_index = s_moveORidle;
+		break;
+	}
+	switch(state){
+		case states.DEAD:
+			sprite_index = s_dead;
+		break;
+	}
+	//update prev pos
+	xp = x;
+	yp = y;
 }

@@ -1,3 +1,4 @@
+event_inherited();
 //global gorilla ID so that stats can be easily accessed
 global.gorilla = id
 

@@ -1,7 +1,7 @@
 
-enum states{
+enum states {
+	IDLE,
 	MOVE,
 	DEAD,
-	HURT,
 }
 global.mp_grid = 0;
