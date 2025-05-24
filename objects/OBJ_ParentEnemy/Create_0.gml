@@ -2,7 +2,7 @@
 alert = false;
 alert_dis = 160;
 //distance from player
-attack_dis = 4;
+attack_dis = 1;
 //create path resource
 path = path_add();
 //move speed
