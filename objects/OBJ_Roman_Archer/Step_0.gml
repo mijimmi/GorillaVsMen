@@ -19,7 +19,7 @@ if (instance_exists(OBJ_Gorilla)) {
     var gor = instance_nearest(x, y, OBJ_Gorilla);
     var dist = point_distance(x, y, gor.x, gor.y);
     var safe_dist = 64; // minimum distance to keep from gorilla (adjust as needed)
-    var move_away_spd = 0.4; // speed to move away when too close (can be same or different from move_spd)
+    var move_away_spd = 0.5; // speed to move away when too close (can be same or different from move_spd)
 
     if (dist < safe_dist) {
         // Calculate direction away from gorilla
