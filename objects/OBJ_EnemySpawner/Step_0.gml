@@ -23,6 +23,23 @@ spawn_timer--;
 // --- allow dynamic spawn_delay update mid-round (optional) ---
 spawn_delay = max(60, 240 - (global.round_num * 15));
 
+// Helper function for weighted random selection
+function weighted_random(weights_array) {
+    var total_weight = 0;
+    for (var i = 0; i < array_length(weights_array); i++) {
+        total_weight += weights_array[i];
+    }
+    var r = random(total_weight);
+    var accum = 0;
+    for (var i = 0; i < array_length(weights_array); i++) {
+        accum += weights_array[i];
+        if (r < accum) {
+            return i;
+        }
+    }
+    return 0; // fallback
+}
+
 // --- time to spawn ---
 if (spawn_timer <= 0) {
     var tier_index = clamp(floor((global.round_num - 1) / 2), 0, 4);
@@ -33,22 +50,33 @@ if (spawn_timer <= 0) {
         if (instance_number(OBJ_ParentEnemy) >= max_enemies) break;
 
         // use local vars properly
-		var tries = 0,
-		    max_tries = 10,
-		    spawn_ok = false,
-		    _x = 0,
-		    _y = 0,
-		    enemy_to_spawn = -1;
+        var tries = 0,
+            max_tries = 10,
+            spawn_ok = false,
+            _x = 0,
+            _y = 0,
+            enemy_to_spawn = -1;
+
+        // create weights: normal = 10, reduce for OBJ_Roman_Archer = 3
+        var weights = [];
+        for (var w = 0; w < array_length(enemy_list); w++) {
+            if (enemy_list[w] == OBJ_Roman_Archer) {
+                weights[w] = 7;  // less likely to spawn
+            } else {
+                weights[w] = 10; // normal chance
+            }
+        }
 
         while (!spawn_ok && tries < max_tries) {
-            enemy_to_spawn = enemy_list[irandom(array_length(enemy_list) - 1)];
+            var enemy_index = weighted_random(weights);
+            enemy_to_spawn = enemy_list[enemy_index];
             _x = random_range(spawn_area_min_x, spawn_area_max_x);
             _y = random_range(spawn_area_min_y, spawn_area_max_y);
 
             spawn_ok = true;
 
             with (OBJ_Gorilla) {
-                if (point_distance(_x, _y, x, y) < 64) {
+                if (point_distance(_x, _y, x, y) < 96) {
                     spawn_ok = false;
                 }
             }
