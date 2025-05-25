@@ -8,7 +8,7 @@ attack_dis = 1;
 //create path resource
 path = path_add();
 //move speed
-move_spd = 1;
+move_spd = 0.7;
 //set delay for path
 calc_path_delay = 30;
 // set timer
