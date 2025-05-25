@@ -11,3 +11,7 @@ state = BowState.AIMING;
 frame_delay = irandom_range(0, 239); // randomize offset
 aim_update_timer = 0;
 has_fired = false;
+last_owner_x = x;
+last_owner_y = y;
+aim_update_timer = 0;
+state = BowState.AIMING;
