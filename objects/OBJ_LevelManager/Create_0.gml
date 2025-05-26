@@ -22,16 +22,18 @@ function apply_powerup(type)
 {
     switch (type)
     {
-        case PowerType.HP:
-            global.gorilla.hp_max += 10;
-            break;
+		case PowerType.HP:
+		    var hp_increase = 10;
+		    global.gorilla.hp_max += hp_increase;
+		    global.gorilla.hp += hp_increase; // maintain current gap between max and current
+		    break;
 
         case PowerType.ATK:
             global.gorilla.attack += 3;
             break;
 
         case PowerType.SPD:
-            global.gorilla.move_spd += 1;
+            global.gorilla.move_spd += 0.2;
             break;
 			
 		case PowerType.SWORD:
