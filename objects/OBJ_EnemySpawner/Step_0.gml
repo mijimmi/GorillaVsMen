@@ -11,8 +11,8 @@ if (global.state != GameState.ROUND_ACTIVE) {
 
 // --- init on round start ---
 if (!spawn_initialized) {
-    // Start with longer delay early, reduce as rounds increase but not too fast
-    spawn_delay = max(90, 240 - (global.round_num * 10)); 
+    // Moderate spawn delay, slower than original but faster than very forgiving
+    spawn_delay = max(105, 270 - (global.round_num * 7)); 
     spawn_timer = spawn_delay;
     spawn_batch_count = 1;
     spawn_initialized = true;
@@ -22,7 +22,7 @@ if (!spawn_initialized) {
 spawn_timer--;
 
 // --- allow dynamic spawn_delay update mid-round (optional) ---
-spawn_delay = max(90, 240 - (global.round_num * 10));
+spawn_delay = max(105, 270 - (global.round_num * 7));
 
 // Helper function for weighted random selection
 function weighted_random(weights_array) {
@@ -46,11 +46,9 @@ if (spawn_timer <= 0) {
     var tier_index = clamp(floor((global.round_num - 1) / 2), 0, 4);
     var enemy_list = enemy_tiers[tier_index];
 
-    // More balanced max enemies cap: start low, increase steadily
-    var max_enemies = 8 + (global.round_num * 3);
-
-    // Spawn cap also grows but starts lower
-    var spawn_cap = 10 + (global.round_num * 4);
+    // Slightly harder caps than very forgiving but softer than original
+    var max_enemies = 6 + (global.round_num * 2.5); // between 5+2*r and 8+3*r
+    var spawn_cap = 9 + (global.round_num * 3.5);   // between 8+3*r and 10+4*r
 
     for (var i = 0; i < spawn_batch_count; i++) {
         if (instance_number(OBJ_ParentEnemy) >= max_enemies ||
@@ -104,12 +102,14 @@ if (spawn_timer <= 0) {
         }
     }
 
-    spawn_timer = spawn_delay;
-
-    // Gradually increase spawn batch count, capped at 6 for balance
+    // Batch growth: a little faster but capped lower than original
     if (global.round_num < 10) {
-        spawn_batch_count = min(spawn_batch_count + 1, 6);
+        if (global.round_num mod 1 == 0) { // every round increase
+            spawn_batch_count = min(spawn_batch_count + 1, 5); // was 4 forgiving, 6 original
+        }
     } else {
-        spawn_batch_count = min(spawn_batch_count + 2, 10);
+        spawn_batch_count = min(spawn_batch_count + 1, 7); // was 6 forgiving, 10 original
     }
+
+    spawn_timer = spawn_delay;
 }
