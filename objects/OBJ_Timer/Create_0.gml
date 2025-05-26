@@ -18,5 +18,6 @@ time_left = 60 * fs;
 wait_timer = 2 * fs;
 wait_counter = 0;
 fade_alpha = 0;
+fade_in_alpha = 1;
 round_end_sound_played = false;
 global.is_leveling_up = false;

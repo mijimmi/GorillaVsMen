@@ -69,33 +69,38 @@ switch (state) {
         break;
 
 	case BowState.FIRE_END:
-		image_index = 5;
-		global.bowstate = BowState.FIRE_END;
+	    image_index = 5;
+	    global.bowstate = BowState.FIRE_END;
 
-		if (!has_fired && !owner_moving) {
-		    if (instance_exists(OBJ_Gorilla)) {
-		        var gor = instance_nearest(x, y, OBJ_Gorilla);
-		        var dir = point_direction(x, y, gor.x, gor.y);
+	    if (!has_fired && !owner_moving) {
+	        if (instance_exists(OBJ_Gorilla)) {
+	            var gor = instance_nearest(x, y, OBJ_Gorilla);
+	            var dir = point_direction(x, y, gor.x, gor.y);
 
-		        var arrow = instance_create_layer(x, y, "Instances", OBJ_Arrow);
-		        arrow.direction = dir;
-		        arrow.speed = 0.5;
-		        arrow.image_angle = dir;
-		        arrow.image_xscale = 0.8;
-		        arrow.image_yscale = 0.8;
+	            var arrow = instance_create_layer(x, y, "Instances", OBJ_Arrow);
+	            arrow.direction = dir;
+	            arrow.speed = 0.5;
+	            arrow.image_angle = dir;
+	            arrow.image_xscale = 0.8;
+	            arrow.image_yscale = 0.8;
 
-		        var offset = 12;
-		        arrow.x += lengthdir_x(offset, image_angle);
-		        arrow.y += lengthdir_y(offset, image_angle);
+	            var offset = 12;
+	            arrow.x += lengthdir_x(offset, image_angle);
+	            arrow.y += lengthdir_y(offset, image_angle);
+				
+				//sound
+	            var snd_inst = audio_play_sound(SND_BowFire, 1, false);
+	            audio_sound_pitch(snd_inst, random_range(0.9, 1.1));
+	            audio_sound_gain(snd_inst, 1.3, 0);
 
-		        has_fired = true;
-		    }
-		}
+	            has_fired = true;
+	        }
+	    }
 
-		frame_delay++;
-		if (frame_delay >= 10) {
-		    state = BowState.AIMING;
-		    frame_delay = 0;
-		}
-		break;
+	    frame_delay++;
+	    if (frame_delay >= 10) {
+	        state = BowState.AIMING;
+	        frame_delay = 0;
+	    }
+	    break;
 }

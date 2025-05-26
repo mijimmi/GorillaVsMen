@@ -24,6 +24,9 @@ hp_max = 20;
 attack = 5;
 smash_cooldown = 0;
 
+footstep_timer = 0;
+footstep_interval = 20; // Number of steps between footstep sounds
+
 // Hitbox Variable
 hitbox_spawned = false;
 
@@ -40,7 +43,7 @@ function add_xp(_xp_to_add){
 		effect_create_above(ef_flare, x, y, 1 , c_orange);
 		level_up();
 		xp -= required_xp;
-		required_xp *= 1.2 //just change this value, this is how much the required EXP scales per level
+		required_xp *= 1.3 //just change this value, this is how much the required EXP scales per level
 	}
 }
 

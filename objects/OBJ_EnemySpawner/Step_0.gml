@@ -86,6 +86,11 @@ if (spawn_timer <= 0) {
 
         if (spawn_ok) {
             instance_create_layer(_x, _y, "Instances", enemy_to_spawn);
+			
+		    var snd_inst = audio_play_sound(SND_Spawn, 1, false);
+		    audio_sound_gain(snd_inst, 0.5, 0); // 40% volume
+		    audio_sound_pitch(snd_inst, random_range(0.95, 1.05)); // slight pitch variation
+	
             part_particles_create(spawn_particle_sys, _x, _y, spawn_particle_type, 20);
         }
     }

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"SND_BowFire",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.8720181,
+  "name":"SND_BowFire",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SND_BowFire.mp3",
+  "type":0,
+  "volume":1.0,
+}
