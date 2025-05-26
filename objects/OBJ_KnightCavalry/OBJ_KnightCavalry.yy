@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_Musketeer",
+  "%Name":"OBJ_KnightCavalry",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"OBJ_Musketeer",
+  "name":"OBJ_KnightCavalry",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemy OBJ",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_Musketeer",
-    "path":"sprites/SPR_Musketeer/SPR_Musketeer.yy",
+    "name":"SPR_Cavalry",
+    "path":"sprites/SPR_Cavalry/SPR_Cavalry.yy",
   },
   "spriteMaskId":null,
   "visible":true,
