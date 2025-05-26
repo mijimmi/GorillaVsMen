@@ -73,7 +73,7 @@
     {"id":{"name":"FNT_Main_Large","path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},},
     {"id":{"name":"FNT_Main_XL","path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},},
     {"id":{"name":"FNT_Main","path":"fonts/FNT_Main/FNT_Main.yy",},},
-    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+    {"id":{"name":"FNT_Subfont","path":"fonts/FNT_Subfont/FNT_Subfont.yy",},},
     {"id":{"name":"Game","path":"objects/Game/Game.yy",},},
     {"id":{"name":"OBJ_Arrow","path":"objects/OBJ_Arrow/OBJ_Arrow.yy",},},
     {"id":{"name":"OBJ_AudioManager","path":"objects/OBJ_AudioManager/OBJ_AudioManager.yy",},},
