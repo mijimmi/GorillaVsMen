@@ -13,6 +13,13 @@ if (knockback_timer > 0) {
     path_end();
     exit;
 }
+if (is_hurt) {
+    hurt_timer--;
+    if (hurt_timer <= 0) {
+        is_hurt = false;
+        hurt_timer = 0;
+    }
+}
 
 switch(state){
 	case states.IDLE:
@@ -27,7 +34,15 @@ switch(state){
 		enemy_anim();
 	break;
 	case states.DEAD:
-	
+	    death_timer++;
+	    path_end();
+	    speed = 0;
+
+	    enemy_anim(); // <- Add this to apply the dead sprite
+
+	    if (death_timer > death_duration) {
+	        instance_destroy();
+	    }
 	break;
 }
 
