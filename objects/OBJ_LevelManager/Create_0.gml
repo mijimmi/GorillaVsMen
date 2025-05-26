@@ -2,16 +2,20 @@
 enum PowerType {
     HP,
     ATK,
-    SPD
+    SPD,
+	SWORD,
+	BOULDER
 }
 
 global.is_leveling_up = true;
 
+
 // Create power-up list
 power_ups = ds_list_create();
-ds_list_add(power_ups, PowerType.HP, PowerType.ATK, PowerType.SPD); // shuffle later
+ds_list_add(power_ups, PowerType.SWORD, PowerType.BOULDER); // shuffle later
 
-
+//draws power ups from the power up list after it is shuffled
+draw_powerups(power_ups, x, y)
 
 //switch case that decides what to do deoending on the power you chose
 function apply_powerup(type)
@@ -30,13 +34,20 @@ function apply_powerup(type)
             global.gorilla.move_spd += 1;
             break;
 			
+		case PowerType.SWORD:
+			global.sword_level++
+			break
+
+		case PowerType.BOULDER:
+			global.boulder_level++
+			break
 		//add the rest of the cases here
     }	
 	
 }
 
 //slam shuffle function 
-function draw_powerups(power_ups)
+function draw_powerups(power_ups, base_x, base_y)
 {
 	
 	// Create buttons
@@ -50,7 +61,7 @@ function draw_powerups(power_ups)
 	
 		var power_type = power_ups[|i]
 		
-	    var b = instance_create_layer(x, y + i * button_height, "LevelUI", OBJ_LevelOption);
+	    var b = instance_create_layer(base_x, base_y + i * button_height, "LevelUI", OBJ_LevelOption);
 	    b.button_id = i + 1;
 	    b.power_type = power_type
     

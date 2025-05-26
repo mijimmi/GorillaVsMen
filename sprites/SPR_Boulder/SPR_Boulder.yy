@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Power Ups In Game",
-    "path":"folders/Sprites/Level System/Power Ups/Power Ups In Game.yy",
+    "path":"folders/Sprites/Power Ups/Power Ups In Game.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Power Ups",
-    "path":"folders/Sprites/Level System/Power Ups.yy",
+    "path":"folders/Sprites/Power Ups.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

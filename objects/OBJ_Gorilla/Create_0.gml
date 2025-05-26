@@ -56,3 +56,17 @@ var _vy = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camer
 //creates an instance of the level manager
 var a = instance_create_layer(x, y, "LevelUI", OBJ_LevelManager);
 }
+
+
+//ATTACK LOGIC HERE
+//global list of variables for the power up levels
+global.sword_level = 0
+global.boulder_level = 0
+
+//attack timing
+global.slashAlarm = 80
+global.boulderAlarm = 150
+
+alarm[0] = global.slashAlarm
+alarm[1] = global.boulderAlarm
+
