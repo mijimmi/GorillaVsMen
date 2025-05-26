@@ -38,5 +38,5 @@
     "path":"sprites/SPR_Gorilla_Hitbox/SPR_Gorilla_Hitbox.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
