@@ -87,6 +87,8 @@
     {"name":"SND_BGM_FFVI","order":16,"path":"sounds/SND_BGM_FFVI/SND_BGM_FFVI.yy",},
     {"name":"SND_BGM_Mario","order":15,"path":"sounds/SND_BGM_Mario/SND_BGM_Mario.yy",},
     {"name":"SND_BowFire","order":2,"path":"sounds/SND_BowFire/SND_BowFire.yy",},
+    {"name":"SND_Flesh","order":18,"path":"sounds/SND_Flesh/SND_Flesh.yy",},
+    {"name":"SND_Flesh2","order":19,"path":"sounds/SND_Flesh2/SND_Flesh2.yy",},
     {"name":"SND_Footstep1","order":9,"path":"sounds/SND_Footstep1/SND_Footstep1.yy",},
     {"name":"SND_Footstep2","order":11,"path":"sounds/SND_Footstep2/SND_Footstep2.yy",},
     {"name":"SND_Footstep3","order":10,"path":"sounds/SND_Footstep3/SND_Footstep3.yy",},

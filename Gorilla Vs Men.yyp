@@ -128,6 +128,8 @@
     {"id":{"name":"SND_BGM_FFVI","path":"sounds/SND_BGM_FFVI/SND_BGM_FFVI.yy",},},
     {"id":{"name":"SND_BGM_Mario","path":"sounds/SND_BGM_Mario/SND_BGM_Mario.yy",},},
     {"id":{"name":"SND_BowFire","path":"sounds/SND_BowFire/SND_BowFire.yy",},},
+    {"id":{"name":"SND_Flesh","path":"sounds/SND_Flesh/SND_Flesh.yy",},},
+    {"id":{"name":"SND_Flesh2","path":"sounds/SND_Flesh2/SND_Flesh2.yy",},},
     {"id":{"name":"SND_Footstep1","path":"sounds/SND_Footstep1/SND_Footstep1.yy",},},
     {"id":{"name":"SND_Footstep2","path":"sounds/SND_Footstep2/SND_Footstep2.yy",},},
     {"id":{"name":"SND_Footstep3","path":"sounds/SND_Footstep3/SND_Footstep3.yy",},},

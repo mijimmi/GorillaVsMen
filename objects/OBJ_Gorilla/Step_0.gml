@@ -74,7 +74,7 @@ switch (current_state) {
 			var step_sound = choose(SND_Footstep1, SND_Footstep2, SND_Footstep3);
 			var snd_step_inst = audio_play_sound(step_sound, 1, false);
 			audio_sound_pitch(snd_step_inst, random_range(0.95, 1.05)); // Pitch variation
-			audio_sound_gain(snd_step_inst, 0.2, 0);
+			audio_sound_gain(snd_step_inst, 0.15, 0);
             footstep_timer = footstep_interval; // Reset timer
         }
         break;
@@ -90,7 +90,7 @@ switch (current_state) {
 			
 			var smash_sound = choose(SND_Smash, SND_Smash2, SND_Smash3);
 			var snd_inst = audio_play_sound(smash_sound, 1, false);
-			audio_sound_gain(snd_inst, 1, 0);
+			audio_sound_gain(snd_inst, 0.6, 0);
 			audio_sound_pitch(snd_inst, random_range(0.95, 1.05)); // slight pitch variation
 
 	        // === Spawn smash effect at correct position ===

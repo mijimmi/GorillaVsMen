@@ -30,27 +30,35 @@ function check_for_player(){
 
 function enemy_anim() {
     if (state == states.DEAD) {
-    if (sprite_index != s_dead_selected) {
-        if (is_array(s_dead)) {
-            s_dead_selected = s_dead[irandom(array_length(s_dead) - 1)];
-        } else {
-            s_dead_selected = s_dead;
+        if (sprite_index != s_dead_selected) {
+            // Select death sprite
+            if (is_array(s_dead)) {
+                s_dead_selected = s_dead[irandom(array_length(s_dead) - 1)];
+            } else {
+                s_dead_selected = s_dead;
+            }
+            sprite_index = s_dead_selected;
+            image_index = 0;
+            image_speed = 1; // adjust as needed
+
+            // Play random death sound with random pitch
+			// Play random death sound with random pitch and reduced volume
+			var _snd = choose(SND_Flesh, SND_Flesh2);
+			var _snd_inst = audio_play_sound(_snd, 1, false);
+			audio_sound_pitch(_snd_inst, random_range(0.8, 1.2));
+			audio_sound_gain(_snd_inst, 0.5, 0); // volume: 0.0 (mute) to 1.0
         }
-        sprite_index = s_dead_selected;
-        image_index = 0;
-        image_speed = 1; // adjust as needed
-    }
 
-    if (image_index >= image_number - 1) {
-        instance_destroy(); // or cleanup
-    }
+        if (image_index >= image_number - 1) {
+            instance_destroy(); // or cleanup
+        }
 
-    return;
-}
+        return;
+    }
 
     if (is_hurt) {
         sprite_index = s_hurt;
-        image_speed = 0.3;
+        image_speed = 0.05;
         return;
     }
 
