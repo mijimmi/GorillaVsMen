@@ -28,23 +28,28 @@ function check_for_player(){
 	}
 }
 
-function enemy_anim(){
-	switch(state){
-		case states.IDLE:
-			sprite_index = s_moveORidle;
-		break;
-	}
-	switch(state){
-		case states.MOVE:
-			sprite_index = s_moveORidle;
-		break;
-	}
-	switch(state){
-		case states.DEAD:
-			sprite_index = s_dead;
-		break;
-	}
-	//update prev pos
-	xp = x;
-	yp = y;
+function enemy_anim() {
+    if (state == states.DEAD) {
+        sprite_index = s_dead;
+        return;
+    }
+
+    if (is_hurt) {
+        sprite_index = s_hurt;
+        image_speed = 0.3;
+        return;
+    }
+
+    switch (state) {
+        case states.IDLE:
+        case states.MOVE:
+            sprite_index = s_moveORidle;
+        break;
+    }
+
+    // Update previous position for facing etc.
+    xp = x;
+    yp = y;
 }
+
+

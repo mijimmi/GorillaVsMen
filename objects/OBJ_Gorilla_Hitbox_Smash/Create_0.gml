@@ -1,1 +1,3 @@
-hitbox_init(3, 24, 2); // lifetime = 3 steps, radius = 24, knockback = 2
+event_inherited(); // Always call this first if it inherits
+
+damage = 5; // Set your desired damage value

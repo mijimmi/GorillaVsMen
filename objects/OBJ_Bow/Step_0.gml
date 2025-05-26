@@ -104,3 +104,6 @@ switch (state) {
 	    }
 	    break;
 }
+if (!instance_exists(owner) || owner.state == states.DEAD) {
+    instance_destroy();
+}
