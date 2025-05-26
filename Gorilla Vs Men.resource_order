@@ -61,6 +61,7 @@
     {"name":"OBJ_ExpBanana","order":2,"path":"objects/OBJ_ExpBanana/OBJ_ExpBanana.yy",},
     {"name":"OBJ_FX_Smash2","order":1,"path":"objects/OBJ_FX_Smash2/OBJ_FX_Smash2.yy",},
     {"name":"OBJ_Gorilla_Hitbox_Parent","order":1,"path":"objects/OBJ_Gorilla_Hitbox_Parent/OBJ_Gorilla_Hitbox_Parent.yy",},
+    {"name":"OBJ_HealthBanana","order":4,"path":"objects/OBJ_HealthBanana/OBJ_HealthBanana.yy",},
     {"name":"OBJ_Knight","order":4,"path":"objects/OBJ_Knight/OBJ_Knight.yy",},
     {"name":"OBJ_KnightCavalry","order":9,"path":"objects/OBJ_KnightCavalry/OBJ_KnightCavalry.yy",},
     {"name":"OBJ_LevelManager","order":1,"path":"objects/OBJ_LevelManager/OBJ_LevelManager.yy",},

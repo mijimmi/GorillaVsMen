@@ -26,20 +26,32 @@ function is_dead(){
             image_index = 0;
 
             // Spawn EXP bananas on death
-            // Spawn EXP bananas on death
-			var num_bananas = 1 + enemy_tier; // base 1, more if higher tier
-			for (var i = 0; i < num_bananas; i++) {
-			    var angle = irandom_range(0, 359);
-			    var dist = random_range(4, 12);
-			    var bx = x + lengthdir_x(dist, angle);
-			    var by = y + lengthdir_y(dist, angle);
+            var num_bananas = 1 + enemy_tier; // base 1, more if higher tier
+            for (var i = 0; i < num_bananas; i++) {
+                var angle = irandom_range(0, 359);
+                var dist = random_range(4, 12);
+                var bx = x + lengthdir_x(dist, angle);
+                var by = y + lengthdir_y(dist, angle);
 
-			    var banana = instance_create_layer(bx, by, "Instances", OBJ_ExpBanana);
+                var banana = instance_create_layer(bx, by, "Instances", OBJ_ExpBanana);
 
-			    // Add small knockback velocity
-			    banana.hsp = lengthdir_x(random_range(1, 2), angle);
-			    banana.vsp = lengthdir_y(random_range(1, 2), angle);
-			}
+                // Add small knockback velocity
+                banana.hsp = lengthdir_x(random_range(1, 2), angle);
+                banana.vsp = lengthdir_y(random_range(1, 2), angle);
+            }
+
+            // 💚 15% chance to drop a Health Banana
+            if (random(1) < 0.15) {
+                var angle = irandom_range(0, 359);
+                var dist = random_range(4, 12);
+                var bx = x + lengthdir_x(dist, angle);
+                var by = y + lengthdir_y(dist, angle);
+
+                var health_banana = instance_create_layer(bx, by, "Instances", OBJ_HealthBanana);
+
+                health_banana.hsp = lengthdir_x(random_range(1, 2), angle);
+                health_banana.vsp = lengthdir_y(random_range(1, 2), angle);
+            }
 
             // Optionally play death sound
             switch(object_index) {
@@ -56,3 +68,4 @@ function is_dead(){
     }
     return false;
 }
+

@@ -1,3 +1,4 @@
+
 // Create a particle system
 bullet_ps = part_system_create();
 part_system_depth(bullet_ps, depth + 1); // behind the bullet
