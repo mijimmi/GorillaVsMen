@@ -99,8 +99,8 @@ switch (state) {
                 bullet.direction = dir;
                 bullet.speed = 1.5;
                 bullet.image_angle = dir;
-                bullet.image_xscale = 0.8;
-                bullet.image_yscale = 0.8;
+                bullet.image_xscale = 0.5;
+                bullet.image_yscale = 0.;
 
                 var offset = 12;
                 bullet.x += lengthdir_x(offset, dir);
