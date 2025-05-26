@@ -51,6 +51,9 @@ switch (state) {
 			with (OBJ_ExpBanana) {
                 instance_destroy();
             }
+			with (OBJ_HealthBanana) {
+                instance_destroy();
+            }
         }
 
         wait_counter--;

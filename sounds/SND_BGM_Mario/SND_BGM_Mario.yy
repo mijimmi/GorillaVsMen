@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"SND_BGM_Main3",
+  "%Name":"SND_BGM_Mario",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":222.8419,
-  "name":"SND_BGM_Main3",
+  "duration":222.16853,
+  "name":"SND_BGM_Mario",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"SND_BGM_Main3.mp3",
+  "soundFile":"SND_BGM_Mario.mp3",
   "type":0,
-  "volume":0.77,
+  "volume":0.84,
 }

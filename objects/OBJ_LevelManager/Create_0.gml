@@ -9,13 +9,14 @@ enum PowerType {
 
 global.is_leveling_up = true;
 
+base_y = 1080/2;
 
 // Create power-up list
 power_ups = ds_list_create();
 ds_list_add(power_ups, PowerType.SWORD, PowerType.BOULDER, PowerType.HP, PowerType.SPD, PowerType.ATK); // shuffle later
 
 //draws power ups from the power up list after it is shuffled
-draw_powerups(power_ups, x, y)
+draw_powerups(power_ups, base_y)
 
 //switch case that decides what to do deoending on the power you chose
 function apply_powerup(type)
@@ -51,19 +52,27 @@ function apply_powerup(type)
 //slam shuffle function 
 function draw_powerups(power_ups, base_y)
 {
-    var screen_center_x = 1920 / 2;
-    var scale = 5;
-    var sprite_size = 36; // if your button sprite is 36x36
-    var button_width = sprite_size * scale;
-    var spacing = button_width + 20;
-    var total_width = spacing * 3 - 20;
-    var start_x = screen_center_x - total_width / 2;
+    var screen_width = 1920;
+    var screen_height = 1080;
+
+    var scale = 7;
+    var button_width = 32 * scale;
+    var button_spacing = 24 * scale;
+    var total_width = (button_width * 3) + (button_spacing * 2);
+
+    // Center horizontally - account for sprite origin
+    var start_x = (screen_width - total_width) / 2 + (button_width / 2);
+
+    // Center vertically if base_y is not given
+    if (argument_count < 2) {
+        base_y = (screen_height / 2) + (button_width / 2);
+    }
 
     ds_list_shuffle(power_ups);
 
     for (var i = 0; i < 3; i++) {
-        var power_type = power_ups[|i];
-        var draw_x = start_x + i * spacing;
+        var power_type = power_ups[| i];
+        var draw_x = start_x + i * (button_width + button_spacing);
 
         var b = instance_create_layer(draw_x, base_y, "LevelUI", OBJ_LevelOption);
         b.button_id = i + 1;

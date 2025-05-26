@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"SND_BGM_Main2",
+  "%Name":"SND_BGM_Desert",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":128.5921,
-  "name":"SND_BGM_Main2",
+  "duration":-1.0,
+  "name":"SND_BGM_Desert",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"SND_BGM_Main2.mp3",
+  "soundFile":"SND_BGM_Desert.mp3",
   "type":0,
-  "volume":0.84,
+  "volume":1.0,
 }

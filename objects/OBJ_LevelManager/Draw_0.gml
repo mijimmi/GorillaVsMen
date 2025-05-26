@@ -17,7 +17,7 @@ draw_set_font(FNT_Main_XL);
 
 var text = "Choose a Powerup!";
 var text_x = center_x;
-var text_y = 280;
+var text_y = 200;
 
 draw_set_color(c_black);
 for (var xo = -5; xo <= 5; xo += 5) {

@@ -4,3 +4,4 @@ image_yscale = 0.5;
 
 // Optional: visual variation
 image_angle = irandom(360);
+lifetime = 600;

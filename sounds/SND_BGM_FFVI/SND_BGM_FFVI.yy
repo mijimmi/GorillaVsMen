@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"SND_BGM_Main",
+  "%Name":"SND_BGM_FFVI",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":141.29343,
-  "name":"SND_BGM_Main",
+  "duration":222.8419,
+  "name":"SND_BGM_FFVI",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"SND_BGM_Main.mp3",
+  "soundFile":"SND_BGM_FFVI.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.77,
 }
