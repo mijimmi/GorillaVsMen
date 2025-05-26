@@ -1,15 +1,15 @@
-// Destroy if owner no longer exists
+// --- Destroy if owner no longer exists ---
 if (!variable_instance_exists(id, "owner") || !instance_exists(owner)) {
     instance_destroy();
     exit;
 }
 
-// Exit if leveling up
+// --- Exit if leveling up ---
 if (global.is_leveling_up) {
     exit;
 }
 
-// Follow the owner
+// --- Follow the owner ---
 x = owner.x;
 y = owner.y - 10;
 
@@ -21,22 +21,20 @@ if (owner.x != last_owner_x || owner.y != last_owner_y) {
 last_owner_x = owner.x;
 last_owner_y = owner.y;
 
-// --- Update aim every 40 frames ---
+// --- Update aim every 5 frames ---
 aim_update_timer++;
 if (aim_update_timer >= 5) {
     aim_update_timer = 0;
-    
+
     if (instance_exists(OBJ_Gorilla)) {
         var gor = instance_nearest(x, y, OBJ_Gorilla);
         var dir = point_direction(x, y, gor.x, gor.y);
-        
+
         if (dir > 90 && dir < 270) {
-            // Aiming left side: flip sprite horizontally and adjust angle
-            image_angle = 180+dir;
+            image_angle = 180 + dir;
             image_xscale = -1;
             sprite_index = SPR_Musket2;
         } else {
-            // Aiming right side: normal rotation and sprite
             image_angle = dir;
             image_xscale = 1;
             sprite_index = SPR_Musket;
@@ -48,7 +46,7 @@ if (aim_update_timer >= 5) {
     }
 }
 
-// Reset fire flag if aiming
+// --- Reset fire flag if aiming ---
 if (state == MusketState.AIMING) {
     has_fired = false;
 }
@@ -56,35 +54,40 @@ if (state == MusketState.AIMING) {
 // --- State Machine ---
 switch (state) {
     case MusketState.AIMING:
-        image_index = 0; // only frame 1 while aiming
+        image_index = 0;
 
         if (!owner_moving) {
             frame_delay++;
         }
 
-        if (frame_delay >= 480) { // long reload before firing
-            if (instance_number(OBJ_BulletMusket) < 4) {
+        // --- Emit pre-fire visual indicator ---
+        if (frame_delay == 460) { // ~20 frames before firing
+            part_emitter_region(part_sys, part_emitter, x-2, x+2, y-2, y+2, ps_shape_ellipse, ps_distr_gaussian);
+            part_emitter_burst(part_sys, part_emitter, part_fire_warn, 10);
+        }
+
+        if (frame_delay >= 480) {
+            if (instance_number(OBJ_BulletMusket) < 3) {
                 state = MusketState.FIRE_START;
                 frame_delay = 0;
             } else {
-                frame_delay = 0; // retry later if too many bullets
+                frame_delay = 0;
             }
         }
         break;
 
     case MusketState.FIRE_START:
-        // Step through firing frames: 2 → 3 → 4 → 5 → 6
         image_index = 1 + frame_delay;
 
         frame_delay++;
-        if (frame_delay >= 5) { // total of 5 frames: 2–6
+        if (frame_delay >= 5) {
             state = MusketState.FIRE_END;
             frame_delay = 0;
         }
         break;
 
     case MusketState.FIRE_END:
-        image_index = 5; // hold on last firing frame
+        image_index = 5;
         global.musketstate = MusketState.FIRE_END;
 
         if (!has_fired && !owner_moving) {
