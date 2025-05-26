@@ -55,10 +55,7 @@
     {"name":"OBJ_Blood_2","order":1,"path":"objects/OBJ_Blood_2/OBJ_Blood_2.yy",},
     {"name":"OBJ_Blood_3","order":2,"path":"objects/OBJ_Blood_3/OBJ_Blood_3.yy",},
     {"name":"OBJ_Blood_4","order":3,"path":"objects/OBJ_Blood_4/OBJ_Blood_4.yy",},
-
-
     {"name":"OBJ_BulletMusket","order":5,"path":"objects/OBJ_BulletMusket/OBJ_BulletMusket.yy",},
-
     {"name":"OBJ_EnemySpawner","order":5,"path":"objects/OBJ_EnemySpawner/OBJ_EnemySpawner.yy",},
     {"name":"OBJ_EntityParent","order":3,"path":"objects/OBJ_EntityParent/OBJ_EntityParent.yy",},
     {"name":"OBJ_ExpBanana","order":2,"path":"objects/OBJ_ExpBanana/OBJ_ExpBanana.yy",},
