@@ -159,6 +159,7 @@
     {"id":{"name":"SPR_Gorilla_Right","path":"sprites/SPR_Gorilla_Right/SPR_Gorilla_Right.yy",},},
     {"id":{"name":"SPR_Gorilla_Smash","path":"sprites/SPR_Gorilla_Smash/SPR_Gorilla_Smash.yy",},},
     {"id":{"name":"SPR_Health","path":"sprites/SPR_Health/SPR_Health.yy",},},
+    {"id":{"name":"SPR_HealthBanana","path":"sprites/SPR_HealthBanana/SPR_HealthBanana.yy",},},
     {"id":{"name":"SPR_HealthBG","path":"sprites/SPR_HealthBG/SPR_HealthBG.yy",},},
     {"id":{"name":"SPR_HealthBorder","path":"sprites/SPR_HealthBorder/SPR_HealthBorder.yy",},},
     {"id":{"name":"SPR_HP_Up","path":"sprites/SPR_HP_Up/SPR_HP_Up.yy",},},

@@ -112,6 +112,7 @@
     {"name":"SPR_Gorilla_Right","order":2,"path":"sprites/SPR_Gorilla_Right/SPR_Gorilla_Right.yy",},
     {"name":"SPR_Gorilla_Smash","order":3,"path":"sprites/SPR_Gorilla_Smash/SPR_Gorilla_Smash.yy",},
     {"name":"SPR_Health","order":2,"path":"sprites/SPR_Health/SPR_Health.yy",},
+    {"name":"SPR_HealthBanana","order":1,"path":"sprites/SPR_HealthBanana/SPR_HealthBanana.yy",},
     {"name":"SPR_HealthBorder","order":1,"path":"sprites/SPR_HealthBorder/SPR_HealthBorder.yy",},
     {"name":"SPR_HP_Up","order":1,"path":"sprites/SPR_HP_Up/SPR_HP_Up.yy",},
     {"name":"SPR_Knight_Hurt","order":3,"path":"sprites/SPR_Knight_Hurt/SPR_Knight_Hurt.yy",},
