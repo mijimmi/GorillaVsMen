@@ -12,7 +12,7 @@ global.is_leveling_up = true;
 
 // Create power-up list
 power_ups = ds_list_create();
-ds_list_add(power_ups, PowerType.SWORD, PowerType.BOULDER); // shuffle later
+ds_list_add(power_ups, PowerType.SWORD, PowerType.BOULDER, PowerType.HP, PowerType.SPD, PowerType.ATK); // shuffle later
 
 //draws power ups from the power up list after it is shuffled
 draw_powerups(power_ups, x, y)
