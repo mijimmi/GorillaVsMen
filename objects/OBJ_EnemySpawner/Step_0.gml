@@ -62,6 +62,9 @@ if (spawn_timer <= 0) {
         for (var w = 0; w < array_length(enemy_list); w++) {
             if (enemy_list[w] == OBJ_Roman_Archer) {
                 weights[w] = 7;  // less likely to spawn
+            }
+			if (enemy_list[w] == OBJ_Musketeer) {
+                weights[w] = 5;  // less likely to spawn
             } else {
                 weights[w] = 10; // normal chance
             }
