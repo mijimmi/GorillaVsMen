@@ -30,20 +30,23 @@ function check_for_player(){
 
 function enemy_anim() {
     if (state == states.DEAD) {
-        if (sprite_index != s_dead_selected) {
+    if (sprite_index != s_dead_selected) {
+        if (is_array(s_dead)) {
             s_dead_selected = s_dead[irandom(array_length(s_dead) - 1)];
-            sprite_index = s_dead_selected;
-            image_index = 0;
-            image_speed = 1; // Adjust speed as needed
+        } else {
+            s_dead_selected = s_dead;
         }
-
-        // Wait until animation finishes before destroying
-        if (image_index >= image_number - 1) {
-            instance_destroy(); // or other cleanup code
-        }
-
-        return;
+        sprite_index = s_dead_selected;
+        image_index = 0;
+        image_speed = 1; // adjust as needed
     }
+
+    if (image_index >= image_number - 1) {
+        instance_destroy(); // or cleanup
+    }
+
+    return;
+}
 
     if (is_hurt) {
         sprite_index = s_hurt;

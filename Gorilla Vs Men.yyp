@@ -93,6 +93,7 @@
     {"id":{"name":"OBJ_Gorilla_Hitbox_Parent","path":"objects/OBJ_Gorilla_Hitbox_Parent/OBJ_Gorilla_Hitbox_Parent.yy",},},
     {"id":{"name":"OBJ_Gorilla_Hitbox_Smash","path":"objects/OBJ_Gorilla_Hitbox_Smash/OBJ_Gorilla_Hitbox_Smash.yy",},},
     {"id":{"name":"OBJ_Gorilla","path":"objects/OBJ_Gorilla/OBJ_Gorilla.yy",},},
+    {"id":{"name":"OBJ_HealthBanana","path":"objects/OBJ_HealthBanana/OBJ_HealthBanana.yy",},},
     {"id":{"name":"OBJ_Healthbar","path":"objects/OBJ_Healthbar/OBJ_Healthbar.yy",},},
     {"id":{"name":"OBJ_Knight","path":"objects/OBJ_Knight/OBJ_Knight.yy",},},
     {"id":{"name":"OBJ_KnightCavalry","path":"objects/OBJ_KnightCavalry/OBJ_KnightCavalry.yy",},},
