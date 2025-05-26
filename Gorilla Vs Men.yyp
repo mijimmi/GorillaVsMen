@@ -84,6 +84,7 @@
     {"id":{"name":"OBJ_Bow","path":"objects/OBJ_Bow/OBJ_Bow.yy",},},
     {"id":{"name":"OBJ_CameraController","path":"objects/OBJ_CameraController/OBJ_CameraController.yy",},},
     {"id":{"name":"OBJ_Caveman","path":"objects/OBJ_Caveman/OBJ_Caveman.yy",},},
+    {"id":{"name":"OBJ_DamageIndicator","path":"objects/OBJ_DamageIndicator/OBJ_DamageIndicator.yy",},},
     {"id":{"name":"OBJ_EnemySpawner","path":"objects/OBJ_EnemySpawner/OBJ_EnemySpawner.yy",},},
     {"id":{"name":"OBJ_EntityParent","path":"objects/OBJ_EntityParent/OBJ_EntityParent.yy",},},
     {"id":{"name":"OBJ_ExpBanana","path":"objects/OBJ_ExpBanana/OBJ_ExpBanana.yy",},},

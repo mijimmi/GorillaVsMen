@@ -19,3 +19,12 @@ knockback_x = 0;
 knockback_y = 0;
 knockback_timer = 0;
 knockback_duration = 10; // How long knockback lasts (in steps)
+
+hp_max = 1;   // fallback default
+hp = hp_max;
+
+death_timer = 0;
+death_duration = 30; // how many steps to show the blood sprite before destroying
+hurt_duration = 30;  // 30 steps @60fps ≈ 0.5 seconds
+is_hurt = false;
+hurt_timer = 0;
