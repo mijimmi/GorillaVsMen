@@ -11,7 +11,8 @@ if (global.state != GameState.ROUND_ACTIVE) {
 
 // --- init on round start ---
 if (!spawn_initialized) {
-    spawn_delay = max(60, 240 - (global.round_num * 15)); // delay between spawn batches
+    // Start with longer delay early, reduce as rounds increase but not too fast
+    spawn_delay = max(90, 240 - (global.round_num * 10)); 
     spawn_timer = spawn_delay;
     spawn_batch_count = 1;
     spawn_initialized = true;
@@ -21,7 +22,7 @@ if (!spawn_initialized) {
 spawn_timer--;
 
 // --- allow dynamic spawn_delay update mid-round (optional) ---
-spawn_delay = max(60, 240 - (global.round_num * 15));
+spawn_delay = max(90, 240 - (global.round_num * 10));
 
 // Helper function for weighted random selection
 function weighted_random(weights_array) {
@@ -44,12 +45,19 @@ function weighted_random(weights_array) {
 if (spawn_timer <= 0) {
     var tier_index = clamp(floor((global.round_num - 1) / 2), 0, 4);
     var enemy_list = enemy_tiers[tier_index];
-    var max_enemies = 12 + global.round_num;
+
+    // More balanced max enemies cap: start low, increase steadily
+    var max_enemies = 8 + (global.round_num * 3);
+
+    // Spawn cap also grows but starts lower
+    var spawn_cap = 10 + (global.round_num * 4);
 
     for (var i = 0; i < spawn_batch_count; i++) {
-        if (instance_number(OBJ_ParentEnemy) >= max_enemies) break;
+        if (instance_number(OBJ_ParentEnemy) >= max_enemies ||
+            instance_number(OBJ_ParentEnemy) >= spawn_cap) {
+            break;
+        }
 
-        // use local vars properly
         var tries = 0,
             max_tries = 10,
             spawn_ok = false,
@@ -57,16 +65,14 @@ if (spawn_timer <= 0) {
             _y = 0,
             enemy_to_spawn = -1;
 
-        // create weights: normal = 10, reduce for OBJ_Roman_Archer = 3
         var weights = [];
         for (var w = 0; w < array_length(enemy_list); w++) {
             if (enemy_list[w] == OBJ_Roman_Archer) {
-                weights[w] = 7;  // less likely to spawn
-            }
-			if (enemy_list[w] == OBJ_Musketeer) {
-                weights[w] = 5;  // less likely to spawn
+                weights[w] = 7;
+            } else if (enemy_list[w] == OBJ_Musketeer) {
+                weights[w] = 5;
             } else {
-                weights[w] = 10; // normal chance
+                weights[w] = 10;
             }
         }
 
@@ -89,22 +95,21 @@ if (spawn_timer <= 0) {
 
         if (spawn_ok) {
             instance_create_layer(_x, _y, "Instances", enemy_to_spawn);
-			
-		    var snd_inst = audio_play_sound(SND_Spawn, 1, false);
-		    audio_sound_gain(snd_inst, 0.5, 0); // 40% volume
-		    audio_sound_pitch(snd_inst, random_range(0.95, 1.05)); // slight pitch variation
-	
+
+            var snd_inst = audio_play_sound(SND_Spawn, 1, false);
+            audio_sound_gain(snd_inst, 0.5, 0);
+            audio_sound_pitch(snd_inst, random_range(0.95, 1.05));
+
             part_particles_create(spawn_particle_sys, _x, _y, spawn_particle_type, 20);
         }
     }
 
-    // reset spawn timer
     spawn_timer = spawn_delay;
 
-    // increase spawn batch count based on round number
-    if (global.round_num <= 5) {
-        spawn_batch_count = min(spawn_batch_count + 1, 8);
+    // Gradually increase spawn batch count, capped at 6 for balance
+    if (global.round_num < 10) {
+        spawn_batch_count = min(spawn_batch_count + 1, 6);
     } else {
-        spawn_batch_count = min(spawn_batch_count * 2, 16);
+        spawn_batch_count = min(spawn_batch_count + 2, 10);
     }
 }

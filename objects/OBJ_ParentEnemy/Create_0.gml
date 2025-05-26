@@ -28,3 +28,5 @@ death_duration = 30; // how many steps to show the blood sprite before destroyin
 hurt_duration = 30;  // 30 steps @60fps ≈ 0.5 seconds
 is_hurt = false;
 hurt_timer = 0;
+s_dead = [SPR_Blood_1, SPR_Blood_2, SPR_Blood_3, SPR_Blood_4];
+s_dead_selected = -1;

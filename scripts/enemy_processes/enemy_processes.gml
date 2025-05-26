@@ -30,7 +30,18 @@ function check_for_player(){
 
 function enemy_anim() {
     if (state == states.DEAD) {
-        sprite_index = s_dead;
+        if (sprite_index != s_dead_selected) {
+            s_dead_selected = s_dead[irandom(array_length(s_dead) - 1)];
+            sprite_index = s_dead_selected;
+            image_index = 0;
+            image_speed = 1; // Adjust speed as needed
+        }
+
+        // Wait until animation finishes before destroying
+        if (image_index >= image_number - 1) {
+            instance_destroy(); // or other cleanup code
+        }
+
         return;
     }
 
@@ -44,12 +55,10 @@ function enemy_anim() {
         case states.IDLE:
         case states.MOVE:
             sprite_index = s_moveORidle;
-        break;
+            break;
     }
 
-    // Update previous position for facing etc.
     xp = x;
     yp = y;
 }
-
 

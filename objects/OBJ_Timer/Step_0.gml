@@ -48,6 +48,9 @@ switch (state) {
             with (OBJ_ParentEnemy) {
                 instance_destroy();
             }
+			with (OBJ_ExpBanana) {
+                instance_destroy();
+            }
         }
 
         wait_counter--;

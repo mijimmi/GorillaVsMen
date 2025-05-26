@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":611.14923,
+  "duration":141.29343,
   "name":"SND_BGM_Main",
   "parent":{
     "name":"Sounds",

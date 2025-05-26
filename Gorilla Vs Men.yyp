@@ -120,6 +120,8 @@
     {"id":{"name":"sh_grass","path":"shaders/sh_grass/sh_grass.yy",},},
     {"id":{"name":"SFX_EXP_Collect","path":"sounds/SFX_EXP_Collect/SFX_EXP_Collect.yy",},},
     {"id":{"name":"SND_BGM_Main","path":"sounds/SND_BGM_Main/SND_BGM_Main.yy",},},
+    {"id":{"name":"SND_BGM_Main2","path":"sounds/SND_BGM_Main2/SND_BGM_Main2.yy",},},
+    {"id":{"name":"SND_BGM_Main3","path":"sounds/SND_BGM_Main3/SND_BGM_Main3.yy",},},
     {"id":{"name":"SND_BowFire","path":"sounds/SND_BowFire/SND_BowFire.yy",},},
     {"id":{"name":"SND_Footstep1","path":"sounds/SND_Footstep1/SND_Footstep1.yy",},},
     {"id":{"name":"SND_Footstep2","path":"sounds/SND_Footstep2/SND_Footstep2.yy",},},
