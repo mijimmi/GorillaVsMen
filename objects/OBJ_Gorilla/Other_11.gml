@@ -1,5 +1,9 @@
 ///@description Boulder
 
+if (global.is_leveling_up) {
+    exit;
+}
+
 switch(global.boulder_level)
 {
 	case 0:

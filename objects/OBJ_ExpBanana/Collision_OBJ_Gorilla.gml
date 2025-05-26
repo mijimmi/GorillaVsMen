@@ -3,7 +3,7 @@ var snd_inst = audio_play_sound(SFX_EXP_Collect, 1, false); // Play sound and ge
 audio_sound_pitch(snd_inst, random_range(0.9, 1.1)); // Apply random pitch to the instance
 
 //just edit this for xp value
-OBJ_Gorilla.add_xp(100);
+OBJ_Gorilla.add_xp(5);
 instance_destroy();
 
 // Create a pixelated burst using particles

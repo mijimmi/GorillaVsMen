@@ -1,5 +1,9 @@
 /// @description Sword
 
+if (global.is_leveling_up) {
+    exit;
+}
+
 switch(global.sword_level)
 {
 	case 0:

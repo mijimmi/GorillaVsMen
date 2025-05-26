@@ -27,7 +27,7 @@ function apply_powerup(type)
             break;
 
         case PowerType.ATK:
-            global.gorilla.attack += 5;
+            global.gorilla.attack += 3;
             break;
 
         case PowerType.SPD:
