@@ -1,4 +1,3 @@
-// Only play music if it hasn't been initialized yet
 if (!variable_global_exists("bgm") || !audio_is_playing(global.bgm)) {
     
     // Define tracks
@@ -17,13 +16,13 @@ if (!variable_global_exists("bgm") || !audio_is_playing(global.bgm)) {
         }
     }
 
-    // Choose one from the filtered list
-    var _chosen_track = choose(_available[0], _available[1]); // now guaranteed different
+    // Choose a random track from the filtered list
+    var _chosen_track = _available[irandom(array_length(_available) - 1)];
 
     // Play the track
     global.bgm = audio_play_sound(_chosen_track, 1, true); // Loop = true
-    audio_sound_gain(global.bgm, 0.15, 0); // Optional: set volume
+    audio_sound_gain(global.bgm, 0.15, 0); // Set volume
     
-    // Remember the track for next time
+    // Store the chosen track
     global.last_bgm_track = _chosen_track;
 }

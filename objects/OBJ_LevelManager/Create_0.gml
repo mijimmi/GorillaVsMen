@@ -49,28 +49,29 @@ function apply_powerup(type)
 }
 
 //slam shuffle function 
-function draw_powerups(power_ups, base_x, base_y)
+function draw_powerups(power_ups, base_y)
 {
-	
-	// Create buttons
-	var scale = 5
-	var button_height = 36 * scale
+    var screen_center_x = 1920 / 2;
+    var scale = 5;
+    var sprite_size = 36; // if your button sprite is 36x36
+    var button_width = sprite_size * scale;
+    var spacing = button_width + 20;
+    var total_width = spacing * 3 - 20;
+    var start_x = screen_center_x - total_width / 2;
 
-	ds_list_shuffle(power_ups)
-	
-	for (var i = 0; i < 3; i++) {
-		
-	
-		var power_type = power_ups[|i]
-		
-	    var b = instance_create_layer(base_x, base_y + i * button_height, "LevelUI", OBJ_LevelOption);
-	    b.button_id = i + 1;
-	    b.power_type = power_type
-    
-	    // Make the button visually bigger
-	    b.image_xscale = 2; // double the width
-	    b.image_yscale = 2; // double the height
-	}	
+    ds_list_shuffle(power_ups);
+
+    for (var i = 0; i < 3; i++) {
+        var power_type = power_ups[|i];
+        var draw_x = start_x + i * spacing;
+
+        var b = instance_create_layer(draw_x, base_y, "LevelUI", OBJ_LevelOption);
+        b.button_id = i + 1;
+        b.power_type = power_type;
+
+        b.image_xscale = scale;
+        b.image_yscale = scale;
+    }
 }
 
 //destroys the level manager as well as the options upon picking an option
