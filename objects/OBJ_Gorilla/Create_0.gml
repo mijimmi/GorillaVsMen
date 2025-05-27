@@ -69,11 +69,13 @@ var a = instance_create_layer(x, y, "LevelUI", OBJ_LevelManager);
 //global list of variables for the power up levels
 global.sword_level = 0
 global.boulder_level = 0
+global.boomerang_level = 0
 
 //attack timing
 global.slashAlarm = 80
-global.boulderAlarm = 150
+global.boulderAlarm = 200
+global.boomerangAlarm = 300
 
 alarm[0] = global.slashAlarm
 alarm[1] = global.boulderAlarm
-
+alarm[2] = global.boomerangAlarm

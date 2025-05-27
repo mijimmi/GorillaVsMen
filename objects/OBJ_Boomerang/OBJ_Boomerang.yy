@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"Game",
+  "%Name":"OBJ_Boomerang",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":82,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Game",
+  "name":"OBJ_Boomerang",
   "overriddenProperties":[],
   "parent":{
-    "name":"Control",
-    "path":"folders/Animation Curves/Control.yy",
+    "name":"Power_Ups",
+    "path":"folders/Objects/Power_Ups.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"OBJ_Weapon_Parent",
+    "path":"objects/OBJ_Weapon_Parent/OBJ_Weapon_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"SPR_Bananarang",
+    "path":"sprites/SPR_Bananarang/SPR_Bananarang.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
