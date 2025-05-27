@@ -1,7 +1,6 @@
 {
   "FolderOrderSettings":[
     {"name":"Animation Curves","order":12,"path":"folders/Animation Curves.yy",},
-    {"name":"Control","order":17,"path":"folders/Control.yy",},
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
@@ -56,6 +55,7 @@
     {"name":"OBJ_Blood_2","order":1,"path":"objects/OBJ_Blood_2/OBJ_Blood_2.yy",},
     {"name":"OBJ_Blood_3","order":2,"path":"objects/OBJ_Blood_3/OBJ_Blood_3.yy",},
     {"name":"OBJ_Blood_4","order":3,"path":"objects/OBJ_Blood_4/OBJ_Blood_4.yy",},
+    {"name":"OBJ_Boomerang","order":3,"path":"objects/OBJ_Boomerang/OBJ_Boomerang.yy",},
     {"name":"OBJ_Boulder","order":1,"path":"objects/OBJ_Boulder/OBJ_Boulder.yy",},
     {"name":"OBJ_BulletMusket","order":5,"path":"objects/OBJ_BulletMusket/OBJ_BulletMusket.yy",},
     {"name":"OBJ_Enemy_Hitbox_Melee","order":1,"path":"objects/OBJ_Enemy_Hitbox_Melee/OBJ_Enemy_Hitbox_Melee.yy",},

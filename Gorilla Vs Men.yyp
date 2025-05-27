@@ -11,7 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Animation Curves","folderPath":"folders/Animation Curves.yy","name":"Animation Curves","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Control","folderPath":"folders/Control.yy","name":"Control","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Control","folderPath":"folders/Animation Curves/Control.yy","name":"Control","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -83,6 +83,7 @@
     {"id":{"name":"OBJ_Blood_2","path":"objects/OBJ_Blood_2/OBJ_Blood_2.yy",},},
     {"id":{"name":"OBJ_Blood_3","path":"objects/OBJ_Blood_3/OBJ_Blood_3.yy",},},
     {"id":{"name":"OBJ_Blood_4","path":"objects/OBJ_Blood_4/OBJ_Blood_4.yy",},},
+    {"id":{"name":"OBJ_Boomerang","path":"objects/OBJ_Boomerang/OBJ_Boomerang.yy",},},
     {"id":{"name":"OBJ_Boulder","path":"objects/OBJ_Boulder/OBJ_Boulder.yy",},},
     {"id":{"name":"OBJ_Bow","path":"objects/OBJ_Bow/OBJ_Bow.yy",},},
     {"id":{"name":"OBJ_BulletMusket","path":"objects/OBJ_BulletMusket/OBJ_BulletMusket.yy",},},

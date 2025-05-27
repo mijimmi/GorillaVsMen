@@ -32,6 +32,12 @@ switch (power_type) {
         draw_sprite_ext(SPR_BoulderATK, 0, x, y, scale, scale, 0, c_white, 1);
         label_text = "BOULDER";
         break;
+		
+    case PowerType.BOOMERANG:
+        draw_sprite_ext(SPR_Bananarang, 0, x, y, scale, scale, 0, c_white, 1);
+        label_text = "BANANARANG";
+        break;		
+		
 }
 
 // Set font and compute text position
