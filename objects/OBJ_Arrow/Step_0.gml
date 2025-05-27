@@ -9,6 +9,12 @@ y += lengthdir_y(speed, direction);
 
 part_particles_create(arrow_ps, x, y, arrow_pt, 1);
 
+// Sync hitbox to this arrow's position
+if (instance_exists(hitbox)) {
+    hitbox.x = x;
+    hitbox.y = y;
+}
+
 // Optional: destroy if out of bounds
 if (x < 0 || x > room_width || y < 0 || y > room_height) {
     instance_destroy();
