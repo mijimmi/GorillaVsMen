@@ -11,3 +11,8 @@ part_type_alpha2(bullet_pt, 1, 0); // fade out
 part_type_color1(bullet_pt, c_yellow); // muzzle flare style
 part_type_speed(bullet_pt, 0.1, 0.3, 0, 0);
 part_type_life(bullet_pt, 25, 40); // longer trail lifetime
+
+//Hitbox
+var hitbox = instance_create_layer(x, y, "Instances", OBJ_ProjectileHitbox);
+hitbox.follow_target = id;
+hitbox.damage = 5;
