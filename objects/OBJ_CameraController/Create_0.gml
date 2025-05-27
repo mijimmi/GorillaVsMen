@@ -7,3 +7,5 @@ shake_timer = 0;
 shake_magnitude = 0;
 view_camera[0] = camera;
 surf_crt = -1;
+flash_timer = 0;
+flash_color = c_red;

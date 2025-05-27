@@ -1,3 +1,19 @@
+// === Apply Knockback Over Time ===
+if (knockback_timer > 0) {
+    var kbx = knockback_x / knockback_timer;
+    var kby = knockback_y / knockback_timer;
+
+    // Apply knockback movement with wall collision checks
+    if (!place_meeting(x + kbx, y, OBJ_Wall)) {
+        x += kbx;
+    }
+    if (!place_meeting(x, y + kby, OBJ_Wall)) {
+        y += kby;
+    }
+
+    knockback_timer--;
+}
+
 //if the level manager is currently onscreen, do NOT read player input.
 if(instance_exists(OBJ_LevelManager)) {exit;}
 
@@ -38,11 +54,22 @@ if (mouse_check_button_pressed(mb_left) && current_state != GorillaState.SMASH &
 }
 
 // === Logic for i-frames ===
+// === Logic for i-frames ===
 if (invincible) {
     invincibility_timer--;
     if (invincibility_timer <= 0) {
         invincible = false;
+        image_alpha = 1; // Ensure visible after invincibility ends
+    } else {
+        // Flashing effect: toggle alpha every 3 frames
+        if ((invincibility_timer mod 6) < 3) {
+            image_alpha = 0;
+        } else {
+            image_alpha = 1;
+        }
     }
+} else {
+    image_alpha = 1; // Make sure alpha is reset when not invincible
 }
 
 // === State Machine ===
@@ -144,11 +171,42 @@ if (current_state != GorillaState.SMASH) {
 }
 
 // === Gorilla Damage Function ===
-function gorilla_take_damage(amount) {
+function gorilla_take_damage(amount, source_x, source_y) {
     hp -= amount;
 
     if (hp <= 0) {
         // Play death animation, effects, etc.
-        instance_destroy();
+        // death logic here
+    } else {
+        var knockback_strength = 3;
+
+        var dx = x - source_x;
+        var dy = y - source_y;
+        var dist = point_distance(0, 0, dx, dy);
+        if (dist > 0) {
+            dx /= dist;
+            dy /= dist;
+        }
+
+        // Apply knockback gradually over time
+        knockback_x = dx * knockback_strength;
+        knockback_y = dy * knockback_strength;
+        knockback_timer = 6;
+
+        invincible = true;
+        invincibility_timer = 30;
+
+        // === Trigger camera shake ===
+		with (OBJ_CameraController) {
+		    shake_timer = 10;
+		    shake_magnitude = 4;
+
+		    flash_timer = 30; // 30 frames = 1 second
+		    flash_color = c_red;
+		}
+		// === Play grunt sound with random pitch and volume ===
+		var snd_grunt_inst = audio_play_sound(SND_Grunt, 1, false);
+		audio_sound_pitch(snd_grunt_inst, random_range(0.95, 1.05)); // Slight pitch variation
+		audio_sound_gain(snd_grunt_inst, 0.7, 0); // Random volume
     }
 }

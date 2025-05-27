@@ -1,13 +1,10 @@
 event_inherited();
 
-if (instance_exists(enemy_parent)) {
-    if (place_meeting(x, y, OBJ_Gorilla)) {
-        with (instance_place(x, y, OBJ_Gorilla)) {
-            if (!invincible) {
-                hp -= other.damage;
-                invincible = true;
-                invincibility_timer = other.cooldown;
-            }
+var gorilla_inst = instance_place(x, y, OBJ_Gorilla);
+if (gorilla_inst != noone) {
+    with (gorilla_inst) {
+        if (!invincible) {
+            gorilla_take_damage(other.damage, other.x, other.y);
         }
     }
 }

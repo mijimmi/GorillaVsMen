@@ -95,6 +95,7 @@
     {"name":"SND_Footstep1","order":9,"path":"sounds/SND_Footstep1/SND_Footstep1.yy",},
     {"name":"SND_Footstep2","order":11,"path":"sounds/SND_Footstep2/SND_Footstep2.yy",},
     {"name":"SND_Footstep3","order":10,"path":"sounds/SND_Footstep3/SND_Footstep3.yy",},
+    {"name":"SND_Grunt","order":20,"path":"sounds/SND_Grunt/SND_Grunt.yy",},
     {"name":"SND_Gunshot","order":12,"path":"sounds/SND_Gunshot/SND_Gunshot.yy",},
     {"name":"SND_Heal","order":17,"path":"sounds/SND_Heal/SND_Heal.yy",},
     {"name":"SND_Smash","order":5,"path":"sounds/SND_Smash/SND_Smash.yy",},
