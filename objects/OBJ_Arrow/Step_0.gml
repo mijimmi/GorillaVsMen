@@ -13,6 +13,7 @@ part_particles_create(arrow_ps, x, y, arrow_pt, 1);
 if (instance_exists(hitbox)) {
     hitbox.x = x;
     hitbox.y = y;
+    hitbox.image_angle = image_angle; // <-- Add this line
 }
 
 // Optional: destroy if out of bounds

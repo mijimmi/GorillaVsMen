@@ -13,6 +13,7 @@ part_type_speed(bullet_pt, 0.1, 0.3, 0, 0);
 part_type_life(bullet_pt, 25, 40); // longer trail lifetime
 
 //Hitbox
-var hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_ProjectileHitbox);
-hitbox.follow_target = id;
-hitbox.damage = 5;
+hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_ProjectileHitbox);
+hitbox.follow_target = id;       // let hitbox follow this arrow
+hitbox.damage = 3;               // set desired damage
+hitbox.owner = id;               // optional if you want it to check back

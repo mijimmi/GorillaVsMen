@@ -30,6 +30,29 @@ function check_for_player(){
 
 function enemy_anim() {
     if (state == states.DEAD) {
+        // Destroy melee hitbox if it exists
+        if (instance_exists(melee_hitbox)) {
+            instance_destroy(melee_hitbox);
+        }
+
+        // Destroy sword instance if it exists
+		if (variable_instance_exists(id, "sword_inst")) {
+		    if (instance_exists(sword_inst)) {
+		        instance_destroy(sword_inst);
+		    }
+		}
+		if (variable_instance_exists(id, "spear_inst")) {
+		    if (instance_exists(spear_inst)) {
+		        instance_destroy(spear_inst);
+		    }
+		}
+		if (variable_instance_exists(id, "bow_inst")) {
+		    if (instance_exists(bow_inst)) {
+		        instance_destroy(bow_inst);
+		    }
+		}
+
+
         if (sprite_index != s_dead_selected) {
             // Select death sprite
             if (is_array(s_dead)) {
@@ -41,12 +64,11 @@ function enemy_anim() {
             image_index = 0;
             image_speed = 1; // adjust as needed
 
-            // Play random death sound with random pitch
-			// Play random death sound with random pitch and reduced volume
-			var _snd = choose(SND_Flesh, SND_Flesh2);
-			var _snd_inst = audio_play_sound(_snd, 1, false);
-			audio_sound_pitch(_snd_inst, random_range(0.8, 1.2));
-			audio_sound_gain(_snd_inst, 0.5, 0); // volume: 0.0 (mute) to 1.0
+            // Play random death sound with random pitch and reduced volume
+            var _snd = choose(SND_Flesh, SND_Flesh2);
+            var _snd_inst = audio_play_sound(_snd, 1, false);
+            audio_sound_pitch(_snd_inst, random_range(0.8, 1.2));
+            audio_sound_gain(_snd_inst, 0.5, 0); // volume: 0.0 (mute) to 1.0
         }
 
         if (image_index >= image_number - 1) {
@@ -66,10 +88,10 @@ function enemy_anim() {
         case states.IDLE:
         case states.MOVE:
             sprite_index = s_moveORidle;
+            image_speed = 1;
             break;
     }
 
     xp = x;
     yp = y;
 }
-

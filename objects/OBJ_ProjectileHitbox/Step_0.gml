@@ -1,8 +1,9 @@
 if (instance_exists(follow_target)) {
     x = follow_target.x;
     y = follow_target.y;
+    image_angle = follow_target.image_angle; // <-- This syncs the rotation
 } else {
-    instance_destroy(); // If the projectile dies, kill the hitbox
+    instance_destroy();
     exit;
 }
 
