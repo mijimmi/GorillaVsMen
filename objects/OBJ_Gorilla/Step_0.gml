@@ -37,6 +37,14 @@ if (mouse_check_button_pressed(mb_left) && current_state != GorillaState.SMASH &
     image_index = 0; // Start animation from the beginning
 }
 
+// === Logic for i-frames ===
+if (invincible) {
+    invincibility_timer--;
+    if (invincibility_timer <= 0) {
+        invincible = false;
+    }
+}
+
 // === State Machine ===
 switch (current_state) {
     case GorillaState.IDLE:

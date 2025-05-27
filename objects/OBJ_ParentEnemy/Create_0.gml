@@ -30,3 +30,6 @@ is_hurt = false;
 hurt_timer = 0;
 s_dead = [SPR_Blood_1, SPR_Blood_2, SPR_Blood_3, SPR_Blood_4];
 s_dead_selected = -1;
+
+melee_hitbox = instance_create_layer(x, y, "Instances", OBJ_Enemy_Hitbox_Melee);
+melee_hitbox.enemy_parent = id;

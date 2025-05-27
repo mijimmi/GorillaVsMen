@@ -30,6 +30,10 @@ footstep_interval = 20; // Number of steps between footstep sounds
 // Hitbox Variable
 hitbox_spawned = false;
 
+// For i-frames
+invincible = false;
+invincibility_timer = 0;
+
 
 //levels
 level = 1;
