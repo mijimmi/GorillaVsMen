@@ -176,6 +176,7 @@
     {"id":{"name":"SPR_Floor_Tiles","path":"sprites/SPR_Floor_Tiles/SPR_Floor_Tiles.yy",},},
     {"id":{"name":"SPR_FX_Smash","path":"sprites/SPR_FX_Smash/SPR_FX_Smash.yy",},},
     {"id":{"name":"SPR_FX_Smash2","path":"sprites/SPR_FX_Smash2/SPR_FX_Smash2.yy",},},
+    {"id":{"name":"SPR_Gorilla_Dash","path":"sprites/SPR_Gorilla_Dash/SPR_Gorilla_Dash.yy",},},
     {"id":{"name":"SPR_Gorilla_Hitbox","path":"sprites/SPR_Gorilla_Hitbox/SPR_Gorilla_Hitbox.yy",},},
     {"id":{"name":"SPR_Gorilla_Hurt","path":"sprites/SPR_Gorilla_Hurt/SPR_Gorilla_Hurt.yy",},},
     {"id":{"name":"SPR_Gorilla_Idle","path":"sprites/SPR_Gorilla_Idle/SPR_Gorilla_Idle.yy",},},

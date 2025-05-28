@@ -124,6 +124,7 @@
     {"name":"SPR_FloatingRockIcon","order":7,"path":"sprites/SPR_FloatingRockIcon/SPR_FloatingRockIcon.yy",},
     {"name":"SPR_Floor_Tiles","order":3,"path":"sprites/SPR_Floor_Tiles/SPR_Floor_Tiles.yy",},
     {"name":"SPR_FX_Smash2","order":1,"path":"sprites/SPR_FX_Smash2/SPR_FX_Smash2.yy",},
+    {"name":"SPR_Gorilla_Dash","order":10,"path":"sprites/SPR_Gorilla_Dash/SPR_Gorilla_Dash.yy",},
     {"name":"SPR_Gorilla_Hitbox","order":5,"path":"sprites/SPR_Gorilla_Hitbox/SPR_Gorilla_Hitbox.yy",},
     {"name":"SPR_Gorilla_Hurt","order":6,"path":"sprites/SPR_Gorilla_Hurt/SPR_Gorilla_Hurt.yy",},
     {"name":"SPR_Gorilla_Right","order":2,"path":"sprites/SPR_Gorilla_Right/SPR_Gorilla_Right.yy",},
