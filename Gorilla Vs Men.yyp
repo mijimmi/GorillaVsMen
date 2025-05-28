@@ -171,8 +171,6 @@
     {"id":{"name":"SPR_ExpBanana","path":"sprites/SPR_ExpBanana/SPR_ExpBanana.yy",},},
     {"id":{"name":"SPR_FloatingRock","path":"sprites/SPR_FloatingRock/SPR_FloatingRock.yy",},},
     {"id":{"name":"SPR_FloatingRockIcon","path":"sprites/SPR_FloatingRockIcon/SPR_FloatingRockIcon.yy",},},
-    {"id":{"name":"SPR_FloatATK","path":"sprites/SPR_FloatATK/SPR_FloatATK.yy",},},
-    {"id":{"name":"SPR_FloatRock","path":"sprites/SPR_FloatRock/SPR_FloatRock.yy",},},
     {"id":{"name":"SPR_Floor_Tiles","path":"sprites/SPR_Floor_Tiles/SPR_Floor_Tiles.yy",},},
     {"id":{"name":"SPR_FX_Smash","path":"sprites/SPR_FX_Smash/SPR_FX_Smash.yy",},},
     {"id":{"name":"SPR_FX_Smash2","path":"sprites/SPR_FX_Smash2/SPR_FX_Smash2.yy",},},

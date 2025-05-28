@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_Bananarang",
-    "path":"sprites/SPR_Bananarang/SPR_Bananarang.yy",
+    "name":"SPR_FloatingRock",
+    "path":"sprites/SPR_FloatingRock/SPR_FloatingRock.yy",
   },
   "spriteMaskId":null,
   "visible":true,

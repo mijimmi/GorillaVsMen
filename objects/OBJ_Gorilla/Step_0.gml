@@ -241,7 +241,7 @@ switch(float_current_state){
 		}
 		else  {
 			float_current_state = floatState.COOLDOWN
-			floatRockCooldown = 300 //edit this to increase cooldown
+			floatRockCooldown = 420 //edit this to increase cooldown
 			
 			
 			//destroy the rocks

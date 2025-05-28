@@ -120,8 +120,6 @@
     {"name":"SPR_Decorations","order":2,"path":"sprites/SPR_Decorations/SPR_Decorations.yy",},
     {"name":"SPR_FloatingRock","order":4,"path":"sprites/SPR_FloatingRock/SPR_FloatingRock.yy",},
     {"name":"SPR_FloatingRockIcon","order":7,"path":"sprites/SPR_FloatingRockIcon/SPR_FloatingRockIcon.yy",},
-    {"name":"SPR_FloatATK","order":7,"path":"sprites/SPR_FloatATK/SPR_FloatATK.yy",},
-    {"name":"SPR_FloatRock","order":2,"path":"sprites/SPR_FloatRock/SPR_FloatRock.yy",},
     {"name":"SPR_Floor_Tiles","order":3,"path":"sprites/SPR_Floor_Tiles/SPR_Floor_Tiles.yy",},
     {"name":"SPR_FX_Smash2","order":1,"path":"sprites/SPR_FX_Smash2/SPR_FX_Smash2.yy",},
     {"name":"SPR_Gorilla_Hitbox","order":5,"path":"sprites/SPR_Gorilla_Hitbox/SPR_Gorilla_Hitbox.yy",},
