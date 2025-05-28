@@ -70,12 +70,34 @@ var a = instance_create_layer(x, y, "LevelUI", OBJ_LevelManager);
 global.sword_level = 0
 global.boulder_level = 0
 global.boomerang_level = 0
+global.float_level = 0
 
 //attack timing
 global.slashAlarm = 80
 global.boulderAlarm = 200
 global.boomerangAlarm = 300
 
+//new shit for the step? crazy
+floatRockTimer = 0;
+floatRockCooldown = 0;
+float_current_state = floatState.IDLE;
+global.floatRock = false
+global.floatRocks = []
+
+enum floatState { IDLE, ORBITTING, COOLDOWN, CONSTANT, DEAD}
+
 alarm[0] = global.slashAlarm
 alarm[1] = global.boulderAlarm
 alarm[2] = global.boomerangAlarm
+
+//floatRock attack
+function spawnFloatRock(count = 4, orbit_speed = 3){
+	for (var i = 0; i < count; i++) {
+		var floatRock = instance_create_layer(x,y,"Instances", OBJ_FloatRock)
+		floatRock.owner = id;
+		floatRock.radius = 50;
+		floatRock.angle = i * (360/count);
+		floatRock.orbit_speed = orbit_speed;
+		global.floatRocks[array_length(global.floatRocks)] = floatRock.id
+	}
+}
