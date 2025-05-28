@@ -38,6 +38,11 @@ switch (power_type) {
         label_text = "BANANARANG";
         break;		
 		
+    case PowerType.FLOAT:
+        draw_sprite_ext(SPR_FloatATK, 0, x, y, scale, scale, 0, c_white, 1);
+        label_text = "ROCK PARADE";
+        break;		
+		
 }
 
 // Set font and compute text position

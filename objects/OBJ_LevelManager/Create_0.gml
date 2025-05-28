@@ -5,7 +5,8 @@ enum PowerType {
     SPD,
 	SWORD,
 	BOULDER,
-	BOOMERANG
+	BOOMERANG,
+	FLOAT
 }
 
 global.is_leveling_up = true;
@@ -20,6 +21,7 @@ ds_list_add(power_ups, PowerType.HP, PowerType.SPD, PowerType.ATK);// shuffle la
 if (global.sword_level < 3) {ds_list_add(power_ups, PowerType.SWORD)}
 if (global.boulder_level < 3) {ds_list_add(power_ups, PowerType.BOULDER)}
 if (global.boomerang_level < 3) {ds_list_add(power_ups, PowerType.BOOMERANG)}
+if (global.float_level < 3) {ds_list_add(power_ups, PowerType.FLOAT)}
 
 //draws power ups from the power up list after it is shuffled
 draw_powerups(power_ups, base_y)
@@ -53,6 +55,24 @@ function apply_powerup(type)
 		
 		case PowerType.BOOMERANG:
 			global.boomerang_level++
+			break
+			
+		case PowerType.FLOAT:
+			global.float_level++
+			if (global.float_level == 3) {
+				// Cleanup all float rocks
+				for (var i = 0; i < array_length(global.floatRocks); i++) {
+					if (instance_exists(global.floatRocks[i])) {
+						with (global.floatRocks[i]) {
+							instance_destroy();
+						}
+					}
+				}
+				global.floatRocks = [];
+				with(OBJ_Gorilla){
+					float_current_state = floatState.CONSTANT
+				}
+			}
 			break
 		//add the rest of the cases here
     }	

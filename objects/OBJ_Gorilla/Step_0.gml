@@ -210,3 +210,57 @@ function gorilla_take_damage(amount, source_x, source_y) {
 		audio_sound_gain(snd_grunt_inst, 0.7, 0); // Random volume
     }
 }
+
+// == FLOATING ROCK ATTACK ==
+switch(float_current_state){
+	case floatState.IDLE:
+		if (global.float_level > 0) {float_current_state = floatState.COOLDOWN}
+		break
+		
+	case floatState.COOLDOWN:
+		if (floatRockCooldown > 0) {
+			floatRockCooldown -= 1
+		}
+		else {
+			float_current_state = floatState.ORBITTING
+			if (global.float_level = 1) {
+				floatRockTimer = 300 //edit this to change how long the rocks stay out for
+				spawnFloatRock()
+				}
+			else if (global.float_level = 2) {
+				floatRockTimer = 500
+				spawnFloatRock(5)
+				}
+			else {float_current_state = floatState.CONSTANT}
+		}
+		break
+		
+	case floatState.ORBITTING:
+		if (floatRockTimer > 0) {
+			floatRockTimer -= 1
+		}
+		else  {
+			float_current_state = floatState.COOLDOWN
+			floatRockCooldown = 300 //edit this to increase cooldown
+			
+			
+			//destroy the rocks
+			for (var i = 0; i < array_length(global.floatRocks); i++){
+				if (instance_exists(global.floatRocks[i])) {
+					with (global.floatRocks[i]) {instance_destroy()
+					}
+				}
+			}
+			global.floatRocks = []
+			
+		}
+		break
+		
+	case floatState.CONSTANT:
+		spawnFloatRock(6)
+		float_current_state = floatState.DEAD
+		break
+		
+	case floatState.DEAD:
+		break
+}
