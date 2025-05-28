@@ -22,10 +22,21 @@ switch(global.sword_level)
 		break
 }
 
-function spawnSword(image_xscale, scale){
-	var slash = instance_create_layer(x, y, "Instances", OBJ_TreeSword)
-		slash.image_xscale = image_xscale * scale
-		slash.image_yscale = scale
-		if (image_xscale == 1) {slash.addX = 50 * scale}
-		if (image_xscale == -1) {slash.addX = -50 * scale}	
+function spawnSword(image_xscale, scale) {
+    var offset = (image_xscale == 1 ? 50 : -50) * scale;
+
+    // Create the visual slash object
+    var slash = instance_create_layer(x, y, "Instances", OBJ_TreeSword);
+    slash.image_xscale = image_xscale * scale;
+    slash.image_yscale = scale;
+    slash.x += offset;
+
+    slash.addX = offset;
+
+    // Create the hitbox at the same position
+    var hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_TreeSword_Hitbox);
+    hitbox.image_xscale = image_xscale * scale;
+    hitbox.image_yscale = scale;
+    hitbox.x += offset;
 }
+
