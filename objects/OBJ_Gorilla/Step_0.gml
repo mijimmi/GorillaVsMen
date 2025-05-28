@@ -134,6 +134,10 @@ switch (current_state) {
 	        instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash);
 			instance_create_layer(fx_x, fx_y, "Effects", OBJ_FX_Smash2);
 			
+			for (var i = 0; i < 8; i++) {
+			var debris = instance_create_layer(fx_x, fx_y, "Effects", OBJ_SmashDebris);
+}
+			
 			// === Spawn smash hitbox at correct position ===
 			var hitbox_x = x + (facing == "right" ? 16 : -16);
 			var hitbox_y = y;
@@ -141,8 +145,8 @@ switch (current_state) {
 
 	        // === Trigger camera shake ===
 	        with (OBJ_CameraController) {
-	            shake_timer = 10;
-	            shake_magnitude = 4;
+	            shake_timer = 12;
+	            shake_magnitude = 5;
 	        }
 			
 			smash_cooldown = 20;

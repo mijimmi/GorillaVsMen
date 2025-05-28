@@ -78,6 +78,7 @@
     {"name":"OBJ_ProjectileHitbox","order":2,"path":"objects/OBJ_ProjectileHitbox/OBJ_ProjectileHitbox.yy",},
     {"name":"OBJ_Roman_Archer","order":7,"path":"objects/OBJ_Roman_Archer/OBJ_Roman_Archer.yy",},
     {"name":"OBJ_Roman","order":1,"path":"objects/OBJ_Roman/OBJ_Roman.yy",},
+    {"name":"OBJ_SmashDebris","order":2,"path":"objects/OBJ_SmashDebris/OBJ_SmashDebris.yy",},
     {"name":"OBJ_Soldier","order":6,"path":"objects/OBJ_Soldier/OBJ_Soldier.yy",},
     {"name":"OBJ_Spear","order":2,"path":"objects/OBJ_Spear/OBJ_Spear.yy",},
     {"name":"OBJ_Sword","order":3,"path":"objects/OBJ_Sword/OBJ_Sword.yy",},

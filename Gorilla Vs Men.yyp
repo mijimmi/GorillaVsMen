@@ -116,6 +116,7 @@
     {"id":{"name":"OBJ_ProjectileHitbox","path":"objects/OBJ_ProjectileHitbox/OBJ_ProjectileHitbox.yy",},},
     {"id":{"name":"OBJ_Roman_Archer","path":"objects/OBJ_Roman_Archer/OBJ_Roman_Archer.yy",},},
     {"id":{"name":"OBJ_Roman","path":"objects/OBJ_Roman/OBJ_Roman.yy",},},
+    {"id":{"name":"OBJ_SmashDebris","path":"objects/OBJ_SmashDebris/OBJ_SmashDebris.yy",},},
     {"id":{"name":"OBJ_Soldier","path":"objects/OBJ_Soldier/OBJ_Soldier.yy",},},
     {"id":{"name":"OBJ_Spear","path":"objects/OBJ_Spear/OBJ_Spear.yy",},},
     {"id":{"name":"OBJ_Sword","path":"objects/OBJ_Sword/OBJ_Sword.yy",},},
