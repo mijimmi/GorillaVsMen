@@ -34,7 +34,7 @@ switch (power_type) {
         break;
 		
     case PowerType.BOOMERANG:
-        draw_sprite_ext(SPR_Bananarang, 0, x, y, scale, scale, 0, c_white, 1);
+        draw_sprite_ext(SPR_BananarangIcon, 0, x, y, scale, scale, 0, c_white, 1);
         label_text = "BANANARANG";
         break;		
 		

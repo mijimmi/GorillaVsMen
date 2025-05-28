@@ -178,7 +178,7 @@ function gorilla_take_damage(amount, source_x, source_y) {
         // Play death animation, effects, etc.
         // death logic here
     } else {
-        var knockback_strength = 3;
+        var knockback_strength = 6;
 
         var dx = x - source_x;
         var dy = y - source_y;
