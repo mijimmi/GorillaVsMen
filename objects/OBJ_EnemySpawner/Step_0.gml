@@ -111,10 +111,6 @@ if (global.round_num == 10) {
     exit;
 }
 
-// --- regular spawning code for other rounds ---
-// (Place your existing spawn logic here, as you already have it)
-// --- normal round behavior ---
-// --- pause spawning if leveling up ---
 if (global.is_leveling_up) {
     exit;
 }

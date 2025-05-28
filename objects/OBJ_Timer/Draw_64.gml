@@ -38,7 +38,6 @@ if (global.boss_fight_active) {
     exit;
 }
 
-// Draw timer for regular rounds
 var total_seconds = ceil(time_left / fs);
 var minutes = total_seconds div 60;
 var seconds = total_seconds mod 60;

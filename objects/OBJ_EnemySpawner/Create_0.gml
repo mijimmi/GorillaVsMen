@@ -41,6 +41,5 @@ part_type_life(spawn_particle_type, 15, 30);
 part_type_gravity(spawn_particle_type, 0, 270);
 part_type_blend(spawn_particle_type, true);
 
-// Add this to CREATE event of OBJ_EnemySpawner (if not already present)
 miniboss_spawned = false;
 finalboss_spawned = false;
