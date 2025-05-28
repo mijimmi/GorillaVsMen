@@ -52,24 +52,39 @@ function enemy_anim() {
 		    }
 		}
 
+	 if (sprite_index != s_dead_selected) {
+	    // Select death sprite
+	    if (is_array(s_dead)) {
+	        s_dead_selected = s_dead[irandom(array_length(s_dead) - 1)];
+	    } else {
+	        s_dead_selected = s_dead;
+	    }
+	    sprite_index = s_dead_selected;
+	    image_index = 0;
+	    image_speed = 1; // adjust as needed
 
-        if (sprite_index != s_dead_selected) {
-            // Select death sprite
-            if (is_array(s_dead)) {
-                s_dead_selected = s_dead[irandom(array_length(s_dead) - 1)];
-            } else {
-                s_dead_selected = s_dead;
-            }
-            sprite_index = s_dead_selected;
-            image_index = 0;
-            image_speed = 1; // adjust as needed
+	    // Blood burst effect
+		var _dir = point_direction(x, y, OBJ_Gorilla.x, OBJ_Gorilla.y) + 180;
+		var instance_blood = instance_create_depth(x, y, depth, obj_Particles);
 
-            // Play random death sound with random pitch and reduced volume
-            var _snd = choose(SND_Flesh, SND_Flesh2);
-            var _snd_inst = audio_play_sound(_snd, 1, false);
-            audio_sound_pitch(_snd_inst, random_range(0.8, 1.2));
-            audio_sound_gain(_snd_inst, 0.5, 0); // volume: 0.0 (mute) to 1.0
-        }
+		instance_blood.set_size(0.04, 0.05);
+		instance_blood.set_sprite(SPR_Blood, false, false, true);
+		instance_blood.set_orientation(0, 360);
+		var dark_red = make_color_rgb(150, 0, 0);
+		instance_blood.set_color(dark_red);
+		instance_blood.set_alpha(1, 0);
+		instance_blood.set_direction(_dir - 40, _dir + 40);
+		instance_blood.set_speed(5, 10, -1);
+		instance_blood.set_life(240, 360);
+		instance_blood.burst(20);
+		instance_blood.set_blend(false);
+
+	    // Play random death sound with random pitch and reduced volume
+	    var _snd = choose(SND_Flesh, SND_Flesh2);
+	    var _snd_inst = audio_play_sound(_snd, 1, false);
+	    audio_sound_pitch(_snd_inst, random_range(0.8, 1.2));
+	    audio_sound_gain(_snd_inst, 0.5, 0); // volume: 0.0 (mute) to 1.0
+	}
 
         if (image_index >= image_number - 1) {
             instance_destroy(); // or cleanup
