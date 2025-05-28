@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"SND_BGM_FFVI.mp3",
   "type":0,
-  "volume":0.77,
+  "volume":1.0,
 }

@@ -1,7 +1,7 @@
 // BGM configuration
 global.bgm_tracks = [SND_BGM_Mario, SND_BGM_FFVI, SND_BGM_Desert];
 global.bgm_timer = 0;
-global.bgm_duration = game_get_speed(gamespeed_fps) * 62;
+global.bgm_duration = game_get_speed(gamespeed_fps) * 124;
 global.last_bgm_track = -1;
 
 // Play first track immediately

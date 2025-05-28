@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":222.16853,
+  "duration":153.58403,
   "name":"SND_BGM_Mario",
   "parent":{
     "name":"Sounds",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"SND_BGM_Mario.mp3",
   "type":0,
-  "volume":0.84,
+  "volume":1.0,
 }
