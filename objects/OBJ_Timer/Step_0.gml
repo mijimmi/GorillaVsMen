@@ -10,6 +10,16 @@ switch (state) {
     case GameState.ROUND_ACTIVE:
         global.state = GameState.ROUND_ACTIVE;
 
+        // For round 5: pause timer and wait for miniboss kill
+        if (global.round_num == 5 && global.miniboss_alive) {
+            // Timer paused, do nothing here
+            exit;
+        }
+		
+		if (global.round_num == 10 && global.finalboss_alive) {
+		    exit; // pause timer during final boss fight
+		}
+
         // Fade volume back up gradually over 1 second
         fade_in_alpha = clamp(fade_in_alpha - (1 / fs), 0, 1);
 
@@ -48,10 +58,10 @@ switch (state) {
             with (OBJ_ParentEnemy) {
                 instance_destroy();
             }
-			with (OBJ_ExpBanana) {
+            with (OBJ_ExpBanana) {
                 instance_destroy();
             }
-			with (OBJ_HealthBanana) {
+            with (OBJ_HealthBanana) {
                 instance_destroy();
             }
         }
@@ -70,12 +80,11 @@ switch (state) {
         time_left = 60 * fs;
         fade_alpha = 0;
 
-        // reset fade_in_alpha to full fade for ROUND_ACTIVE
         fade_in_alpha = 1;
 
         state = GameState.ROUND_ACTIVE;
 
-        // Reset all enemy spawner timers to spawn immediately
+        // Reset enemy spawner timers to spawn immediately
         with (OBJ_EnemySpawner) {
             spawn_timer = 0;
         }
