@@ -2,11 +2,12 @@ spawn_timer = 0;
 spawn_delay = 120; // 2 seconds default (60 = 1 sec)
 
 enemy_tiers = [
-    [OBJ_Caveman],                                      // Round 1–2
-    [OBJ_Caveman, OBJ_Roman, OBJ_Roman_Archer],            // Round 3–4
-    [OBJ_Roman, OBJ_Knight, OBJ_Roman_Archer],                   // Round 5–6
-    [OBJ_Roman, OBJ_Knight, OBJ_KnightCavalry, OBJ_Musketeer],    // Round 7–8
-    [OBJ_Caveman, OBJ_Roman, OBJ_Knight, OBJ_Musketeer, OBJ_Soldier] // Round 9–10
+    [OBJ_Caveman],                                      
+    [OBJ_Caveman, OBJ_Roman, OBJ_Roman_Archer],           
+    [OBJ_Roman, OBJ_Knight, OBJ_Roman_Archer],                  
+    [OBJ_Roman, OBJ_Knight, OBJ_KnightCavalry, OBJ_Musketeer],    
+    [OBJ_Caveman, OBJ_Roman, OBJ_Knight, OBJ_Musketeer, OBJ_Soldier],
+	[OBJ_MiniBoss]
 ];
 
 spawn_area_min_x = 64;
@@ -39,3 +40,7 @@ part_type_direction(spawn_particle_type, 0, 360, 0, 0);
 part_type_life(spawn_particle_type, 15, 30);
 part_type_gravity(spawn_particle_type, 0, 270);
 part_type_blend(spawn_particle_type, true);
+
+// Add this to CREATE event of OBJ_EnemySpawner (if not already present)
+miniboss_spawned = false;
+finalboss_spawned = false;

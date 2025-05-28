@@ -21,3 +21,6 @@ fade_alpha = 0;
 fade_in_alpha = 1;
 round_end_sound_played = false;
 global.is_leveling_up = false;
+global.miniboss_alive = false;
+global.finalboss_alive = false;
+global.boss_fight_active= false;
