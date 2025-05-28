@@ -1,3 +1,4 @@
+
 // Zoom in 2.2x more than the normal view
 view_w = 400;
 view_h = 225;

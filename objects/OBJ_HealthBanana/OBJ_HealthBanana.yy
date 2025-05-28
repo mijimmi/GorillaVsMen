@@ -11,8 +11,8 @@
   "name":"OBJ_HealthBanana",
   "overriddenProperties":[],
   "parent":{
-    "name":"GUI Elements",
-    "path":"folders/Objects/GUI Elements.yy",
+    "name":"EXP Pickups",
+    "path":"folders/Objects/EXP Pickups.yy",
   },
   "parentObjectId":null,
   "persistent":false,
