@@ -37,5 +37,5 @@
     "path":"sprites/SPR_TreeSword_Hitbox/SPR_TreeSword_Hitbox.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
