@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_Gorilla_Hitbox_Parent",
+  "%Name":"OBJ_TreeSword_Hitbox",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"OBJ_Gorilla_Hitbox_Parent",
+  "name":"OBJ_TreeSword_Hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hitbox",
-    "path":"folders/Objects/Player/Hitbox.yy",
+    "name":"Powerup Hitboxes",
+    "path":"folders/Objects/Player/Hitbox/Powerup Hitboxes.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"OBJ_Gorilla_Hitbox_Parent",
+    "path":"objects/OBJ_Gorilla_Hitbox_Parent/OBJ_Gorilla_Hitbox_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"SPR_TreeSword_Hitbox",
+    "path":"sprites/SPR_TreeSword_Hitbox/SPR_TreeSword_Hitbox.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
