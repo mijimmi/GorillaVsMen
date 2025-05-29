@@ -101,3 +101,9 @@ function spawnFloatRock(count = 4, orbit_speed = 3){
 		global.floatRocks[array_length(global.floatRocks)] = floatRock.id
 	}
 }
+
+global.has_dash = false;
+dash_speed = 12;
+dash_timer = 0;
+dash_duration = 8; // frames
+dash_cooldown = 0;
