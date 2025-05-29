@@ -6,7 +6,8 @@ enum PowerType {
 	SWORD,
 	BOULDER,
 	BOOMERANG,
-	FLOAT
+	FLOAT,
+	DASH
 }
 
 global.is_leveling_up = true;
@@ -18,13 +19,14 @@ base_y = 1080/2;
 
 // Create power-up list
 power_ups = ds_list_create();
-ds_list_add(power_ups, PowerType.HP, PowerType.SPD, PowerType.ATK);// shuffle later
+ds_list_add(power_ups, PowerType.HP, PowerType.SPD, PowerType.ATK);
 
-//messy if statements, if the level is 3 it won't append it to the list it's creating
-if (global.sword_level < 3) {ds_list_add(power_ups, PowerType.SWORD)}
-if (global.boulder_level < 3) {ds_list_add(power_ups, PowerType.BOULDER)}
-if (global.boomerang_level < 3) {ds_list_add(power_ups, PowerType.BOOMERANG)}
-if (global.float_level < 3) {ds_list_add(power_ups, PowerType.FLOAT)}
+// Add special powers if not maxed/unlocked
+if (global.sword_level < 3)        { ds_list_add(power_ups, PowerType.SWORD); }
+if (global.boulder_level < 3)      { ds_list_add(power_ups, PowerType.BOULDER); }
+if (global.boomerang_level < 3)    { ds_list_add(power_ups, PowerType.BOOMERANG); }
+if (global.float_level < 3)        { ds_list_add(power_ups, PowerType.FLOAT); }
+if (!global.has_dash)              { ds_list_add(power_ups, PowerType.DASH); } 
 
 //draws power ups from the power up list after it is shuffled
 draw_powerups(power_ups, base_y)
@@ -59,6 +61,10 @@ function apply_powerup(type)
 		case PowerType.BOOMERANG:
 			global.boomerang_level++
 			break
+		
+		case PowerType.DASH:
+            global.has_dash = true;
+            break;
 			
 		case PowerType.FLOAT:
 			global.float_level++

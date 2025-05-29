@@ -41,7 +41,12 @@ switch (power_type) {
     case PowerType.FLOAT:
         draw_sprite_ext(SPR_FloatingRockIcon, 0, x, y, scale, scale, 0, c_white, 1);
         label_text = "ROCK PARADE";
-        break;		
+        break;
+		
+	case PowerType.DASH:
+        draw_sprite_ext(SPR_Gorilla_Dash, 0, x, y, scale, scale, 0, c_white, 1);
+        label_text = "DASH";
+        break;
 		
 }
 
