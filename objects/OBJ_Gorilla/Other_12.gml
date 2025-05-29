@@ -33,6 +33,8 @@ switch(global.boomerang_level)
 //spawns the main boomerang which tracks targets
 function spawnBoomerang(dir, scale = 1.1){
 	var boomerang = instance_create_layer(x , y, "Instances", OBJ_Boomerang)
+	boomerang.owner = id; 
+
 	boomerang.speed = 4
 	boomerang.direction = dir
 	
@@ -59,4 +61,10 @@ function spawnSecondaryBoomerang(dir, spread, scale = 1.1){
 	boomerang.direction = dir + random_range(-spread, spread)
 	boomerang.image_xscale = scale
 	boomerang.image_yscale = scale
+	
+	var hb = instance_create_layer(proj.x, proj.y, "Hitboxes", OBJ_Bananarang_Hitbox);
+	hb.follow_target = proj;
+	hb.owner = id; // assuming 'id' is the OBJ_Gorilla that fired it
+	hb.damage = 1;
+	hb.cooldown = 30; // in frames
 }
