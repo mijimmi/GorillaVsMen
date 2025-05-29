@@ -161,6 +161,68 @@ switch (current_state) {
 	    break;
 }
 
+// === Dash Logic ===
+if (global.has_dash) {
+    if (dash_cooldown > 0) dash_cooldown--;
+
+    if (dash_timer > 0) {
+        dash_timer--;
+
+        if (!dash_sound_played) {
+            var pitch = random_range(0.9, 1.1);
+            var snd_inst = audio_play_sound(SND_Dash, 0.5, false);
+            audio_sound_pitch(snd_inst, pitch);
+            dash_sound_played = true;
+        }
+        invincible = true;
+
+        // Use current movement direction for dash
+        var dash_dir_x = xdir;
+        var dash_dir_y = ydir;
+
+        // If no input direction, fallback to facing direction (left/right)
+        if (dash_dir_x == 0 && dash_dir_y == 0) {
+            dash_dir_x = (facing == "right") ? 1 : -1;
+            dash_dir_y = 0;
+        }
+
+        // Normalize dash direction just in case
+        var dash_length = point_distance(0, 0, dash_dir_x, dash_dir_y);
+        if (dash_length > 0) {
+            dash_dir_x /= dash_length;
+            dash_dir_y /= dash_length;
+        }
+
+        // Calculate proposed new position
+        var new_x = x + dash_dir_x * dash_speed;
+        var new_y = y + dash_dir_y * dash_speed;
+
+        // Check collisions separately and move accordingly
+        if (!place_meeting(new_x, y, OBJ_Wall)) {
+            x = new_x;
+        }
+        if (!place_meeting(x, new_y, OBJ_Wall)) {
+            y = new_y;
+        }
+
+        // Create dash trail effect
+        var trail = instance_create_layer(x, y, "Effects", OBJ_DashTrail);
+        trail.image_xscale = image_xscale;
+        trail.image_yscale = image_yscale;
+        trail.image_index = image_index;
+        trail.image_speed = 0;
+
+        if (dash_timer <= 0) {
+            invincible = false;
+            invincibility_timer = 0;
+            dash_cooldown = 480; // 8 seconds cooldown
+        }
+    } else if (keyboard_check_pressed(vk_space) && dash_cooldown <= 0 && current_state != GorillaState.SMASH) {
+        dash_timer = dash_duration;
+        dash_sound_played = false; // reset sound flag
+    }
+}
+
 // === Wall Collisions & Apply Movement ===
 if (current_state != GorillaState.SMASH) {
     if (place_meeting(x + xspd, y, OBJ_Wall)) {
@@ -176,6 +238,11 @@ if (current_state != GorillaState.SMASH) {
 
 // === Gorilla Damage Function ===
 function gorilla_take_damage(amount, source_x, source_y) {
+    // === Prevent damage while dashing ===
+    if (dash_timer > 0) {
+        return;
+    }
+
     hp -= amount;
 
     if (hp <= 0) {
@@ -201,17 +268,18 @@ function gorilla_take_damage(amount, source_x, source_y) {
         invincibility_timer = 30;
 
         // === Trigger camera shake ===
-		with (OBJ_CameraController) {
-		    shake_timer = 10;
-		    shake_magnitude = 4;
+        with (OBJ_CameraController) {
+            shake_timer = 10;
+            shake_magnitude = 4;
 
-		    flash_timer = 30; // 30 frames = 1 second
-		    flash_color = c_red;
-		}
-		// === Play grunt sound with random pitch and volume ===
-		var snd_grunt_inst = audio_play_sound(SND_Grunt, 1, false);
-		audio_sound_pitch(snd_grunt_inst, random_range(0.95, 1.05)); // Slight pitch variation
-		audio_sound_gain(snd_grunt_inst, 0.7, 0); // Random volume
+            flash_timer = 30;
+            flash_color = c_red;
+        }
+
+        // === Play grunt sound with random pitch and volume ===
+        var snd_grunt_inst = audio_play_sound(SND_Grunt, 1, false);
+        audio_sound_pitch(snd_grunt_inst, random_range(0.95, 1.05));
+        audio_sound_gain(snd_grunt_inst, 0.7, 0);
     }
 }
 
@@ -267,30 +335,5 @@ switch(float_current_state){
 		
 	case floatState.DEAD:
 		break
-}
-
-// === Dash Logic ===
-if (global.has_dash) {
-    if (dash_cooldown > 0) dash_cooldown--;
-    if (dash_timer > 0) {
-        dash_timer--;
-        
-        var dir = (facing == "right") ? 1 : -1;
-        if (!place_meeting(x + dash_speed * dir, y, OBJ_Wall)) {
-            x += dash_speed * dir;
-        }
-
-        if (dash_timer mod 2 == 0) {
-            //var fx = instance_create_layer(x, y, "Effects", OBJ_Dash);
-            //fx.image_index = image_index;
-            //fx.image_alpha = 0.5;
-        }
-
-        if (dash_timer <= 0) {
-            dash_cooldown = 480;//8 secs
-        }
-    } else if (keyboard_check_pressed(vk_space) && dash_cooldown <= 0 && current_state != GorillaState.SMASH) {
-        dash_timer = dash_duration;
-    }
 }
 

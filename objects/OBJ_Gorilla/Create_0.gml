@@ -37,7 +37,6 @@ hitbox_spawned = false;
 invincible = false;
 invincibility_timer = 0;
 
-
 //levels
 level = 1;
 xp = 0;
@@ -105,5 +104,6 @@ function spawnFloatRock(count = 4, orbit_speed = 3){
 global.has_dash = false;
 dash_speed = 12;
 dash_timer = 0;
-dash_duration = 8; // frames
+dash_duration = 6; // frames
 dash_cooldown = 0;
+dash_sound_played = false;
