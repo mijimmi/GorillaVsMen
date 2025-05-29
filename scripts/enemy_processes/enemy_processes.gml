@@ -59,10 +59,15 @@ function enemy_anim() {
 	    } else {
 	        s_dead_selected = s_dead;
 	    }
+		with (OBJ_CameraController) {
+		shake_timer = 2;
+	    shake_magnitude = 1.5;
+	    }
 	    sprite_index = s_dead_selected;
 	    image_index = 0;
 	    image_speed = 1; // adjust as needed
-
+		
+			
 	    // Blood burst effect
 		var _dir = point_direction(x, y, OBJ_Gorilla.x, OBJ_Gorilla.y) + 180;
 		var instance_blood = instance_create_depth(x, y, depth, obj_Particles);
@@ -76,7 +81,7 @@ function enemy_anim() {
 		instance_blood.set_direction(_dir - 40, _dir + 40);
 		instance_blood.set_speed(5, 10, -1);
 		instance_blood.set_life(240, 360);
-		instance_blood.burst(20);
+		instance_blood.burst(30);
 		instance_blood.set_blend(false);
 
 	    // Play random death sound with random pitch and reduced volume
@@ -84,6 +89,7 @@ function enemy_anim() {
 	    var _snd_inst = audio_play_sound(_snd, 1, false);
 	    audio_sound_pitch(_snd_inst, random_range(0.8, 1.2));
 	    audio_sound_gain(_snd_inst, 0.5, 0); // volume: 0.0 (mute) to 1.0
+		
 	}
 
         if (image_index >= image_number - 1) {
@@ -93,11 +99,26 @@ function enemy_anim() {
         return;
     }
 
-    if (is_hurt) {
-        sprite_index = s_hurt;
-        image_speed = 0.05;
-        return;
-    }
+		if (is_hurt) {
+			sprite_index = s_hurt;
+			image_speed = 0.05;
+
+			if (!has_played_hurt_sound) {
+			    var _snd_hrt = audio_play_sound(SND_Hit, 1, false);
+			    audio_sound_pitch(_snd_hrt, random_range(0.8, 1.2));
+			    audio_sound_gain(_snd_hrt, 0.3, 0);
+			    has_played_hurt_sound = true;
+			}
+			
+			with (OBJ_CameraController) {
+			shake_timer = 2;
+	        shake_magnitude = 1.5;
+	        }
+			
+			return;
+		} else {
+			has_played_hurt_sound = false; // reset if not hurt anymore
+		}
 
     switch (state) {
         case states.IDLE:

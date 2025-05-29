@@ -76,6 +76,7 @@
   "name":"Gorilla Vs Men",
   "resources":[
     {"id":{"name":"FNT_Main_Large","path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},},
+    {"id":{"name":"FNT_Main_Mini","path":"fonts/FNT_Main_Mini/FNT_Main_Mini.yy",},},
     {"id":{"name":"FNT_Main_XL","path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},},
     {"id":{"name":"FNT_Main","path":"fonts/FNT_Main/FNT_Main.yy",},},
     {"id":{"name":"FNT_Subfont","path":"fonts/FNT_Subfont/FNT_Subfont.yy",},},
@@ -151,6 +152,8 @@
     {"id":{"name":"SND_Grunt","path":"sounds/SND_Grunt/SND_Grunt.yy",},},
     {"id":{"name":"SND_Gunshot","path":"sounds/SND_Gunshot/SND_Gunshot.yy",},},
     {"id":{"name":"SND_Heal","path":"sounds/SND_Heal/SND_Heal.yy",},},
+    {"id":{"name":"SND_Hit","path":"sounds/SND_Hit/SND_Hit.yy",},},
+    {"id":{"name":"SND_LVL","path":"sounds/SND_LVL/SND_LVL.yy",},},
     {"id":{"name":"SND_Round_End","path":"sounds/SND_Round_End/SND_Round_End.yy",},},
     {"id":{"name":"SND_Smash","path":"sounds/SND_Smash/SND_Smash.yy",},},
     {"id":{"name":"SND_Smash2","path":"sounds/SND_Smash2/SND_Smash2.yy",},},

@@ -51,6 +51,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"FNT_Main_Large","order":1,"path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},
+    {"name":"FNT_Main_Mini","order":3,"path":"fonts/FNT_Main_Mini/FNT_Main_Mini.yy",},
     {"name":"FNT_Main_XL","order":2,"path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},
     {"name":"OBJ_Arrow","order":1,"path":"objects/OBJ_Arrow/OBJ_Arrow.yy",},
     {"name":"OBJ_AudioManager","order":4,"path":"objects/OBJ_AudioManager/OBJ_AudioManager.yy",},
@@ -104,6 +105,8 @@
     {"name":"SND_Grunt","order":20,"path":"sounds/SND_Grunt/SND_Grunt.yy",},
     {"name":"SND_Gunshot","order":12,"path":"sounds/SND_Gunshot/SND_Gunshot.yy",},
     {"name":"SND_Heal","order":17,"path":"sounds/SND_Heal/SND_Heal.yy",},
+    {"name":"SND_Hit","order":21,"path":"sounds/SND_Hit/SND_Hit.yy",},
+    {"name":"SND_LVL","order":22,"path":"sounds/SND_LVL/SND_LVL.yy",},
     {"name":"SND_Smash","order":5,"path":"sounds/SND_Smash/SND_Smash.yy",},
     {"name":"SND_Smash2","order":6,"path":"sounds/SND_Smash2/SND_Smash2.yy",},
     {"name":"SND_Smash3","order":7,"path":"sounds/SND_Smash3/SND_Smash3.yy",},

@@ -10,6 +10,9 @@ enum PowerType {
 }
 
 global.is_leveling_up = true;
+var lvl_up_volume = 0.7; // adjust volume here
+audio_play_sound(SND_LVL, 1, false);
+audio_sound_gain(SND_LVL, lvl_up_volume, 0);
 
 base_y = 1080/2;
 
