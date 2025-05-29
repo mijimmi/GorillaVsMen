@@ -6,6 +6,7 @@ global.last_bgm_track = -1;
 
 // Play first track immediately
 var available = [];
+randomize();
 for (var i = 0; i < array_length(global.bgm_tracks); i++) {
     array_push(available, global.bgm_tracks[i]);
 }
