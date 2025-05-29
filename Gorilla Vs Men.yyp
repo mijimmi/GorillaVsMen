@@ -155,6 +155,7 @@
     {"id":{"name":"SND_Hit","path":"sounds/SND_Hit/SND_Hit.yy",},},
     {"id":{"name":"SND_LVL","path":"sounds/SND_LVL/SND_LVL.yy",},},
     {"id":{"name":"SND_Round_End","path":"sounds/SND_Round_End/SND_Round_End.yy",},},
+    {"id":{"name":"SND_Slash","path":"sounds/SND_Slash/SND_Slash.yy",},},
     {"id":{"name":"SND_Smash","path":"sounds/SND_Smash/SND_Smash.yy",},},
     {"id":{"name":"SND_Smash2","path":"sounds/SND_Smash2/SND_Smash2.yy",},},
     {"id":{"name":"SND_Smash3","path":"sounds/SND_Smash3/SND_Smash3.yy",},},

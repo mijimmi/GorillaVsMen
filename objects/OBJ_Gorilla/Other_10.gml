@@ -38,5 +38,12 @@ function spawnSword(image_xscale, scale) {
     hitbox.image_xscale = image_xscale * scale;
     hitbox.image_yscale = scale;
     hitbox.x += offset;
-}
 
+    // Play slash sound with random pitch and adjustable volume
+    var snd = audio_play_sound(SND_Slash, 1, false);
+    var vol = 0.6; // adjust volume here
+    var pitch = random_range(0.9, 1.1); // slight variation
+
+    audio_sound_gain(snd, vol, 0);
+    audio_sound_pitch(snd, pitch);
+}

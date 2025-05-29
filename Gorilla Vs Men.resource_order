@@ -107,6 +107,7 @@
     {"name":"SND_Heal","order":17,"path":"sounds/SND_Heal/SND_Heal.yy",},
     {"name":"SND_Hit","order":21,"path":"sounds/SND_Hit/SND_Hit.yy",},
     {"name":"SND_LVL","order":22,"path":"sounds/SND_LVL/SND_LVL.yy",},
+    {"name":"SND_Slash","order":23,"path":"sounds/SND_Slash/SND_Slash.yy",},
     {"name":"SND_Smash","order":5,"path":"sounds/SND_Smash/SND_Smash.yy",},
     {"name":"SND_Smash2","order":6,"path":"sounds/SND_Smash2/SND_Smash2.yy",},
     {"name":"SND_Smash3","order":7,"path":"sounds/SND_Smash3/SND_Smash3.yy",},
