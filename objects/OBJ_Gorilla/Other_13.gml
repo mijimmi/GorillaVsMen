@@ -29,6 +29,7 @@ function spawnDart(dir){
 	dart.image_yscale = 0.70;
 }
 
+//bruh
 //function to get the location of the target
 function getDirection(){
 	if (instance_exists(OBJ_ParentEnemy)){
