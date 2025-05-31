@@ -2,7 +2,7 @@ spawn_timer = 0;
 spawn_delay = 120; // 2 seconds default (60 = 1 sec)
 
 enemy_tiers = [
-    [OBJ_Caveman, OBJ_Roman_Archer],                                      
+    [OBJ_Caveman],                                      
     [OBJ_Caveman, OBJ_Roman, OBJ_Roman_Archer],           
     [OBJ_Roman, OBJ_Knight, OBJ_Roman_Archer],                  
     [OBJ_Roman, OBJ_Knight, OBJ_KnightCavalry, OBJ_Musketeer],    
