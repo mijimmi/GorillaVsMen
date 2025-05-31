@@ -12,9 +12,9 @@
     {"name":"VFX","order":2,"path":"folders/Objects/Enemy OBJ/VFX.yy",},
     {"name":"Weapons","order":8,"path":"folders/Objects/Enemy OBJ/Weapons.yy",},
     {"name":"EXP Pickups","order":5,"path":"folders/Objects/EXP Pickups.yy",},
-    {"name":"Menu","order":9,"path":"folders/Objects/Menu.yy",},
     {"name":"GUI Elements","order":1,"path":"folders/Objects/GUI Elements.yy",},
     {"name":"Level System","order":8,"path":"folders/Objects/Level System.yy",},
+    {"name":"Menu","order":9,"path":"folders/Objects/Menu.yy",},
     {"name":"Particle System","order":7,"path":"folders/Objects/Particle System.yy",},
     {"name":"Player","order":3,"path":"folders/Objects/Player.yy",},
     {"name":"Hitbox","order":3,"path":"folders/Objects/Player/Hitbox.yy",},
@@ -175,5 +175,5 @@
     {"name":"Sprite71","order":2,"path":"sprites/Sprite71/Sprite71.yy",},
     {"name":"TS_Decorations","order":3,"path":"tilesets/TS_Decorations/TS_Decorations.yy",},
     {"name":"TS_Floor","order":4,"path":"tilesets/TS_Floor/TS_Floor.yy",},
-  ]
+  ],
 }

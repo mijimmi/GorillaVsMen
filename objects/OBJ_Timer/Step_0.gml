@@ -84,7 +84,7 @@ switch (state) {
     case GameState.WAITING_NEXT_ROUND:
         round_num += 1;
         global.round_num = round_num;
-        time_left = 3 * fs;
+        time_left = 60 * fs;
         fade_alpha = 0;
 
         fade_in_alpha = 1;
