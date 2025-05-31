@@ -6,4 +6,4 @@ enemy_tier = 0;
 //assign_sprites
 s_moveORidle = SPR_Caveman;
 s_hurt = SPR_Caveman_Hurt;
-melee_hitbox.damage = 3;
+melee_hitbox.damage = 2;
