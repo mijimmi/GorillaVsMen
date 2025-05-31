@@ -7,7 +7,8 @@ enum PowerType {
 	BOULDER,
 	BOOMERANG,
 	FLOAT,
-	DASH
+	DASH,
+	DART
 }
 
 global.is_leveling_up = true;
@@ -25,7 +26,8 @@ ds_list_add(power_ups, PowerType.HP, PowerType.SPD, PowerType.ATK);
 if (global.sword_level < 3)        { ds_list_add(power_ups, PowerType.SWORD); }
 if (global.boulder_level < 3)      { ds_list_add(power_ups, PowerType.BOULDER); }
 if (global.boomerang_level < 3)    { ds_list_add(power_ups, PowerType.BOOMERANG); }
-if (global.float_level < 3)        { ds_list_add(power_ups, PowerType.FLOAT); }
+if (global.float_level < 3)        { ds_list_add(power_ups, PowerType.FLOAT);} 
+if (global.dart_level < 3)		   {ds_list_add(power_ups, PowerType.DART)}
 if (!global.has_dash)              { ds_list_add(power_ups, PowerType.DASH); } 
 
 //draws power ups from the power up list after it is shuffled
@@ -84,6 +86,12 @@ function apply_powerup(type)
 			}
 			break
 		//add the rest of the cases here
+		case PowerType.DART:
+			global.dart_level++
+			//increases the amount of darts you can shoot in a burst
+			if (global.dart_level == 1) {global.dart_max = 5}
+			if (global.dart_level == 2) {global.dart_max = 7}
+			if (global.dart_level == 3) {global.dart_max = 9}
     }	
 	
 }

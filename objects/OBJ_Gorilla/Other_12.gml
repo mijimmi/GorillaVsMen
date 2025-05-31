@@ -1,5 +1,4 @@
 /// @description Boomerang
-///@description Boulder
 if (global.is_leveling_up) {
     exit;
 }

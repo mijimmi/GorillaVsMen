@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_FloatRock",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"OBJ_DartMonkey",
+  "eventList":[],
   "managed":true,
-  "name":"OBJ_FloatRock",
+  "name":"OBJ_DartMonkey",
   "overriddenProperties":[],
   "parent":{
     "name":"Power_Ups",
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_FloatingRock",
-    "path":"sprites/SPR_FloatingRock/SPR_FloatingRock.yy",
+    "name":"SPR_Dart",
+    "path":"sprites/SPR_Dart/SPR_Dart.yy",
   },
   "spriteMaskId":null,
   "visible":true,
