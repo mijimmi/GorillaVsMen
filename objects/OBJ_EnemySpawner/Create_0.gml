@@ -7,7 +7,6 @@ enemy_tiers = [
     [OBJ_Roman, OBJ_Knight, OBJ_Roman_Archer],                  
     [OBJ_Roman, OBJ_Knight, OBJ_KnightCavalry, OBJ_Musketeer],    
     [OBJ_Caveman, OBJ_Roman, OBJ_Knight, OBJ_Musketeer, OBJ_Soldier],
-	[OBJ_MiniBoss]
 ];
 
 spawn_area_min_x = 64;
