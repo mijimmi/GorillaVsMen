@@ -13,4 +13,4 @@ enemy_tier = 1;
 
 hp_max = 30;
 hp = hp_max;
-melee.hitbox_damage = 10;
+melee_hitbox.damage = 4;
