@@ -10,16 +10,23 @@ switch (state) {
     case GameState.ROUND_ACTIVE:
         global.state = GameState.ROUND_ACTIVE;
 
-        // For round 5: pause timer and wait for miniboss kill
-        if (global.round_num == 5 && global.miniboss_alive) {
-            // Timer paused, do nothing here
-            exit;
-        }
 		
 		if (global.round_num == 10 && global.finalboss_alive) {
 		    exit; // pause timer during final boss fight
 		}
-
+		
+		// Check if final boss was killed - immediately complete the round
+		if (global.round_num == 10 && !global.finalboss_alive && global.boss_fight_active) {
+		    // Final boss defeated! Complete the round immediately
+		    time_left = 0;
+		    state = GameState.ROUND_COMPLETE;
+		    wait_counter = wait_timer;
+		    fade_alpha = 0;
+		    round_end_sound_played = false;
+		    fade_in_alpha = 1;
+		    global.boss_fight_active = false; // Reset boss fight flag
+		    break;
+		}
         // Fade volume back up gradually over 1 second
         fade_in_alpha = clamp(fade_in_alpha - (1 / fs), 0, 1);
 
@@ -77,7 +84,7 @@ switch (state) {
     case GameState.WAITING_NEXT_ROUND:
         round_num += 1;
         global.round_num = round_num;
-        time_left = 60 * fs;
+        time_left = 3 * fs;
         fade_alpha = 0;
 
         fade_in_alpha = 1;
