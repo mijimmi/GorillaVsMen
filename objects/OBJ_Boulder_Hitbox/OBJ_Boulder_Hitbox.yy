@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_Boulder",
+  "%Name":"OBJ_Boulder_Hitbox",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":40,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"OBJ_Boulder",
+  "name":"OBJ_Boulder_Hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"Power_Ups",
-    "path":"folders/Objects/Power_Ups.yy",
+    "name":"Powerup Hitboxes",
+    "path":"folders/Objects/Player/Hitbox/Powerup Hitboxes.yy",
   },
   "parentObjectId":{
-    "name":"OBJ_Weapon_Parent",
-    "path":"objects/OBJ_Weapon_Parent/OBJ_Weapon_Parent.yy",
+    "name":"OBJ_Projectile_Hitbox",
+    "path":"objects/OBJ_Projectile_Hitbox/OBJ_Projectile_Hitbox.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_Boulder",
-    "path":"sprites/SPR_Boulder/SPR_Boulder.yy",
+    "name":"SPR_Boulder_Hitbox",
+    "path":"sprites/SPR_Boulder_Hitbox/SPR_Boulder_Hitbox.yy",
   },
   "spriteMaskId":null,
   "visible":true,
