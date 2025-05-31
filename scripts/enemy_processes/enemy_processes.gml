@@ -51,6 +51,11 @@ function enemy_anim() {
 		        instance_destroy(bow_inst);
 		    }
 		}
+		if (variable_instance_exists(id, "rifle_inst")) {
+		    if (instance_exists(rifle_inst)) {
+		        instance_destroy(rifle_inst);
+		    }
+		}
 
 	 if (sprite_index != s_dead_selected) {
 	    // Select death sprite

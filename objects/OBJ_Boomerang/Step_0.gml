@@ -7,7 +7,9 @@ image_angle += 10
 var dist = point_distance(x,y, start_x, start_y)
 
 if (!returning && dist >= max_distance){
-	returning = true;
+    returning = true;
+    audio_play_sound(SND_Boomerang, 1, false);
+    audio_sound_gain(SND_Boomerang, 0.6, 0);
 }
 
 if (returning) {

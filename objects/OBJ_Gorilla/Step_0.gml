@@ -223,6 +223,7 @@ if (global.has_dash) {
     }
 }
 
+
 // === Wall Collisions & Apply Movement ===
 if (current_state != GorillaState.SMASH) {
     if (place_meeting(x + xspd, y, OBJ_Wall)) {
@@ -295,11 +296,11 @@ switch(float_current_state){
 		}
 		else {
 			float_current_state = floatState.ORBITTING
-			if (global.float_level = 1) {
+			if (global.float_level == 1) {
 				floatRockTimer = 300 //edit this to change how long the rocks stay out for
 				spawnFloatRock()
 				}
-			else if (global.float_level = 2) {
+			else if (global.float_level == 2) {
 				floatRockTimer = 500
 				spawnFloatRock(5)
 				}
