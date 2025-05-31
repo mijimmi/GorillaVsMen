@@ -175,5 +175,5 @@
     {"name":"Sprite71","order":2,"path":"sprites/Sprite71/Sprite71.yy",},
     {"name":"TS_Decorations","order":3,"path":"tilesets/TS_Decorations/TS_Decorations.yy",},
     {"name":"TS_Floor","order":4,"path":"tilesets/TS_Floor/TS_Floor.yy",},
-  ],
+  ]
 }

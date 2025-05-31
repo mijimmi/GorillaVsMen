@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"hitbox_init",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Power Ups",
+    "path":"folders/Sprites/Power Ups.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

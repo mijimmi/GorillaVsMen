@@ -42,6 +42,7 @@ level = 1;
 xp = 0;
 required_xp= 100;
 
+
 function add_xp(_xp_to_add){
 	xp += _xp_to_add;
 	if (xp >= required_xp){
@@ -70,11 +71,14 @@ global.sword_level = 0
 global.boulder_level = 0
 global.boomerang_level = 0
 global.float_level = 0
+global.dart_level = 0
 
 //attack timing
 global.slashAlarm = 80
 global.boulderAlarm = 200
 global.boomerangAlarm = 300
+global.dartTiming = 10
+global.dartAlarm = 50
 
 //new shit for the step? crazy
 floatRockTimer = 0;
@@ -88,6 +92,11 @@ enum floatState { IDLE, ORBITTING, COOLDOWN, CONSTANT, DEAD}
 alarm[0] = global.slashAlarm
 alarm[1] = global.boulderAlarm
 alarm[2] = global.boomerangAlarm
+alarm[3] = global.dartTiming
+
+//dart shit
+dart_count = 0;
+global.dart_max = 0;
 
 //floatRock attack
 function spawnFloatRock(count = 4, orbit_speed = 3){

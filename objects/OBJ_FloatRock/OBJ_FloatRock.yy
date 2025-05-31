@@ -12,7 +12,10 @@
     "name":"Power_Ups",
     "path":"folders/Objects/Power_Ups.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"OBJ_Weapon_Parent",
+    "path":"objects/OBJ_Weapon_Parent/OBJ_Weapon_Parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

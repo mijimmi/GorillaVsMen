@@ -1,5 +1,4 @@
 /// @description Boomerang
-///@description Boulder
 if (global.is_leveling_up) {
     exit;
 }
@@ -61,10 +60,4 @@ function spawnSecondaryBoomerang(dir, spread, scale = 1.1){
 	boomerang.direction = dir + random_range(-spread, spread)
 	boomerang.image_xscale = scale
 	boomerang.image_yscale = scale
-	
-	var hb = instance_create_layer(proj.x, proj.y, "Hitboxes", OBJ_Bananarang_Hitbox);
-	hb.follow_target = proj;
-	hb.owner = id; // assuming 'id' is the OBJ_Gorilla that fired it
-	hb.damage = 1;
-	hb.cooldown = 30; // in frames
 }
