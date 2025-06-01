@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"OBJ_PlayButton",
+  "%Name":"OBJ_HowToPlay",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"OBJ_PlayButton",
+  "name":"OBJ_HowToPlay",
   "overriddenProperties":[],
   "parent":{
     "name":"Menu",
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_PlayButton",
-    "path":"sprites/SPR_PlayButton/SPR_PlayButton.yy",
+    "name":"SPR_InstructionButton",
+    "path":"sprites/SPR_InstructionButton/SPR_InstructionButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,
