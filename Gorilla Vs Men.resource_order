@@ -188,6 +188,7 @@
     {"name":"SPR_PooSplatLinger","order":1,"path":"sprites/SPR_PooSplatLinger/SPR_PooSplatLinger.yy",},
     {"name":"SPR_ProjectileHitbox","order":1,"path":"sprites/SPR_ProjectileHitbox/SPR_ProjectileHitbox.yy",},
     {"name":"SPR_Rifle","order":3,"path":"sprites/SPR_Rifle/SPR_Rifle.yy",},
+    {"name":"SPR_Rocket","order":8,"path":"sprites/SPR_Rocket/SPR_Rocket.yy",},
     {"name":"SPR_Roman_Hurt","order":1,"path":"sprites/SPR_Roman_Hurt/SPR_Roman_Hurt.yy",},
     {"name":"SPR_Sandtiles","order":1,"path":"sprites/SPR_Sandtiles/SPR_Sandtiles.yy",},
     {"name":"SPR_Shadow","order":4,"path":"sprites/SPR_Shadow/SPR_Shadow.yy",},
