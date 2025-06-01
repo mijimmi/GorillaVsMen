@@ -1,4 +1,6 @@
 {
   "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"SPR_PooSplatLinger","order":1,"path":"sprites/SPR_PooSplatLinger/SPR_PooSplatLinger.yy",},
+  ],
 }

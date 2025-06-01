@@ -16,7 +16,7 @@
     "name":"OBJ_Weapon_Parent",
     "path":"objects/OBJ_Weapon_Parent/OBJ_Weapon_Parent.yy",
   },
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

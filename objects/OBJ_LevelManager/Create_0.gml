@@ -8,7 +8,8 @@ enum PowerType {
 	BOOMERANG,
 	FLOAT,
 	DASH,
-	DART
+	DART,
+	POOP
 }
 
 global.is_leveling_up = true;
@@ -28,6 +29,7 @@ if (global.boulder_level < 3)      { ds_list_add(power_ups, PowerType.BOULDER); 
 if (global.boomerang_level < 3)    { ds_list_add(power_ups, PowerType.BOOMERANG); }
 if (global.float_level < 3)        { ds_list_add(power_ups, PowerType.FLOAT);} 
 if (global.dart_level < 3)		   {ds_list_add(power_ups, PowerType.DART)}
+if (global.poop_level < 3)		   {ds_list_add(power_ups, PowerType.POOP)}
 if (!global.has_dash)              { ds_list_add(power_ups, PowerType.DASH); } 
 
 //draws power ups from the power up list after it is shuffled
@@ -89,9 +91,16 @@ function apply_powerup(type)
 		case PowerType.DART:
 			global.dart_level++
 			//increases the amount of darts you can shoot in a burst
-			if (global.dart_level == 1) {global.dart_max = 5}
-			if (global.dart_level == 2) {global.dart_max = 7}
+			if (global.dart_level == 1) {global.dart_max = 3}
+			if (global.dart_level == 2) {global.dart_max = 6}
 			if (global.dart_level == 3) {global.dart_max = 9}
+			
+		case PowerType.POOP:
+			global.poop_level++
+			if (global.poop_level == 1) {global.poop_max = 1}
+			if (global.poop_level == 2) {global.poop_max = 2}
+			if (global.poop_level == 3) {global.poop_max = 3}
+			
     }	
 	
 }
