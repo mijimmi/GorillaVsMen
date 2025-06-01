@@ -6,7 +6,7 @@ if (current_state == state.SPAWNING && image_index >= image_number - 1) {
 
     var hb = instance_create_layer(x, y, "Hitboxes", OBJ_PooSplat_Hitbox);
     hb.follow_target = id;                  
-    hb.damage = global.gorilla.attack * 0.2;              
+    hb.damage = global.gorilla.attack * 0.3;              
     hb.cooldown = 30;
     hb.dot_interval = 1; // e.g., damage every n frames
     hb.image_xscale = 3;
