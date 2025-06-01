@@ -66,7 +66,7 @@ var a = instance_create_layer(x, y, "LevelUI", OBJ_LevelManager);
 
 //ATTACK LOGIC HERE
 //global list of variables for the power up levels
-global.sword_level = 0
+global.sword_level = 3
 global.boulder_level = 0
 global.boomerang_level = 0
 global.float_level = 0
