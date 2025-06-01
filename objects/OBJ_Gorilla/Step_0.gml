@@ -3,11 +3,13 @@ if (knockback_timer > 0) {
     var kbx = knockback_x / knockback_timer;
     var kby = knockback_y / knockback_timer;
 
-    // Apply knockback movement with wall collision checks
-    if (!place_meeting(x + kbx, y, OBJ_Wall)) {
+    var tilemap = layer_tilemap_get_id("WallLayer");
+    
+    // Apply knockback movement with tile collision checks
+    if (tilemap_get_at_pixel(tilemap, x + kbx, y) == 0) {
         x += kbx;
     }
-    if (!place_meeting(x, y + kby, OBJ_Wall)) {
+    if (tilemap_get_at_pixel(tilemap, x, y + kby) == 0) {
         y += kby;
     }
 
@@ -225,14 +227,18 @@ if (global.has_dash) {
 
 
 // === Wall Collisions & Apply Movement ===
+var tilemap = layer_tilemap_get_id("WallLayer");
+
 if (current_state != GorillaState.SMASH) {
-    if (place_meeting(x + xspd, y, OBJ_Wall)) {
+    // check horizontal movement
+    if (tilemap_get_at_pixel(tilemap, x + xspd, y) != 0) {
         xspd = 0;
     }
-    if (place_meeting(x, y + yspd, OBJ_Wall)) {
+    // check vertical movement
+    if (tilemap_get_at_pixel(tilemap, x, y + yspd) != 0) {
         yspd = 0;
     }
-
+    
     x += xspd;
     y += yspd;
 }
