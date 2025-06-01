@@ -1,10 +1,3 @@
-// Destroy if owner no longer exists
-if (global.is_leveling_up) {
-    // make sure no particle draw happens
-    instance_destroy();
-    exit; // optional, just for safety
-}
-
 // Exit if leveling up
 if (global.is_leveling_up) {
     exit;
