@@ -1,7 +1,9 @@
 if (global.is_leveling_up) {
-    exit;
+    // make sure no particle draw happens
+    bullet_ps = -1;
+    instance_destroy();
+    exit; // optional, just for safety
 }
-
 // Move forward
 x += lengthdir_x(speed, direction);
 y += lengthdir_y(speed, direction);
