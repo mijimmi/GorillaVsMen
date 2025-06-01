@@ -134,6 +134,7 @@
     {"name":"SND_Spawn","order":3,"path":"sounds/SND_Spawn/SND_Spawn.yy",},
     {"name":"SPR_Arrow","order":4,"path":"sprites/SPR_Arrow/SPR_Arrow.yy",},
     {"name":"SPR_ATKTutorial","order":5,"path":"sprites/SPR_ATKTutorial/SPR_ATKTutorial.yy",},
+    {"name":"SPR_BackIcon","order":12,"path":"sprites/SPR_BackIcon/SPR_BackIcon.yy",},
     {"name":"SPR_Bananarang_Hitbox","order":3,"path":"sprites/SPR_Bananarang_Hitbox/SPR_Bananarang_Hitbox.yy",},
     {"name":"SPR_Bananarang","order":2,"path":"sprites/SPR_Bananarang/SPR_Bananarang.yy",},
     {"name":"SPR_BananarangIcon","order":6,"path":"sprites/SPR_BananarangIcon/SPR_BananarangIcon.yy",},

@@ -195,6 +195,7 @@
     {"id":{"name":"SPR_Arrow","path":"sprites/SPR_Arrow/SPR_Arrow.yy",},},
     {"id":{"name":"SPR_ATK_Up","path":"sprites/SPR_ATK_Up/SPR_ATK_Up.yy",},},
     {"id":{"name":"SPR_ATKTutorial","path":"sprites/SPR_ATKTutorial/SPR_ATKTutorial.yy",},},
+    {"id":{"name":"SPR_BackIcon","path":"sprites/SPR_BackIcon/SPR_BackIcon.yy",},},
     {"id":{"name":"SPR_Bananarang_Hitbox","path":"sprites/SPR_Bananarang_Hitbox/SPR_Bananarang_Hitbox.yy",},},
     {"id":{"name":"SPR_Bananarang","path":"sprites/SPR_Bananarang/SPR_Bananarang.yy",},},
     {"id":{"name":"SPR_BananarangIcon","path":"sprites/SPR_BananarangIcon/SPR_BananarangIcon.yy",},},
