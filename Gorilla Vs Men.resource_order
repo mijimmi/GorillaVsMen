@@ -63,6 +63,7 @@
     {"name":"OBJ_Blood_3","order":2,"path":"objects/OBJ_Blood_3/OBJ_Blood_3.yy",},
     {"name":"OBJ_Blood_4","order":3,"path":"objects/OBJ_Blood_4/OBJ_Blood_4.yy",},
     {"name":"OBJ_Boomerang","order":3,"path":"objects/OBJ_Boomerang/OBJ_Boomerang.yy",},
+    {"name":"OBJ_BossRocket","order":1,"path":"objects/OBJ_BossRocket/OBJ_BossRocket.yy",},
     {"name":"OBJ_Boulder","order":1,"path":"objects/OBJ_Boulder/OBJ_Boulder.yy",},
     {"name":"OBJ_BulletMusket","order":5,"path":"objects/OBJ_BulletMusket/OBJ_BulletMusket.yy",},
     {"name":"OBJ_Dart_Hitbox","order":3,"path":"objects/OBJ_Dart_Hitbox/OBJ_Dart_Hitbox.yy",},

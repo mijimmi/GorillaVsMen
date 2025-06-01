@@ -40,7 +40,7 @@ function is_dead(){
                 banana.vsp = lengthdir_y(random_range(1, 2), angle);
             }
 
-            // 💚 15% chance to drop a Health Banana
+            // 15% chance to drop a Health Banana
             if (random(1) < 0.15) {
                 var angle = irandom_range(0, 359);
                 var dist = random_range(4, 12);
