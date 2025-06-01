@@ -1,3 +1,5 @@
+
+
 // === Apply Knockback Over Time ===
 if (knockback_timer > 0) {
     var kbx = knockback_x / knockback_timer;
@@ -29,6 +31,27 @@ var down_key  = keyboard_check(vk_down)  || keyboard_check(ord("S"));
 var xdir = right_key - left_key;
 var ydir = down_key - up_key;
 
+// === Tutorial Logic ===
+// Check if player has moved (WASD input)
+if (show_move_tutorial && (right_key || left_key || up_key || down_key)) {
+    show_move_tutorial = false;
+}
+
+// Check if player has attacked (left click)
+if (show_attack_tutorial && mouse_check_button_pressed(mb_left)) {
+    show_attack_tutorial = false;
+}
+
+// Fade out tutorials
+if (!show_move_tutorial && move_tutorial_alpha > 0) {
+    move_tutorial_alpha -= tutorial_fade_speed;
+    if (move_tutorial_alpha < 0) move_tutorial_alpha = 0;
+}
+
+if (!show_attack_tutorial && attack_tutorial_alpha > 0) {
+    attack_tutorial_alpha -= tutorial_fade_speed;
+    if (attack_tutorial_alpha < 0) attack_tutorial_alpha = 0;
+}
 //pause logic
 if (global.is_leveling_up) {
     exit;

@@ -126,3 +126,10 @@ dash_sound_played = false;
 // UI variables
 show_dash_prompt = false;
 first_dash_used = false;
+
+// Tutorial variables
+show_move_tutorial = true;
+show_attack_tutorial = true;
+move_tutorial_alpha = 1.0;
+attack_tutorial_alpha = 1.0;
+tutorial_fade_speed = 0.02;
