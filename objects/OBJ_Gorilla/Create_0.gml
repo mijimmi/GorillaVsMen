@@ -76,9 +76,9 @@ global.poop_level = 0
 //attack timing
 global.slashAlarm = 150
 global.boulderAlarm = 150
-global.boomerangAlarm = 120
+global.boomerangAlarm = 100
 global.dartTiming = 10 //in between darts
-global.dartAlarm = 50
+global.dartAlarm = 40
 global.poopTiming = 15 //in between dumps
 global.poopAlarm = 800
 
