@@ -11,6 +11,6 @@ spear_inst = instance_create_layer(x, y, "Instances", OBJ_Spear);
 spear_inst.owner = id;
 enemy_tier = 1;
 
-hp_max = 30;
+hp_max = 40;
 hp = hp_max;
 melee_hitbox.damage = 4;
