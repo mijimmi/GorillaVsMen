@@ -96,6 +96,7 @@
     {"id":{"name":"OBJ_Blood_4","path":"objects/OBJ_Blood_4/OBJ_Blood_4.yy",},},
     {"id":{"name":"OBJ_Boomerang","path":"objects/OBJ_Boomerang/OBJ_Boomerang.yy",},},
     {"id":{"name":"OBJ_BossLaser","path":"objects/OBJ_BossLaser/OBJ_BossLaser.yy",},},
+    {"id":{"name":"OBJ_BossRocket","path":"objects/OBJ_BossRocket/OBJ_BossRocket.yy",},},
     {"id":{"name":"OBJ_Boulder_Hitbox","path":"objects/OBJ_Boulder_Hitbox/OBJ_Boulder_Hitbox.yy",},},
     {"id":{"name":"OBJ_Boulder","path":"objects/OBJ_Boulder/OBJ_Boulder.yy",},},
     {"id":{"name":"OBJ_Bow","path":"objects/OBJ_Bow/OBJ_Bow.yy",},},
