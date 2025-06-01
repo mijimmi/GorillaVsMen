@@ -181,7 +181,6 @@
     {"name":"SPR_TreeATK","order":5,"path":"sprites/SPR_TreeATK/SPR_TreeATK.yy",},
     {"name":"SPR_TreeSword","order":1,"path":"sprites/SPR_TreeSword/SPR_TreeSword.yy",},
     {"name":"SPR_YouDied","order":4,"path":"sprites/SPR_YouDied/SPR_YouDied.yy",},
-    {"name":"SPR_YouDied1","order":3,"path":"sprites/SPR_YouDied1/SPR_YouDied1.yy",},
     {"name":"Sprite71","order":2,"path":"sprites/Sprite71/Sprite71.yy",},
     {"name":"TS_Decorations","order":3,"path":"tilesets/TS_Decorations/TS_Decorations.yy",},
     {"name":"TS_Floor","order":4,"path":"tilesets/TS_Floor/TS_Floor.yy",},

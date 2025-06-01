@@ -262,7 +262,6 @@
     {"id":{"name":"SPR_TreeSword","path":"sprites/SPR_TreeSword/SPR_TreeSword.yy",},},
     {"id":{"name":"SPR_Wall","path":"sprites/SPR_Wall/SPR_Wall.yy",},},
     {"id":{"name":"SPR_YouDied","path":"sprites/SPR_YouDied/SPR_YouDied.yy",},},
-    {"id":{"name":"SPR_YouDied1","path":"sprites/SPR_YouDied1/SPR_YouDied1.yy",},},
     {"id":{"name":"Sprite71","path":"sprites/Sprite71/Sprite71.yy",},},
     {"id":{"name":"TS_Decorations","path":"tilesets/TS_Decorations/TS_Decorations.yy",},},
     {"id":{"name":"TS_Floor","path":"tilesets/TS_Floor/TS_Floor.yy",},},
