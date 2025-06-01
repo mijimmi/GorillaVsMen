@@ -22,6 +22,8 @@
     {"name":"inst_4DA8FB94","path":"rooms/gamescreen/gamescreen.yy",},
     {"name":"inst_F2AC221","path":"rooms/gamescreen/gamescreen.yy",},
     {"name":"inst_59381064","path":"rooms/gamescreen/gamescreen.yy",},
+    {"name":"inst_3B9FC6FB","path":"rooms/gamescreen/gamescreen.yy",},
+    {"name":"inst_3BC27F22","path":"rooms/gamescreen/gamescreen.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -53,6 +55,8 @@
       ],"layers":[],"name":"InvisibleWalls","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_691FE334","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_691FE334","objectId":{"name":"OBJ_EnemySpawner","path":"objects/OBJ_EnemySpawner/OBJ_EnemySpawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":160.0,},
+        {"$GMRInstance":"v2","%Name":"inst_3B9FC6FB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3B9FC6FB","objectId":{"name":"OBJ_Roman","path":"objects/OBJ_Roman/OBJ_Roman.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":224.0,},
+        {"$GMRInstance":"v2","%Name":"inst_3BC27F22","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BC27F22","objectId":{"name":"OBJ_Knight","path":"objects/OBJ_Knight/OBJ_Knight.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":128.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Hitboxes","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Hitboxes","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"MotionPlan","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
