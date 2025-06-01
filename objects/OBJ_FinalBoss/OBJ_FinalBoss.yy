@@ -36,7 +36,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"SPR_Godzilla_Idle",
+    "path":"sprites/SPR_Godzilla_Idle/SPR_Godzilla_Idle.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
