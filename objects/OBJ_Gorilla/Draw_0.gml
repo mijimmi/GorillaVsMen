@@ -18,7 +18,7 @@ if (move_tutorial_alpha > 0 || attack_tutorial_alpha > 0) {
     
     // Draw movement tutorial (left side)
     if (move_tutorial_alpha > 0) {
-        var move_text = "TO MOVE";
+        var move_text = "To Move";
         var move_text_x = move_tutorial_x;
         var move_text_y = tutorial_y + 60; // Text position
         var move_sprite_y = move_text_y - 40; // Sprite positioned above text
@@ -26,7 +26,7 @@ if (move_tutorial_alpha > 0 || attack_tutorial_alpha > 0) {
         // Draw sprite above the text
         draw_sprite_ext(SPR_MoveTutorial, 0, move_tutorial_x, move_sprite_y, 1.5, 1.5, 0, c_white, move_tutorial_alpha);
         
-        draw_set_font(FNT_Main_Mini);
+        draw_set_font(FNT_Main);
         draw_set_halign(fa_center);
         draw_set_valign(fa_top);
         
@@ -49,7 +49,7 @@ if (move_tutorial_alpha > 0 || attack_tutorial_alpha > 0) {
     
     // Draw attack tutorial (right side)
     if (attack_tutorial_alpha > 0) {
-        var attack_text = "TO SMASH";
+        var attack_text = "To Smash";
         var attack_text_x = attack_tutorial_x;
         var attack_text_y = tutorial_y + 60; // Text position
         var attack_sprite_y = attack_text_y - 40; // Sprite positioned above text
@@ -57,7 +57,7 @@ if (move_tutorial_alpha > 0 || attack_tutorial_alpha > 0) {
         // Draw sprite above the text
         draw_sprite_ext(SPR_ATKTutorial, 0, attack_tutorial_x, attack_sprite_y, 1.5, 1.5, 0, c_white, attack_tutorial_alpha);
         
-        draw_set_font(FNT_Main_Mini);
+        draw_set_font(FNT_Main);
         draw_set_halign(fa_center);
         draw_set_valign(fa_top);
         

@@ -1,5 +1,6 @@
-// Exit if leveling up
-if (global.is_leveling_up) {
+// --- Destroy if owner no longer exists ---
+if (!variable_instance_exists(id, "owner") || !instance_exists(owner)) {
+    instance_destroy();
     exit;
 }
 
