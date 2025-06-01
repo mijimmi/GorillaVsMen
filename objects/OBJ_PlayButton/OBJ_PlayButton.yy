@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite71",
-    "path":"sprites/Sprite71/Sprite71.yy",
+    "name":"SPR_PlayButton",
+    "path":"sprites/SPR_PlayButton/SPR_PlayButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,

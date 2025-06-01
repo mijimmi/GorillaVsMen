@@ -12,18 +12,18 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2f6dfec1-ed8f-40f6-86bd-875e5d427757","name":"2f6dfec1-ed8f-40f6-86bd-875e5d427757","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f4eef10c-c6a9-4b8c-8aa7-969fa88737a2","name":"f4eef10c-c6a9-4b8c-8aa7-969fa88737a2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"5fcc2bf8-f5e7-444e-9de5-5c633814d7f1","blendMode":0,"displayName":"default","isLocked":false,"name":"5fcc2bf8-f5e7-444e-9de5-5c633814d7f1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"b673bcba-b1b6-46cb-8789-3be5eb581fd5","blendMode":0,"displayName":"default","isLocked":false,"name":"b673bcba-b1b6-46cb-8789-3be5eb581fd5","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"SPR_InstructionButton",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"Menu",
     "path":"folders/Sprites/Menu.yy",
@@ -71,14 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2f6dfec1-ed8f-40f6-86bd-875e5d427757","path":"sprites/SPR_InstructionButton/SPR_InstructionButton.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cf4a2e3f-76a4-47a8-a33e-11d2c04ed492","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f4eef10c-c6a9-4b8c-8aa7-969fa88737a2","path":"sprites/SPR_InstructionButton/SPR_InstructionButton.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"f6d5f768-c2eb-4431-ba53-c855d6107868","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":32,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
