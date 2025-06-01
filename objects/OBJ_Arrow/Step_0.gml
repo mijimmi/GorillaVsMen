@@ -1,5 +1,7 @@
 if (global.is_leveling_up) {
+	arrow_ps = -1;
     instance_destroy();
+	exit;
 }
 
 // The arrow just moves in a straight line using its set speed & direction
