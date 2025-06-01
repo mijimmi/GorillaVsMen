@@ -153,6 +153,8 @@
     {"name":"SPR_Dart","order":5,"path":"sprites/SPR_Dart/SPR_Dart.yy",},
     {"name":"SPR_DartMonkeyIcon","order":8,"path":"sprites/SPR_DartMonkeyIcon/SPR_DartMonkeyIcon.yy",},
     {"name":"SPR_Decorations","order":2,"path":"sprites/SPR_Decorations/SPR_Decorations.yy",},
+    {"name":"SPR_ExplosionFX1","order":9,"path":"sprites/SPR_ExplosionFX1/SPR_ExplosionFX1.yy",},
+    {"name":"SPR_ExplosionFX2","order":10,"path":"sprites/SPR_ExplosionFX2/SPR_ExplosionFX2.yy",},
     {"name":"SPR_FloatingRock_Hitbox","order":1,"path":"sprites/SPR_FloatingRock_Hitbox/SPR_FloatingRock_Hitbox.yy",},
     {"name":"SPR_FloatingRock","order":4,"path":"sprites/SPR_FloatingRock/SPR_FloatingRock.yy",},
     {"name":"SPR_FloatingRockIcon","order":7,"path":"sprites/SPR_FloatingRockIcon/SPR_FloatingRockIcon.yy",},
