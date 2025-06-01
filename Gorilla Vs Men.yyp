@@ -78,6 +78,7 @@
   },
   "name":"Gorilla Vs Men",
   "resources":[
+    {"id":{"name":"FNT_Main_Big","path":"fonts/FNT_Main_Big/FNT_Main_Big.yy",},},
     {"id":{"name":"FNT_Main_Large","path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},},
     {"id":{"name":"FNT_Main_Mini","path":"fonts/FNT_Main_Mini/FNT_Main_Mini.yy",},},
     {"id":{"name":"FNT_Main_XL","path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},},

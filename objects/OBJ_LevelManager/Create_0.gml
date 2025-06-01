@@ -114,9 +114,16 @@ function draw_powerups(power_ups, base_y)
     var start_x = (screen_width - total_width) / 2 + (button_width / 2);
 
     // Center vertically if base_y is not given
-    if (argument_count < 2) {
-        base_y = (screen_height / 2) + (button_width / 2);
-    }
+	// Offset amount to raise buttons
+	var y_offset = -40;
+
+	// Center vertically if base_y is not given
+	if (argument_count < 2) {
+		base_y = ((screen_height / 2) + (button_width / 2)) + y_offset;
+	}
+	else {
+		base_y += y_offset;
+	}
 
     ds_list_shuffle(power_ups);
 

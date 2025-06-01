@@ -53,6 +53,7 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"FNT_Main_Big","order":4,"path":"fonts/FNT_Main_Big/FNT_Main_Big.yy",},
     {"name":"FNT_Main_Large","order":1,"path":"fonts/FNT_Main_Large/FNT_Main_Large.yy",},
     {"name":"FNT_Main_Mini","order":3,"path":"fonts/FNT_Main_Mini/FNT_Main_Mini.yy",},
     {"name":"FNT_Main_XL","order":2,"path":"fonts/FNT_Main_XL/FNT_Main_XL.yy",},
