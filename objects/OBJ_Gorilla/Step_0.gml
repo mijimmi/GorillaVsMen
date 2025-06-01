@@ -281,7 +281,7 @@ function gorilla_take_damage(amount, source_x, source_y) {
         knockback_timer = 6;
 
         invincible = true;
-        invincibility_timer = 30;
+        invincibility_timer = 90;
 
         // === Trigger camera shake ===
         with (OBJ_CameraController) {
@@ -298,14 +298,26 @@ function gorilla_take_damage(amount, source_x, source_y) {
         audio_sound_gain(snd_grunt_inst, 0.7, 0);
     }
 	if (hp <= 0) {
-		global.game_over = true;
-	    with (OBJ_GameOverController) {
-	        visible = true;
+	    if (!global.game_over) {
+	        global.game_over = true;
+
+	        var random_index = irandom_range(1, 4);
+	        global.chosen_game_over_sprite = choose(
+	            SPR_YouDied1,
+	            SPR_YouDied2,
+	            SPR_YouDied3,
+	            SPR_YouDied4
+	        );
+
+	        global.game_over_alpha = 0;
+
+	        with (OBJ_GameOverController) {
+	            visible = true;
+	        }
 	    }
 
 	    instance_create_layer(x, y, "Effects", OBJ_Blood_1); 
-
-	    instance_destroy(); // Destroy the Gorilla
+	    instance_destroy();
 	}
 }
 
