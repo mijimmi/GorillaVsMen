@@ -1,3 +1,10 @@
+if (!variable_instance_exists(id, "spawn_initialized")) {
+    spawn_initialized = false;
+    finalboss_spawned = false;
+    spawn_delay = 0;
+    spawn_timer = 0;
+    spawn_batch_count = 1;
+}
 // --- stop everything if game is over ---
 if (global.game_over) {
     exit;
