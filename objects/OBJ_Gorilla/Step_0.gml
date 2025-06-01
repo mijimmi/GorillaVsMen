@@ -271,7 +271,7 @@ function gorilla_take_damage(amount, source_x, source_y) {
         knockback_timer = 6;
 
         invincible = true;
-        invincibility_timer = 30;
+        invincibility_timer = 90;
 
         // === Trigger camera shake ===
         with (OBJ_CameraController) {
