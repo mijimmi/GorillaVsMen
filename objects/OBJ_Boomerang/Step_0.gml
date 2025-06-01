@@ -1,7 +1,7 @@
 if (global.is_leveling_up) {
 	exit
 }
-
+//yes
 if (!instance_exists(OBJ_Gorilla)){
 	instance_destroy()
 	exit
