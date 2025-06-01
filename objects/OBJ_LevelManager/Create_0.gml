@@ -94,12 +94,14 @@ function apply_powerup(type)
 			if (global.dart_level == 1) {global.dart_max = 3}
 			if (global.dart_level == 2) {global.dart_max = 6}
 			if (global.dart_level == 3) {global.dart_max = 9}
+			break
 			
 		case PowerType.POOP:
 			global.poop_level++
 			if (global.poop_level == 1) {global.poop_max = 1}
 			if (global.poop_level == 2) {global.poop_max = 2}
 			if (global.poop_level == 3) {global.poop_max = 3}
+			break
 			
     }	
 	
