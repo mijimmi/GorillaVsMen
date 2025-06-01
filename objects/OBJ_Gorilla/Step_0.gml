@@ -282,6 +282,16 @@ function gorilla_take_damage(amount, source_x, source_y) {
         audio_sound_pitch(snd_grunt_inst, random_range(0.95, 1.05));
         audio_sound_gain(snd_grunt_inst, 0.7, 0);
     }
+	if (hp <= 0) {
+		global.game_over = true;
+	    with (OBJ_GameOverController) {
+	        visible = true;
+	    }
+
+	    instance_create_layer(x, y, "Effects", OBJ_Blood_1); 
+
+	    instance_destroy(); // Destroy the Gorilla
+	}
 }
 
 // == FLOATING ROCK ATTACK ==

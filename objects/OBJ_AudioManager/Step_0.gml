@@ -1,3 +1,28 @@
+// --- Game Over Music Logic ---
+if (global.game_over) {
+    // Only trigger once
+    if (!global.bgm_gameover_played) {
+        global.bgm_gameover_played = true;
+
+        // Fade out current BGM
+        if (audio_is_playing(global.bgm)) {
+            audio_sound_gain(global.bgm, 0, 1000); // fade out over 1 second
+        }
+
+        // Delay game over music by setting negative timer (approx 1 second at 60fps)
+        global.bgm_timer = -60;
+    }
+
+    // After delay, play game over music once
+    if (global.bgm_timer == 0) {
+        global.bgm = audio_play_sound(global.bgm_gameover, 1, false); // play once
+        audio_sound_gain(global.bgm, 0.2, 0); // play at full volume
+    }
+
+    global.bgm_timer++;
+    exit; // stop regular BGM cycling
+}
+
 // Increment timer
 global.bgm_timer++;
 

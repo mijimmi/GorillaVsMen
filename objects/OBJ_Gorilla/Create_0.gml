@@ -26,7 +26,6 @@ smash_cooldown = 0;
 knockback_x = 0;
 knockback_y = 0;
 knockback_timer = 0;
-
 footstep_timer = 0;
 footstep_interval = 20; // Number of steps between footstep sounds
 

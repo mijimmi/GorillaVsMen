@@ -8,7 +8,7 @@ if (current_state == state.SPAWNING && image_index >= image_number - 1) {
     hb.follow_target = id;                  
     hb.damage = global.gorilla.attack * 0.2;              
     hb.cooldown = 30;
-    hb.dot_interval = 15; // e.g., damage every 15 frames
+    hb.dot_interval = 1; // e.g., damage every n frames
     hb.image_xscale = 3;
     hb.image_yscale = 2.5;
 }

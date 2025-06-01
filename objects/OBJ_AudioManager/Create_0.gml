@@ -4,6 +4,9 @@ global.bgm_timer = 0;
 global.bgm_duration = game_get_speed(gamespeed_fps) * 124;
 global.last_bgm_track = -1;
 
+global.bgm_gameover = SND_Gameover; // <- Replace with your actual Game Over sound asset
+global.bgm_gameover_played = false;     // To prevent replaying it every step
+
 // Play first track immediately
 var available = [];
 randomize();
@@ -20,3 +23,4 @@ if (global.bgm != -1) {
 } else {
     show_debug_message("❌ Failed to play initial BGM: " + string(chosen));
 }
+global.game_over = false;

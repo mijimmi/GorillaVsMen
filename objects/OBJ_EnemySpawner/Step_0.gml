@@ -1,3 +1,8 @@
+// --- stop everything if game is over ---
+if (global.game_over) {
+    exit;
+}
+
 // --- pause spawning if leveling up ---
 if (global.is_leveling_up) {
     exit;

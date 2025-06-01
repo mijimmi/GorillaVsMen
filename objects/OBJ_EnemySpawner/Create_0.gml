@@ -1,3 +1,11 @@
+if (!variable_global_exists("game_over")) {
+    global.game_over = false;
+}
+
+if (global.game_over) {
+    exit;
+}
+
 spawn_timer = 0;
 spawn_delay = 120; // 2 seconds default (60 = 1 sec)
 
