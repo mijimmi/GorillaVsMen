@@ -2,6 +2,84 @@
 draw_sprite_ext(SPR_Shadow, 0, x, y + 4, 1, 1, 0, c_black, 0.3);
 // Then draw the sprite
 draw_self();
+// === Draw Tutorial Instructions ===
+if (move_tutorial_alpha > 0 || attack_tutorial_alpha > 0) {
+    // Get camera position for UI positioning
+    var cam = view_camera[0];
+    var cam_x = camera_get_view_x(cam);
+    var cam_y = camera_get_view_y(cam);
+    var cam_width = camera_get_view_width(cam);
+    var cam_height = camera_get_view_height(cam);
+    
+    // Position tutorials on opposite sides of screen
+    var move_tutorial_x = cam_x + cam_width * 0.3;    // Left side
+    var attack_tutorial_x = cam_x + cam_width * 0.7;  // Right side
+    var tutorial_y = cam_y + cam_height * 0.3;
+    
+    // Draw movement tutorial (left side)
+    if (move_tutorial_alpha > 0) {
+        var move_text = "TO MOVE";
+        var move_text_x = move_tutorial_x;
+        var move_text_y = tutorial_y + 60; // Text position
+        var move_sprite_y = move_text_y - 40; // Sprite positioned above text
+        
+        // Draw sprite above the text
+        draw_sprite_ext(SPR_MoveTutorial, 0, move_tutorial_x, move_sprite_y, 1.5, 1.5, 0, c_white, move_tutorial_alpha);
+        
+        draw_set_font(FNT_Main_Mini);
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_top);
+        
+        // Draw text border (8-directional outline)
+        draw_set_color(c_black);
+        for (var xx = -1; xx <= 1; xx++) {
+            for (var yy = -1; yy <= 1; yy++) {
+                if (xx != 0 || yy != 0) {
+                    draw_text(move_text_x + xx, move_text_y + yy, move_text);
+                }
+            }
+        }
+        
+        // Draw the main white text on top
+        draw_set_color(c_white);
+        draw_set_alpha(move_tutorial_alpha);
+        draw_text(move_text_x, move_text_y, move_text);
+        draw_set_alpha(1.0);
+    }
+    
+    // Draw attack tutorial (right side)
+    if (attack_tutorial_alpha > 0) {
+        var attack_text = "TO SMASH";
+        var attack_text_x = attack_tutorial_x;
+        var attack_text_y = tutorial_y + 60; // Text position
+        var attack_sprite_y = attack_text_y - 40; // Sprite positioned above text
+        
+        // Draw sprite above the text
+        draw_sprite_ext(SPR_ATKTutorial, 0, attack_tutorial_x, attack_sprite_y, 1.5, 1.5, 0, c_white, attack_tutorial_alpha);
+        
+        draw_set_font(FNT_Main_Mini);
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_top);
+        
+        // Draw text border (8-directional outline)
+        draw_set_color(c_black);
+        for (var xx = -1; xx <= 1; xx++) {
+            for (var yy = -1; yy <= 1; yy++) {
+                if (xx != 0 || yy != 0) {
+                    draw_text(attack_text_x + xx, attack_text_y + yy, attack_text);
+                }
+            }
+        }
+        
+        // Draw the main white text on top
+        draw_set_color(c_white);
+        draw_set_alpha(attack_tutorial_alpha);
+        draw_text(attack_text_x, attack_text_y, attack_text);
+        draw_set_alpha(1.0);
+    }
+}
+
+
 // Only draw if dash skill is obtained
 if (!global.has_dash) exit;
 // Margins (same as UILevel)
