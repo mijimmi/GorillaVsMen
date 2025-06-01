@@ -1,5 +1,8 @@
 if (global.is_leveling_up) {
+    // make sure no particle draw happens
+    bullet_ps = -1;
     instance_destroy();
+    exit; // optional, just for safety
 }
 
 // Move forward

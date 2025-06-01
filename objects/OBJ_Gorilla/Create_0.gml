@@ -124,3 +124,6 @@ dash_timer = 0;
 dash_duration = 6; // frames
 dash_cooldown = 0;
 dash_sound_played = false;
+// UI variables
+show_dash_prompt = false;
+first_dash_used = false;
