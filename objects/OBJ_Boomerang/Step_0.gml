@@ -2,9 +2,15 @@ if (global.is_leveling_up) {
 	exit
 }
 
+if (!instance_exists(OBJ_Gorilla)){
+	instance_destroy()
+	exit
+}
+
 image_angle += 10
 
 var dist = point_distance(x,y, start_x, start_y)
+
 
 if (!returning && dist >= max_distance){
     returning = true;

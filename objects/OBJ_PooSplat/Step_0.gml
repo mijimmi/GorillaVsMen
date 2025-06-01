@@ -1,3 +1,9 @@
+if (!instance_exists(OBJ_Gorilla)){
+	instance_destroy()
+	exit
+}
+
+
 if (current_state == state.SPAWNING && image_index >= image_number - 1) {
     sprite_index = SPR_PooSplatLinger;
     image_speed = 1;
