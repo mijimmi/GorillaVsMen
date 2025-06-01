@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-hp_max = 50;
+hp_max = 100;
 hp = hp_max;
 
 //move speed
