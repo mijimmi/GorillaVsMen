@@ -53,12 +53,12 @@ switch (power_type) {
         label_text = "DART BURST";
         break;
 	
-	
+	/*
 	case PowerType.POOP:
         draw_sprite_ext(SPR_PooSplatSpawn, 0, x, y, scale, scale, 0, c_white, 1);
         label_text = "CONGALALA";
         break;
-	
+	*/
 }
 
 // Set font and compute text position

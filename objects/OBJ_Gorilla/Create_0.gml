@@ -71,7 +71,7 @@ global.boulder_level = 0
 global.boomerang_level = 0
 global.float_level = 0
 global.dart_level = 0
-global.poop_level = 0
+//global.poop_level = 0
 
 //attack timing
 global.slashAlarm = 150
@@ -79,8 +79,8 @@ global.boulderAlarm = 150
 global.boomerangAlarm = 100
 global.dartTiming = 10 //in between darts
 global.dartAlarm = 40
-global.poopTiming = 15 //in between dumps
-global.poopAlarm = 800
+//global.poopTiming = 15 //in between dumps
+//global.poopAlarm = 800
 
 
 //new shit for the step? crazy
@@ -96,15 +96,14 @@ alarm[0] = global.slashAlarm
 alarm[1] = global.boulderAlarm
 alarm[2] = global.boomerangAlarm
 alarm[3] = global.dartAlarm
-alarm[4] = global.poopAlarm
 
 //dart shit
 dart_count = 0;
 global.dart_max = 0;
 
 //poopoofart shit
-poop_count = 0;
-global.poop_max = 0;
+//poop_count = 0;
+//global.poop_max = 0;
 
 //floatRock attack
 function spawnFloatRock(count = 4, orbit_speed = 3){
