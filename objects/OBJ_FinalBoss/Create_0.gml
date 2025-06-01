@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 // final boss properties
-hp_max = 30;
+hp_max = 500;
 hp = hp_max;
 enemy_tier = 5;
 is_finalboss = true;

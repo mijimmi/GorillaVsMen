@@ -224,6 +224,16 @@ if (global.has_dash) {
     }
 }
 
+// UI Logic
+if (global.has_dash && !first_dash_used) {
+    show_dash_prompt = true;
+}
+
+// Hide prompt after first dash
+if (dash_timer > 0 || dash_cooldown > 0) {
+    first_dash_used = true;
+    show_dash_prompt = false;
+}
 
 // === Wall Collisions & Apply Movement ===
 var tilemap = layer_tilemap_get_id("WallLayer");
