@@ -56,7 +56,6 @@ if (mouse_check_button_pressed(mb_left) && current_state != GorillaState.SMASH &
 }
 
 // === Logic for i-frames ===
-// === Logic for i-frames ===
 if (invincible) {
     invincibility_timer--;
     if (invincibility_timer <= 0) {
