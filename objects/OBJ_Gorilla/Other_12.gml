@@ -16,16 +16,16 @@ switch(global.boomerang_level)
 	case 2:
 		spread = 45
 		dir = getDirection()
-		spawnBoomerang(dir, 1.2)
-		spawnSecondaryBoomerang(dir, spread, 1.2)
+		spawnBoomerang(dir, 1.3)
+		spawnSecondaryBoomerang(dir, spread, 1.3)
 		break
 	//case 3 spawns 3 boulders at once with a bigger size
 	case 3:
 		spread = 30
 		dir = getDirection()
-		spawnBoomerang(dir, 1.3)
-		spawnSecondaryBoomerang(dir, spread, 1.3)
-		spawnSecondaryBoomerang(dir, spread, 1.3)
+		spawnBoomerang(dir, 1.5)
+		spawnSecondaryBoomerang(dir, spread, 1.5)
+		spawnSecondaryBoomerang(dir, spread, 1.5)
 		break
 }
 

@@ -159,6 +159,7 @@
     {"name":"SPR_Musketeer_Hurt","order":3,"path":"sprites/SPR_Musketeer_Hurt/SPR_Musketeer_Hurt.yy",},
     {"name":"SPR_Poo_Icon","order":9,"path":"sprites/SPR_Poo_Icon/SPR_Poo_Icon.yy",},
     {"name":"SPR_PooSplat","order":6,"path":"sprites/SPR_PooSplat/SPR_PooSplat.yy",},
+    {"name":"SPR_PooSplatLinger","order":1,"path":"sprites/SPR_PooSplatLinger/SPR_PooSplatLinger.yy",}
     {"name":"SPR_ProjectileHitbox","order":1,"path":"sprites/SPR_ProjectileHitbox/SPR_ProjectileHitbox.yy",},
     {"name":"SPR_Rifle","order":3,"path":"sprites/SPR_Rifle/SPR_Rifle.yy",},
     {"name":"SPR_Roman_Hurt","order":1,"path":"sprites/SPR_Roman_Hurt/SPR_Roman_Hurt.yy",},
