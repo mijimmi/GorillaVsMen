@@ -1,1 +1,2 @@
-instance_destroy()
+// Mark for deletion
+should_destroy = true;
