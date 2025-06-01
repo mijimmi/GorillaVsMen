@@ -20,8 +20,8 @@ if (laser_state == "active") {
         var ly = y + lengthdir_y(1000, dir);
         if (collision_line(x, y, lx, ly, OBJ_Gorilla, false, true)) {
             with (OBJ_Gorilla) {
-                hp -= 1;
-            }
+			    gorilla_take_damage(1, other.x, other.y);
+			}
         }
     }
 }

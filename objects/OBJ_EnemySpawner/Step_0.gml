@@ -19,12 +19,8 @@ if (global.is_leveling_up) {
 if (global.state != GameState.ROUND_ACTIVE) {
     spawn_initialized = false; // reset for next round
     finalboss_spawned = false;
-    exit;
-}
-
-// --- Final boss fight: stop enemy spawning ---
-if (global.round_num == 10 && global.finalboss_alive) {
-    spawn_initialized = false;
+    // Reset boss threshold tracking for new round
+    boss_spawned_at_threshold = [false, false, false, false, false];
     exit;
 }
 
@@ -39,11 +35,14 @@ if (!spawn_initialized) {
     if (global.round_num == 10) {
         finalboss_spawned = false;
         global.boss_fight_active = true;
+        // Reset boss threshold tracking for boss fight
+        boss_spawned_at_threshold = [false, false, false, false, false];
     }
 }
 
-// --- Special round 10: spawn exactly one final boss, no other enemies ---
+// --- Special round 10: spawn exactly one final boss, then handle HP-based spawning ---
 if (global.round_num == 10) {
+    // Spawn final boss if not spawned yet
     if (!finalboss_spawned) {
         var tries = 0;
         var max_tries = 20;
@@ -75,8 +74,81 @@ if (global.round_num == 10) {
             part_particles_create(spawn_particle_sys, _x, _y, spawn_particle_type, 20);
         }
     }
-
-    // Skip spawning any other enemies during round 10
+    
+    // Handle HP-based enemy spawning during boss fight
+    if (finalboss_spawned && global.finalboss_alive) {
+        // Find the final boss instance
+        var finalboss_instance = instance_find(OBJ_FinalBoss, 0);
+        if (instance_exists(finalboss_instance)) {
+            var boss_hp_percent = (finalboss_instance.hp / finalboss_instance.hp_max) * 100;
+            
+            // Check each threshold
+            for (var i = 0; i < array_length(boss_hp_thresholds); i++) {
+                if (!boss_spawned_at_threshold[i] && boss_hp_percent <= boss_hp_thresholds[i]) {
+                    boss_spawned_at_threshold[i] = true;
+                    
+                    // Spawn 5 enemies of the appropriate tier
+                    var tier_to_spawn = boss_tier_for_threshold[i];
+                    var enemy_list = enemy_tiers[tier_to_spawn];
+                    
+                    for (var j = 0; j < 5; j++) {
+                        var tries = 0;
+                        var max_tries = 10;
+                        var spawn_ok = false;
+                        var _x, _y;
+                        
+                        while (!spawn_ok && tries < max_tries) {
+                            _x = random_range(spawn_area_min_x, spawn_area_max_x);
+                            _y = random_range(spawn_area_min_y, spawn_area_max_y);
+                            spawn_ok = true;
+                            
+                            // Check distance from player
+                            with (OBJ_Gorilla) {
+                                if (point_distance(_x, _y, x, y) < 96) {
+                                    spawn_ok = false;
+                                }
+                            }
+                            
+                            // Check distance from boss
+                            if (point_distance(_x, _y, finalboss_instance.x, finalboss_instance.y) < 96) {
+                                spawn_ok = false;
+                            }
+                            
+                            tries++;
+                        }
+                        
+                        if (spawn_ok) {
+                            // Use weighted random selection like normal spawning
+                            var weights = [];
+                            for (var w = 0; w < array_length(enemy_list); w++) {
+                                if (enemy_list[w] == OBJ_Roman_Archer) {
+                                    weights[w] = 7;
+                                } else if (enemy_list[w] == OBJ_Musketeer) {
+                                    weights[w] = 5;
+                                } else {
+                                    weights[w] = 10;
+                                }
+                            }
+                            
+                            var enemy_index = weighted_random(weights);
+                            var enemy_to_spawn = enemy_list[enemy_index];
+                            
+                            instance_create_layer(_x, _y, "Instances", enemy_to_spawn);
+                            
+                            // Apply same spawn effects as normal spawning
+                            var snd_inst = audio_play_sound(SND_Spawn, 1, false);
+                            audio_sound_gain(snd_inst, 0.5, 0);
+                            audio_sound_pitch(snd_inst, random_range(0.95, 1.05));
+                            
+                            part_particles_create(spawn_particle_sys, _x, _y, spawn_particle_type, 20);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // Skip normal spawning logic during round 10
     exit;
 }
 
