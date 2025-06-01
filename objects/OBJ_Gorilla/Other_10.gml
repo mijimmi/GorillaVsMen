@@ -9,16 +9,18 @@ switch(global.sword_level)
 	case 0:
 		break
 	case 1:
-		spawnSword(image_xscale,1)
+		spawnSword(image_xscale, 1.2)
 		break
 	case 2: //(make it bigger?)
-		spawnSword(image_xscale, 1.2)
+		spawnSword(image_xscale, 1.3)
+		alarm[11] = 20
 		break
 	//case 3 (add one slash behind u?)
 	case 3:
 		spawnSword(image_xscale, 1.3)
 		//add a timer in between
 		alarm[11] = 20
+		
 		break
 }
 
