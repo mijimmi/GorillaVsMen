@@ -247,6 +247,7 @@
     {"id":{"name":"SPR_InstructionButton","path":"sprites/SPR_InstructionButton/SPR_InstructionButton.yy",},},
     {"id":{"name":"SPR_Knight_Hurt","path":"sprites/SPR_Knight_Hurt/SPR_Knight_Hurt.yy",},},
     {"id":{"name":"SPR_Knight","path":"sprites/SPR_Knight/SPR_Knight.yy",},},
+    {"id":{"name":"SPR_Lazerbeam","path":"sprites/SPR_Lazerbeam/SPR_Lazerbeam.yy",},},
     {"id":{"name":"SPR_LevelManager","path":"sprites/SPR_LevelManager/SPR_LevelManager.yy",},},
     {"id":{"name":"SPR_LevelOption","path":"sprites/SPR_LevelOption/SPR_LevelOption.yy",},},
     {"id":{"name":"SPR_MenuBG","path":"sprites/SPR_MenuBG/SPR_MenuBG.yy",},},

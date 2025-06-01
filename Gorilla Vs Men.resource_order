@@ -173,6 +173,7 @@
     {"name":"SPR_HP_Up","order":1,"path":"sprites/SPR_HP_Up/SPR_HP_Up.yy",},
     {"name":"SPR_InstructionButton","order":11,"path":"sprites/SPR_InstructionButton/SPR_InstructionButton.yy",},
     {"name":"SPR_Knight_Hurt","order":3,"path":"sprites/SPR_Knight_Hurt/SPR_Knight_Hurt.yy",},
+    {"name":"SPR_Lazerbeam","order":7,"path":"sprites/SPR_Lazerbeam/SPR_Lazerbeam.yy",},
     {"name":"SPR_LevelManager","order":1,"path":"sprites/SPR_LevelManager/SPR_LevelManager.yy",},
     {"name":"SPR_MoveTutorial","order":4,"path":"sprites/SPR_MoveTutorial/SPR_MoveTutorial.yy",},
     {"name":"SPR_Musket","order":4,"path":"sprites/SPR_Musket/SPR_Musket.yy",},
