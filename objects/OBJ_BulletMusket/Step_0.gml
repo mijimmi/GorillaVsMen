@@ -1,5 +1,5 @@
 if (global.is_leveling_up) {
-    exit;
+    instance_destroy();
 }
 
 // Move forward
