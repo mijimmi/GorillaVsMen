@@ -242,7 +242,6 @@
     {"id":{"name":"SPR_HealthBG","path":"sprites/SPR_HealthBG/SPR_HealthBG.yy",},},
     {"id":{"name":"SPR_HealthBorder","path":"sprites/SPR_HealthBorder/SPR_HealthBorder.yy",},},
     {"id":{"name":"SPR_HP_Up","path":"sprites/SPR_HP_Up/SPR_HP_Up.yy",},},
-    {"id":{"name":"SPR_InstructionButton","path":"sprites/SPR_InstructionButton/SPR_InstructionButton.yy",},},
     {"id":{"name":"SPR_Knight_Hurt","path":"sprites/SPR_Knight_Hurt/SPR_Knight_Hurt.yy",},},
     {"id":{"name":"SPR_Knight","path":"sprites/SPR_Knight/SPR_Knight.yy",},},
     {"id":{"name":"SPR_LevelManager","path":"sprites/SPR_LevelManager/SPR_LevelManager.yy",},},

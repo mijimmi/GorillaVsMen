@@ -169,7 +169,6 @@
     {"name":"SPR_HealthBanana","order":1,"path":"sprites/SPR_HealthBanana/SPR_HealthBanana.yy",},
     {"name":"SPR_HealthBorder","order":1,"path":"sprites/SPR_HealthBorder/SPR_HealthBorder.yy",},
     {"name":"SPR_HP_Up","order":1,"path":"sprites/SPR_HP_Up/SPR_HP_Up.yy",},
-    {"name":"SPR_InstructionButton","order":9,"path":"sprites/SPR_InstructionButton/SPR_InstructionButton.yy",},
     {"name":"SPR_Knight_Hurt","order":3,"path":"sprites/SPR_Knight_Hurt/SPR_Knight_Hurt.yy",},
     {"name":"SPR_LevelManager","order":1,"path":"sprites/SPR_LevelManager/SPR_LevelManager.yy",},
     {"name":"SPR_MoveTutorial","order":4,"path":"sprites/SPR_MoveTutorial/SPR_MoveTutorial.yy",},
