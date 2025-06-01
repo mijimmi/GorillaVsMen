@@ -161,7 +161,8 @@ switch (current_state) {
 	    yspd = 0;
 	    break;
 }
-
+// === Wall Collisions & Apply Movement ===
+var tilemap = layer_tilemap_get_id("WallLayer");
 // === Dash Logic ===
 if (global.has_dash) {
     if (dash_cooldown > 0) dash_cooldown--;
@@ -199,10 +200,10 @@ if (global.has_dash) {
         var new_y = y + dash_dir_y * dash_speed;
 
         // Check collisions separately and move accordingly
-        if (!place_meeting(new_x, y, OBJ_Wall)) {
+        if (!place_meeting(new_x, y, tilemap)) {
             x = new_x;
         }
-        if (!place_meeting(x, new_y, OBJ_Wall)) {
+        if (!place_meeting(x, new_y, tilemap)) {
             y = new_y;
         }
 
@@ -223,10 +224,18 @@ if (global.has_dash) {
         dash_sound_played = false; // reset sound flag
     }
 }
+// UI Logic
+if (global.has_dash && !first_dash_used) {
+    show_dash_prompt = true;
+}
+
+// Hide prompt after first dash
+if (dash_timer > 0 || dash_cooldown > 0) {
+    first_dash_used = true;
+    show_dash_prompt = false;
+}
 
 
-// === Wall Collisions & Apply Movement ===
-var tilemap = layer_tilemap_get_id("WallLayer");
 
 if (current_state != GorillaState.SMASH) {
     // check horizontal movement

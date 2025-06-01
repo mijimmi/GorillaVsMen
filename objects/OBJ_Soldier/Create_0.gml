@@ -8,6 +8,6 @@ rifle_inst = instance_create_layer(x, y, "Instances", OBJ_Rifle);
 rifle_inst.owner = id;
 
 attack_dis = 210;
-hp_max = 70;
+hp_max = 100;
 hp = hp_max;
 enemy_tier = 5;
