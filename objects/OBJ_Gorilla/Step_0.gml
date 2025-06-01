@@ -328,7 +328,8 @@ function gorilla_take_damage(amount, source_x, source_y) {
 	            SPR_YouDied1,
 	            SPR_YouDied2,
 	            SPR_YouDied3,
-	            SPR_YouDied4
+	            SPR_YouDied4,
+				SPR_YouDied5
 	        );
 
 	        global.game_over_alpha = 0;

@@ -269,6 +269,7 @@
     {"id":{"name":"SPR_YouDied2","path":"sprites/SPR_YouDied2/SPR_YouDied2.yy",},},
     {"id":{"name":"SPR_YouDied3","path":"sprites/SPR_YouDied3/SPR_YouDied3.yy",},},
     {"id":{"name":"SPR_YouDied4","path":"sprites/SPR_YouDied4/SPR_YouDied4.yy",},},
+    {"id":{"name":"SPR_YouDied5","path":"sprites/SPR_YouDied5/SPR_YouDied5.yy",},},
     {"id":{"name":"Sprite71","path":"sprites/Sprite71/Sprite71.yy",},},
     {"id":{"name":"TS_Decorations","path":"tilesets/TS_Decorations/TS_Decorations.yy",},},
     {"id":{"name":"TS_Floor","path":"tilesets/TS_Floor/TS_Floor.yy",},},

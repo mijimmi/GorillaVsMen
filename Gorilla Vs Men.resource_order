@@ -188,6 +188,7 @@
     {"name":"SPR_YouDied2","order":5,"path":"sprites/SPR_YouDied2/SPR_YouDied2.yy",},
     {"name":"SPR_YouDied3","order":6,"path":"sprites/SPR_YouDied3/SPR_YouDied3.yy",},
     {"name":"SPR_YouDied4","order":7,"path":"sprites/SPR_YouDied4/SPR_YouDied4.yy",},
+    {"name":"SPR_YouDied5","order":8,"path":"sprites/SPR_YouDied5/SPR_YouDied5.yy",},
     {"name":"Sprite71","order":2,"path":"sprites/Sprite71/Sprite71.yy",},
     {"name":"TS_Decorations","order":3,"path":"tilesets/TS_Decorations/TS_Decorations.yy",},
     {"name":"TS_Floor","order":4,"path":"tilesets/TS_Floor/TS_Floor.yy",},
