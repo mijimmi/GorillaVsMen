@@ -1,6 +1,10 @@
 if (global.game_over) {
     exit;
 }
+
+if (!global.finalboss_alive) {
+	exit;
+}
 fs = game_get_speed(gamespeed_fps);
 
 // Pause timer logic if leveling up

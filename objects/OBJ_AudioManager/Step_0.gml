@@ -23,6 +23,32 @@ if (global.game_over) {
     exit; // stop regular BGM cycling
 }
 
+// --- Game Winner Music Logic ---
+if (!global.finalboss_alive) {
+    // Only trigger once
+    if (!global.bgm_winner_played) {
+        global.bgm_winner_played = true;
+
+        // Fade out current BGM
+        if (audio_is_playing(global.bgm)) {
+            audio_sound_gain(global.bgm, 0, 1000); // fade out over 1 second
+        }
+
+        // Delay winner music by setting negative timer
+        global.bgm_timer = -60;
+    }
+
+    // After delay, play winner music once
+    if (global.bgm_timer == 0) {
+        global.bgm = audio_play_sound(global.bgm_winner, 1, false); // play once
+        audio_sound_gain(global.bgm, 0.2, 0);
+    }
+
+    global.bgm_timer++;
+    exit; // stop regular BGM cycling
+}
+
+
 // Increment timer
 global.bgm_timer++;
 

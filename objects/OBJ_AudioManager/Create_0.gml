@@ -7,6 +7,9 @@ global.last_bgm_track = -1;
 global.bgm_gameover = SND_Gameover; // <- Replace with your actual Game Over sound asset
 global.bgm_gameover_played = false;     // To prevent replaying it every step
 
+global.bgm_winner = SND_Winning_Congrats;
+global.bgm_winner_played = false;
+
 // Play first track immediately
 var available = [];
 randomize();
