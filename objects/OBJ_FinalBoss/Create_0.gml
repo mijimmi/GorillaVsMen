@@ -1,11 +1,11 @@
+disable_parent_melee = true;
 event_inherited();
+
 // final boss properties
-hp_max = 500;
+hp_max = 5;
 hp = hp_max;
 enemy_tier = 5;
 is_finalboss = true;
-// Sprite setup
-//s_idlegodzilla = SPR_Godzilla_Idle;
 s_moveORidle = SPR_Godzilla_Right;
 s_hurt = SPR_Godzilla_Idle;
 s_dead_selected = -1;
@@ -22,10 +22,13 @@ laser_instance = noone;
 
 // Rocket instances
 rocket_instances = [];  // Array to hold rocket instances
-
 roar_state = "none";  // "none", "active"
 roar_timer = 0;
 roar_triggered = [false, false, false, false, false];  // Track which HP thresholds triggered roar
 roar_hp_thresholds = [1.0, 0.8, 0.6, 0.4, 0.2];  
 rocket_jump_state = "none";  
 rocket_jump_timer = 0;
+melee_hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_Godzilla_Hitbox);
+melee_hitbox.damage = 10;
+melee_hitbox.enemy_parent = id;
+

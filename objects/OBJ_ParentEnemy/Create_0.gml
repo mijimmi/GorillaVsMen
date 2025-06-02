@@ -32,5 +32,9 @@ s_dead = [SPR_Blood_1, SPR_Blood_2, SPR_Blood_3, SPR_Blood_4];
 s_dead_selected = -1;
 has_played_hurt_sound = false;
 
-melee_hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_Enemy_Hitbox_Melee);
-melee_hitbox.enemy_parent = id;
+// Only create melee hitbox if allowed
+if (!variable_instance_exists(self, "disable_parent_melee") || !disable_parent_melee) {
+    melee_hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_Enemy_Hitbox_Melee);
+    melee_hitbox.enemy_parent = id;
+}
+

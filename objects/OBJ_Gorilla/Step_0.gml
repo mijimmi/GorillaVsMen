@@ -280,6 +280,10 @@ function gorilla_take_damage(amount, source_x, source_y) {
     if (dash_timer > 0) {
         return;
     }
+	
+	if (!global.finalboss_alive) {
+		return;
+	}
 
     hp -= amount;
 
