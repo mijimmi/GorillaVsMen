@@ -44,7 +44,7 @@ part_type_blend(part_line, false);
 dash_target_x = x;
 dash_target_y = y;
 
-melee_hitbox.damage = 8;
 
 melee_hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_Cavalry_Hitbox);
+melee_hitbox.damage = 8;
 melee_hitbox.enemy_parent = id;
