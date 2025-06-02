@@ -75,78 +75,127 @@ if (global.round_num == 10) {
         }
     }
     
-    // Handle HP-based enemy spawning during boss fight
-    if (finalboss_spawned && global.finalboss_alive) {
-        // Find the final boss instance
-        var finalboss_instance = instance_find(OBJ_FinalBoss, 0);
-        if (instance_exists(finalboss_instance)) {
-            var boss_hp_percent = (finalboss_instance.hp / finalboss_instance.hp_max) * 100;
-            
-            // Check each threshold
-            for (var i = 0; i < array_length(boss_hp_thresholds); i++) {
-                if (!boss_spawned_at_threshold[i] && boss_hp_percent <= boss_hp_thresholds[i]) {
-                    boss_spawned_at_threshold[i] = true;
+// Handle HP-based enemy spawning during boss fight
+if (finalboss_spawned && global.finalboss_alive) {
+// Find the final boss instance
+var finalboss_instance = instance_find(OBJ_FinalBoss, 0);
+if (instance_exists(finalboss_instance)) {
+    var boss_hp_percent = (finalboss_instance.hp / finalboss_instance.hp_max) * 100;
+        
+    // Check each threshold
+    for (var i = 0; i < array_length(boss_hp_thresholds); i++) {
+        if (!boss_spawned_at_threshold[i] && boss_hp_percent <= boss_hp_thresholds[i]) {
+            boss_spawned_at_threshold[i] = true;
+                
+            // Spawn 5 enemies of the appropriate tier
+            var tier_to_spawn = boss_tier_for_threshold[i];
+            var enemy_list = enemy_tiers[tier_to_spawn];
+                
+            // Define spawn radius around boss (adjust these values as needed)
+            var boss_spawn_radius_min = 120;  // Minimum distance from boss
+            var boss_spawn_radius_max = 250;  // Maximum distance from boss
+                
+            for (var j = 0; j < 5; j++) {
+                var tries = 0;
+                var max_tries = 15;  // Increased tries for boss spawning
+                var spawn_ok = false;
+                var _x, _y;
                     
-                    // Spawn 5 enemies of the appropriate tier
-                    var tier_to_spawn = boss_tier_for_threshold[i];
-                    var enemy_list = enemy_tiers[tier_to_spawn];
-                    
-                    for (var j = 0; j < 5; j++) {
-                        var tries = 0;
-                        var max_tries = 10;
-                        var spawn_ok = false;
-                        var _x, _y;
+                while (!spawn_ok && tries < max_tries) {
+                    // Generate random angle and distance from boss
+                    var spawn_angle = random(360);
+                    var spawn_distance = random_range(boss_spawn_radius_min, boss_spawn_radius_max);
                         
-                        while (!spawn_ok && tries < max_tries) {
-                            _x = random_range(spawn_area_min_x, spawn_area_max_x);
-                            _y = random_range(spawn_area_min_y, spawn_area_max_y);
-                            spawn_ok = true;
-                            
-                            // Check distance from player
-                            with (OBJ_Gorilla) {
-                                if (point_distance(_x, _y, x, y) < 96) {
-                                    spawn_ok = false;
-                                }
-                            }
-                            
-                            // Check distance from boss
-                            if (point_distance(_x, _y, finalboss_instance.x, finalboss_instance.y) < 96) {
-                                spawn_ok = false;
-                            }
-                            
-                            tries++;
-                        }
+                    // Calculate position relative to boss
+                    _x = finalboss_instance.x + lengthdir_x(spawn_distance, spawn_angle);
+                    _y = finalboss_instance.y + lengthdir_y(spawn_distance, spawn_angle);
                         
-                        if (spawn_ok) {
-                            // Use weighted random selection like normal spawning
-                            var weights = [];
-                            for (var w = 0; w < array_length(enemy_list); w++) {
-                                if (enemy_list[w] == OBJ_Roman_Archer) {
-                                    weights[w] = 7;
-                                } else if (enemy_list[w] == OBJ_Musketeer) {
-                                    weights[w] = 5;
-                                } else {
-                                    weights[w] = 10;
-                                }
-                            }
-                            
-                            var enemy_index = weighted_random(weights);
-                            var enemy_to_spawn = enemy_list[enemy_index];
-                            
-                            instance_create_layer(_x, _y, "Instances", enemy_to_spawn);
-                            
-                            // Apply same spawn effects as normal spawning
-                            var snd_inst = audio_play_sound(SND_Spawn, 1, false);
-                            audio_sound_gain(snd_inst, 0.5, 0);
-                            audio_sound_pitch(snd_inst, random_range(0.95, 1.05));
-                            
-                            part_particles_create(spawn_particle_sys, _x, _y, spawn_particle_type, 20);
+                    // Clamp to room boundaries with some padding
+                    _x = clamp(_x, spawn_area_min_x, spawn_area_max_x);
+                    _y = clamp(_y, spawn_area_min_y, spawn_area_max_y);
+                        
+                    spawn_ok = true;
+                        
+                    // Check distance from player (minimum safe distance)
+                    with (OBJ_Gorilla) {
+                        if (point_distance(_x, _y, x, y) < 96) {
+                            spawn_ok = false;
                         }
                     }
+                        
+                    // Check distance from boss (not too close)
+                    if (point_distance(_x, _y, finalboss_instance.x, finalboss_instance.y) < boss_spawn_radius_min) {
+                        spawn_ok = false;
+                    }
+                        
+                    // Optional: Check collision with other enemies to avoid stacking
+                    with (OBJ_ParentEnemy) {
+                        if (point_distance(_x, _y, x, y) < 48) {
+                            spawn_ok = false;
+                        }
+                    }
+                        
+                    tries++;
+                }
+                    
+                // If normal spawning fails, try fallback spawning in wider area
+                if (!spawn_ok) {
+                    tries = 0;
+                    max_tries = 10;
+                    var fallback_radius = boss_spawn_radius_max + 100;  // Wider fallback area
+                        
+                    while (!spawn_ok && tries < max_tries) {
+                        var spawn_angle = random(360);
+                        var spawn_distance = random_range(boss_spawn_radius_min, fallback_radius);
+                            
+                        _x = finalboss_instance.x + lengthdir_x(spawn_distance, spawn_angle);
+                        _y = finalboss_instance.y + lengthdir_y(spawn_distance, spawn_angle);
+                            
+                        _x = clamp(_x, spawn_area_min_x, spawn_area_max_x);
+                        _y = clamp(_y, spawn_area_min_y, spawn_area_max_y);
+                            
+                        spawn_ok = true;
+                            
+                        with (OBJ_Gorilla) {
+                            if (point_distance(_x, _y, x, y) < 80) {  // Slightly reduced player distance for fallback
+                                spawn_ok = false;
+                            }
+                        }
+                            
+                        tries++;
+                    }
+                }
+                    
+                if (spawn_ok) {
+                    // Use weighted random selection like normal spawning
+                    var weights = [];
+                    for (var w = 0; w < array_length(enemy_list); w++) {
+                        if (enemy_list[w] == OBJ_Roman_Archer) {
+                            weights[w] = 7;
+                        } else if (enemy_list[w] == OBJ_Musketeer) {
+                            weights[w] = 5;
+                        } else {
+                            weights[w] = 10;
+                        }
+                    }
+                        
+                    var enemy_index = weighted_random(weights);
+                    var enemy_to_spawn = enemy_list[enemy_index];
+                        
+                    instance_create_layer(_x, _y, "Instances", enemy_to_spawn);
+                        
+                    // Apply same spawn effects as normal spawning
+                    var snd_inst = audio_play_sound(SND_Spawn, 1, false);
+                    audio_sound_gain(snd_inst, 0.5, 0);
+                    audio_sound_pitch(snd_inst, random_range(0.95, 1.05));
+                        
+                    part_particles_create(spawn_particle_sys, _x, _y, spawn_particle_type, 20);
                 }
             }
         }
     }
+}
+}
     
     // Skip normal spawning logic during round 10
     exit;
