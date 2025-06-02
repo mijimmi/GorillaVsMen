@@ -9,3 +9,4 @@ explosion_image_speed = 0.3;  // Slower animation (0.5 = half speed, 0.25 = quar
 is_boss_aoe = false;  // Flag to identify boss position AOE
 damage_dealt = false;  // NEW: Flag to ensure damage is only dealt once
 damage_timer = 0;      // NEW: Timer to control damage duration
+explosion_sound_played = false;
