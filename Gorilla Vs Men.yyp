@@ -238,6 +238,7 @@
     {"id":{"name":"SPR_Godzilla_Lazer","path":"sprites/SPR_Godzilla_Lazer/SPR_Godzilla_Lazer.yy",},},
     {"id":{"name":"SPR_Godzilla_Right","path":"sprites/SPR_Godzilla_Right/SPR_Godzilla_Right.yy",},},
     {"id":{"name":"SPR_Godzilla_Roar","path":"sprites/SPR_Godzilla_Roar/SPR_Godzilla_Roar.yy",},},
+    {"id":{"name":"SPR_Godzilla_WeakLazer","path":"sprites/SPR_Godzilla_WeakLazer/SPR_Godzilla_WeakLazer.yy",},},
     {"id":{"name":"SPR_GodzillaJump","path":"sprites/SPR_GodzillaJump/SPR_GodzillaJump.yy",},},
     {"id":{"name":"SPR_Gorilla_Dash","path":"sprites/SPR_Gorilla_Dash/SPR_Gorilla_Dash.yy",},},
     {"id":{"name":"SPR_Gorilla_Dashing","path":"sprites/SPR_Gorilla_Dashing/SPR_Gorilla_Dashing.yy",},},
