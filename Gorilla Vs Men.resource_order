@@ -77,6 +77,7 @@
     {"name":"OBJ_Enemy_Hitbox_Melee","order":1,"path":"objects/OBJ_Enemy_Hitbox_Melee/OBJ_Enemy_Hitbox_Melee.yy",},
     {"name":"OBJ_EnemySpawner","order":3,"path":"objects/OBJ_EnemySpawner/OBJ_EnemySpawner.yy",},
     {"name":"OBJ_EntityParent","order":2,"path":"objects/OBJ_EntityParent/OBJ_EntityParent.yy",},
+    {"name":"OBJ_FinalBoss_Healthbar","order":5,"path":"objects/OBJ_FinalBoss_Healthbar/OBJ_FinalBoss_Healthbar.yy",},
     {"name":"OBJ_FinalBoss","order":12,"path":"objects/OBJ_FinalBoss/OBJ_FinalBoss.yy",},
     {"name":"OBJ_FloatRock","order":4,"path":"objects/OBJ_FloatRock/OBJ_FloatRock.yy",},
     {"name":"OBJ_FX_Smash2","order":1,"path":"objects/OBJ_FX_Smash2/OBJ_FX_Smash2.yy",},
