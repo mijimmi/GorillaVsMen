@@ -146,16 +146,135 @@ if (rocket_jump_state == "pre_jump") {
 var is_laser_immobilized = (current_skill == "laser" && (skill_state == "warning" || skill_state == "active"));
 var is_roar_immobilized = (roar_state == "active");
 var is_rocket_immobilized = (rocket_jump_state != "none");
+var is_default_laser_immobilized = (default_laser_state == "warning" || default_laser_state == "active");
 
 // Only run parent movement logic if NOT immobilized by any system
-if (!is_laser_immobilized && !is_roar_immobilized && !is_rocket_immobilized) {
+if (!is_laser_immobilized && !is_roar_immobilized && !is_rocket_immobilized && !is_default_laser_immobilized) {
     event_inherited(); 
 }
 
-// === Final Boss State/Skill Logic ===
+//  Final Boss State/Skill Logic 
 // If the miniboss is dead, flag it so round can proceed
 if (state == states.DEAD && global.finalboss_alive) {
     global.finalboss_alive = false;
+}
+// Only run default laser during skill cooldowns and when boss is alive
+var can_use_default_laser = (state != states.DEAD && 
+                           roar_state == "none" && 
+                           (skill_state == "cooldown" || skill_state == "waiting") &&
+                           instance_exists(OBJ_Gorilla));
+
+if (can_use_default_laser) {
+    default_laser_timer -= 1;
+    
+    switch(default_laser_state) {
+        case "waiting":
+            if (default_laser_timer <= 0) {
+                // Start default laser attack
+                default_laser_state = "warning";
+                default_laser_timer = room_speed * 1;  // 1 second warning (faster than skill laser)
+                
+                // Calculate direction to player
+                default_laser_direction = point_direction(x, y, OBJ_Gorilla.x, OBJ_Gorilla.y);
+                
+                // Create default laser instance
+                default_laser_instance = instance_create_layer(x, y, "Instances", OBJ_DefaultLaser);
+                default_laser_instance.owner = id;
+                default_laser_instance.laser_state = "warning";
+                default_laser_instance.target_direction = default_laser_direction;
+                
+                show_debug_message("Default laser warning started, targeting player");
+            }
+            break;
+            
+        case "warning":
+            // Stop movement during warning
+            path_end();
+            hspeed = 0;
+            vspeed = 0;
+            speed = 0;
+            
+            // Handle default laser sprite animation during warning
+            sprite_index = SPR_Godzilla_WeakLazer;
+            
+            // Calculate animation progress (assuming similar frame structure to main laser)
+            var warning_duration = room_speed * 1;  // Total warning time
+            var time_elapsed = warning_duration - default_laser_timer;  // Time that has passed
+            var progress = time_elapsed / warning_duration;  // 0 to 1 progress
+            
+            // Get total frames in weak laser sprite (adjust this number based on your sprite)
+            var total_warning_frames = sprite_get_number(SPR_Godzilla_WeakLazer);
+            
+            // If sprite has similar structure to main laser (warning frames + active frame)
+            // Assume last frame is for active state, so warning uses all frames except last
+            var warning_frames = max(1, total_warning_frames - 1);
+            var target_frame = progress * warning_frames;
+            
+            // Set the frame directly
+            image_index = min(floor(target_frame), warning_frames - 1);
+            image_speed = 0;  // Manual frame control
+            
+            if (default_laser_timer <= 0) {
+                // Start active phase
+                default_laser_state = "active";
+                default_laser_timer = room_speed * 1;  // 1 second active duration
+                
+                if (instance_exists(default_laser_instance)) {
+                    default_laser_instance.laser_state = "active";
+                }
+                
+                show_debug_message("Default laser active phase started");
+            }
+            break;
+            
+        case "active":
+            // Stop movement during active
+            path_end();
+            hspeed = 0;
+            vspeed = 0;
+            speed = 0;
+            
+            // Hold the last frame of weak laser sprite during active phase
+            sprite_index = SPR_Godzilla_WeakLazer;
+            var total_frames = sprite_get_number(SPR_Godzilla_WeakLazer);
+            image_index = total_frames - 1;  // Hold last frame
+            image_speed = 0;
+            
+            if (default_laser_timer <= 0) {
+                // End attack and start cooldown
+                default_laser_state = "waiting";
+                default_laser_timer = room_speed * 2;  // 2 second cooldown
+                
+                if (instance_exists(default_laser_instance)) {
+                    instance_destroy(default_laser_instance);
+                    default_laser_instance = noone;
+                }
+                
+                // Return to normal sprite
+                sprite_index = s_moveORidle;
+                image_speed = 1;
+                
+                show_debug_message("Default laser finished, starting cooldown");
+            }
+            break;
+    }
+} else {
+    // Clean up default laser if conditions are no longer met
+    if (default_laser_state != "waiting") {
+        default_laser_state = "waiting";
+        default_laser_timer = room_speed * 2;  // Reset cooldown
+        
+        if (instance_exists(default_laser_instance)) {
+            instance_destroy(default_laser_instance);
+            default_laser_instance = noone;
+        }
+        
+        // Return to normal sprite when cleaning up
+        if (sprite_index == SPR_Godzilla_WeakLazer) {
+            sprite_index = s_moveORidle;
+            image_speed = 1;
+        }
+    }
 }
 
 // ONLY run skill system if boss is alive, not in DEAD state, and not roaring
@@ -342,7 +461,7 @@ if (state == states.DEAD) {
         hurt_timer = 0;
     }
     // Only apply hurt animation if not doing any special animations
-    if (!is_laser_immobilized && !is_rocket_immobilized) {
+    if (!is_laser_immobilized && !is_rocket_immobilized && !is_default_laser_immobilized) {
         enemy_anim();
     }
 }

@@ -110,6 +110,7 @@
     {"id":{"name":"OBJ_Dart_Hitbox","path":"objects/OBJ_Dart_Hitbox/OBJ_Dart_Hitbox.yy",},},
     {"id":{"name":"OBJ_DartMonkey","path":"objects/OBJ_DartMonkey/OBJ_DartMonkey.yy",},},
     {"id":{"name":"OBJ_DashTrail","path":"objects/OBJ_DashTrail/OBJ_DashTrail.yy",},},
+    {"id":{"name":"OBJ_DefaultLaser","path":"objects/OBJ_DefaultLaser/OBJ_DefaultLaser.yy",},},
     {"id":{"name":"OBJ_DestoryUILevel","path":"objects/OBJ_DestoryUILevel/OBJ_DestoryUILevel.yy",},},
     {"id":{"name":"OBJ_Enemy_Hitbox_Melee","path":"objects/OBJ_Enemy_Hitbox_Melee/OBJ_Enemy_Hitbox_Melee.yy",},},
     {"id":{"name":"OBJ_Enemy_Hitbox_Parent","path":"objects/OBJ_Enemy_Hitbox_Parent/OBJ_Enemy_Hitbox_Parent.yy",},},
