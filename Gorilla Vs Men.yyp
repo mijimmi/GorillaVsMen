@@ -118,6 +118,7 @@
     {"id":{"name":"OBJ_EnemySpawner","path":"objects/OBJ_EnemySpawner/OBJ_EnemySpawner.yy",},},
     {"id":{"name":"OBJ_EntityParent","path":"objects/OBJ_EntityParent/OBJ_EntityParent.yy",},},
     {"id":{"name":"OBJ_ExpBanana","path":"objects/OBJ_ExpBanana/OBJ_ExpBanana.yy",},},
+    {"id":{"name":"OBJ_FinalBoss_Healthbar","path":"objects/OBJ_FinalBoss_Healthbar/OBJ_FinalBoss_Healthbar.yy",},},
     {"id":{"name":"OBJ_FinalBoss","path":"objects/OBJ_FinalBoss/OBJ_FinalBoss.yy",},},
     {"id":{"name":"OBJ_FloatingRock_Hitbox","path":"objects/OBJ_FloatingRock_Hitbox/OBJ_FloatingRock_Hitbox.yy",},},
     {"id":{"name":"OBJ_FloatRock","path":"objects/OBJ_FloatRock/OBJ_FloatRock.yy",},},

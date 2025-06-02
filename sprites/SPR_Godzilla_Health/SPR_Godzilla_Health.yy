@@ -23,7 +23,7 @@
   ],
   "name":"SPR_Godzilla_Health",
   "nineSlice":null,
-  "origin":0,
+  "origin":3,
   "parent":{
     "name":"Healthbar",
     "path":"folders/Sprites/Godzilla/Healthbar.yy",
@@ -78,7 +78,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
