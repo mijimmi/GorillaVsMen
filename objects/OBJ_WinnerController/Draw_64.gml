@@ -19,6 +19,7 @@ if (!global.finalboss_alive) {
 
         if (keyboard_check_pressed(vk_space)) {
             room_goto(GameEnd); // Replace with your actual GameEnd room
+			instance_destroy(); 
         }
     }
 }
