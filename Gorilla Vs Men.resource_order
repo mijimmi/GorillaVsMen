@@ -162,6 +162,7 @@
     {"name":"SPR_FloatingRockIcon","order":7,"path":"sprites/SPR_FloatingRockIcon/SPR_FloatingRockIcon.yy",},
     {"name":"SPR_Floor_Tiles","order":3,"path":"sprites/SPR_Floor_Tiles/SPR_Floor_Tiles.yy",},
     {"name":"SPR_FX_Smash2","order":1,"path":"sprites/SPR_FX_Smash2/SPR_FX_Smash2.yy",},
+    {"name":"SPR_GameWin","order":13,"path":"sprites/SPR_GameWin/SPR_GameWin.yy",},
     {"name":"SPR_Godzilla_Hurt","order":6,"path":"sprites/SPR_Godzilla_Hurt/SPR_Godzilla_Hurt.yy",},
     {"name":"SPR_Godzilla_Land","order":5,"path":"sprites/SPR_Godzilla_Land/SPR_Godzilla_Land.yy",},
     {"name":"SPR_Godzilla_Lazer","order":2,"path":"sprites/SPR_Godzilla_Lazer/SPR_Godzilla_Lazer.yy",},
