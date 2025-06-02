@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":4.4117913,
+  "duration":9.357642,
   "name":"SND_Winning_Congrats",
   "parent":{
     "name":"Sounds",
