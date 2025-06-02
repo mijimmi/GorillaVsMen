@@ -6,7 +6,7 @@ move_spd = 0.6;
 s_moveORidle = SPR_Cavalry;
 s_hurt = SPR_Cavalry_Hurt;
 s_dead = SPR_Blood_3;
-hp_max = 120;
+hp_max = 80;
 hp = hp_max;
 enemy_tier = 3;
 
