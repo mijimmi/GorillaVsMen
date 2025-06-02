@@ -15,6 +15,4 @@ hp_max = 40;
 hp = hp_max;
 
 melee_hitbox.damage = 2;
-melee_hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_Enemy_Hitbox_Melee);
-melee_hitbox.enemy_parent = id;
 

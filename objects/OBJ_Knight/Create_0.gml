@@ -15,7 +15,5 @@ s_dead = SPR_Blood_4;
 enemy_tier = 2;
 
 melee_hitbox.damage = 3;
-melee_hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_Enemy_Hitbox_Melee);
-melee_hitbox.enemy_parent = id;
 
 

@@ -1,4 +1,4 @@
-// Inherit the parent event
+disable_parent_melee = true;
 event_inherited();
 
 // Move speed and stats
