@@ -2,7 +2,7 @@ disable_parent_melee = true;
 event_inherited();
 
 // final boss properties
-hp_max = 20000;
+hp_max = 15000;
 hp = hp_max;
 enemy_tier = 5;
 is_finalboss = true;
