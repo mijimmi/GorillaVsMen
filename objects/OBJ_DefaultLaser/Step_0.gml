@@ -11,6 +11,16 @@ damage_dealt_this_frame = false;
 
 // Only do damage during active state
 if (laser_state == "active") {
+	if (laser_state == "active") {
+    // Play sound only once when laser becomes active
+    if (!laser_sound_played) {
+        audio_play_sound(SND_WeakLaser, 1, false);
+        laser_sound_played = true;
+    }
+		with (OBJ_CameraController) {
+		            shake_timer = 20;
+		            shake_magnitude = 5;
+		        }
     // Calculate the visual center of the boss (matching draw event)
     var boss_center_x = owner.x;
     var boss_center_y = owner.y - (sprite_get_height(owner.sprite_index) / 2);
@@ -47,6 +57,7 @@ if (laser_state == "active") {
             }
         }
     }
+}
 }
 
 // Helper function to calculate distance from point to line

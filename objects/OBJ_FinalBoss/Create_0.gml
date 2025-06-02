@@ -7,7 +7,7 @@ hp = hp_max;
 enemy_tier = 5;
 is_finalboss = true;
 s_moveORidle = SPR_Godzilla_Right;
-s_hurt = SPR_Godzilla_Idle;
+s_hurt = SPR_Godzilla_Hurt;
 s_dead_selected = -1;
 global.finalboss_alive = true;
 

@@ -9,6 +9,10 @@ if (rocket_state == "warning") {
         draw_set_alpha(1);  // Reset alpha
     }
 } else if (rocket_state == "active") {
+	with (OBJ_CameraController) {
+		            shake_timer = 12;
+		            shake_magnitude = 5;
+		        }
     // Calculate scale to match the red oval size
     var exp_width = sprite_get_width(explosion_sprite);
     var exp_height = sprite_get_height(explosion_sprite);
