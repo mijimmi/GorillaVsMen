@@ -10,6 +10,8 @@ global.bgm_gameover_played = false;     // To prevent replaying it every step
 global.bgm_winner = SND_Winning_Congrats;
 global.bgm_winner_played = false;
 
+global.finalboss_alive = true;
+
 // Play first track immediately
 var available = [];
 randomize();
