@@ -54,6 +54,7 @@
     {"$GMFolder":"","%Name":"Weapons","folderPath":"folders/Sprites/Enemies/Weapons.yy","name":"Weapons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"EXP Pickups","folderPath":"folders/Sprites/EXP Pickups.yy","name":"EXP Pickups","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Godzilla","folderPath":"folders/Sprites/Godzilla.yy","name":"Godzilla","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Healthbar","folderPath":"folders/Sprites/Godzilla/Healthbar.yy","name":"Healthbar","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"GUI Elements","folderPath":"folders/Sprites/GUI Elements.yy","name":"GUI Elements","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hitbox","folderPath":"folders/Sprites/Hitbox.yy","name":"Hitbox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Powerup Hitboxes","folderPath":"folders/Sprites/Hitbox/Powerup Hitboxes.yy","name":"Powerup Hitboxes","resourceType":"GMFolder","resourceVersion":"2.0",},

@@ -41,6 +41,7 @@
     {"name":"Weapons","order":2,"path":"folders/Sprites/Enemies/Weapons.yy",},
     {"name":"EXP Pickups","order":5,"path":"folders/Sprites/EXP Pickups.yy",},
     {"name":"Godzilla","order":10,"path":"folders/Sprites/Godzilla.yy",},
+    {"name":"Healthbar","order":13,"path":"folders/Sprites/Godzilla/Healthbar.yy",},
     {"name":"Hitbox","order":8,"path":"folders/Sprites/Hitbox.yy",},
     {"name":"Powerup Hitboxes","order":3,"path":"folders/Sprites/Hitbox/Powerup Hitboxes.yy",},
     {"name":"Level System","order":6,"path":"folders/Sprites/Level System.yy",},
