@@ -1,4 +1,6 @@
+disable_parent_melee = true;
 event_inherited();
+
 // final boss properties
 hp_max = 500;
 hp = hp_max;
@@ -21,3 +23,7 @@ laser_instance = noone;
 
 // Rocket instances
 rocket_instances = [];  // Array to hold rocket instances
+
+melee_hitbox = instance_create_layer(x, y, "Hitboxes", OBJ_Godzilla_Hitbox);
+melee_hitbox.damage = 10;
+melee_hitbox.enemy_parent = id;
