@@ -18,8 +18,9 @@ if (!global.finalboss_alive) {
         draw_text(_cx, _cy + 125, "Press SPACE to Continue");
 
         if (keyboard_check_pressed(vk_space)) {
-            room_goto(GameEnd); // Replace with your actual GameEnd room
+			global.finalboss_alive = true;
 			instance_destroy(); 
+            room_goto(GameEnd); // Replace with your actual GameEnd room
         }
     }
 }
