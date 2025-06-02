@@ -110,6 +110,7 @@
     {"id":{"name":"OBJ_Dart_Hitbox","path":"objects/OBJ_Dart_Hitbox/OBJ_Dart_Hitbox.yy",},},
     {"id":{"name":"OBJ_DartMonkey","path":"objects/OBJ_DartMonkey/OBJ_DartMonkey.yy",},},
     {"id":{"name":"OBJ_DashTrail","path":"objects/OBJ_DashTrail/OBJ_DashTrail.yy",},},
+    {"id":{"name":"OBJ_DestoryUILevel","path":"objects/OBJ_DestoryUILevel/OBJ_DestoryUILevel.yy",},},
     {"id":{"name":"OBJ_Enemy_Hitbox_Melee","path":"objects/OBJ_Enemy_Hitbox_Melee/OBJ_Enemy_Hitbox_Melee.yy",},},
     {"id":{"name":"OBJ_Enemy_Hitbox_Parent","path":"objects/OBJ_Enemy_Hitbox_Parent/OBJ_Enemy_Hitbox_Parent.yy",},},
     {"id":{"name":"OBJ_EnemySpawner","path":"objects/OBJ_EnemySpawner/OBJ_EnemySpawner.yy",},},
@@ -160,6 +161,7 @@
     {"id":{"name":"OBJ_Wall","path":"objects/OBJ_Wall/OBJ_Wall.yy",},},
     {"id":{"name":"OBJ_Weapon_Parent","path":"objects/OBJ_Weapon_Parent/OBJ_Weapon_Parent.yy",},},
     {"id":{"name":"OBJ_WinnerController","path":"objects/OBJ_WinnerController/OBJ_WinnerController.yy",},},
+    {"id":{"name":"GameEnd","path":"rooms/GameEnd/GameEnd.yy",},},
     {"id":{"name":"gamescreen","path":"rooms/gamescreen/gamescreen.yy",},},
     {"id":{"name":"HowToPlay","path":"rooms/HowToPlay/HowToPlay.yy",},},
     {"id":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
@@ -314,6 +316,7 @@
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"roomId":{"name":"gamescreen","path":"rooms/gamescreen/gamescreen.yy",},},
     {"roomId":{"name":"HowToPlay","path":"rooms/HowToPlay/HowToPlay.yy",},},
+    {"roomId":{"name":"GameEnd","path":"rooms/GameEnd/GameEnd.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
