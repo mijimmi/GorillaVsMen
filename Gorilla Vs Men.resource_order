@@ -71,6 +71,7 @@
     {"name":"OBJ_BulletMusket","order":5,"path":"objects/OBJ_BulletMusket/OBJ_BulletMusket.yy",},
     {"name":"OBJ_Dart_Hitbox","order":3,"path":"objects/OBJ_Dart_Hitbox/OBJ_Dart_Hitbox.yy",},
     {"name":"OBJ_DashTrail","order":5,"path":"objects/OBJ_DashTrail/OBJ_DashTrail.yy",},
+    {"name":"OBJ_DefaultLaser","order":2,"path":"objects/OBJ_DefaultLaser/OBJ_DefaultLaser.yy",},
     {"name":"OBJ_DestoryUILevel","order":4,"path":"objects/OBJ_DestoryUILevel/OBJ_DestoryUILevel.yy",},
     {"name":"OBJ_Enemy_Hitbox_Melee","order":1,"path":"objects/OBJ_Enemy_Hitbox_Melee/OBJ_Enemy_Hitbox_Melee.yy",},
     {"name":"OBJ_EnemySpawner","order":3,"path":"objects/OBJ_EnemySpawner/OBJ_EnemySpawner.yy",},
