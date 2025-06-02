@@ -11,6 +11,12 @@ if (rocket_state == "warning") {
 
 // Handle active state
 if (rocket_state == "active") {
+    // Play explosion sound only once when rocket becomes active
+    if (!explosion_sound_played) {
+        audio_play_sound(SND_Boom, 1, false); 
+        explosion_sound_played = true;
+    }
+    
     // Increment damage timer
     damage_timer++;
     

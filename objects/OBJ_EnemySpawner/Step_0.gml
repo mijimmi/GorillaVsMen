@@ -77,6 +77,7 @@ if (global.round_num == 10) {
     
 // Handle HP-based enemy spawning during boss fight
 if (finalboss_spawned && global.finalboss_alive) {
+
 // Find the final boss instance
 var finalboss_instance = instance_find(OBJ_FinalBoss, 0);
 if (instance_exists(finalboss_instance)) {

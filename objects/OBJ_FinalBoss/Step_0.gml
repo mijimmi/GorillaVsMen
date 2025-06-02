@@ -6,8 +6,11 @@ if (state != states.DEAD && roar_state == "none") {
         if (hp_percentage <= roar_hp_thresholds[i] && !roar_triggered[i]) {
             // Trigger roar
             roar_state = "active";
-            roar_timer = sprite_get_number(SPR_Godzilla_Roar) * (60/room_speed);  // Duration based on sprite frames
+            roar_timer = sprite_get_number(SPR_Godzilla_Roar) * (60/room_speed);
             roar_triggered[i] = true;
+            
+            // PLAY SOUND HERE - only once when roar starts
+            audio_play_sound(SND_Roar, 1, false);
             
             // Stop all movement
             path_end();
@@ -18,16 +21,15 @@ if (state != states.DEAD && roar_state == "none") {
             // Set roar sprite
             sprite_index = SPR_Godzilla_Roar;
             image_index = 0;
-            image_speed = 1;  // Play animation normally
-            
-            show_debug_message("Roar triggered at " + string(roar_hp_thresholds[i] * 100) + "% HP");
-            break;  // Only trigger one roar at a time
+            image_speed = 1;
+            break;
         }
     }
 }
 
 // Handle roar state
 if (roar_state == "active") {
+    // REMOVE THE AUDIO_PLAY_SOUND FROM HERE
     roar_timer -= 1/room_speed;
     
     // Keep boss immobilized during roar
@@ -44,8 +46,6 @@ if (roar_state == "active") {
         // Return to normal sprite
         sprite_index = s_moveORidle;
         image_speed = 1;
-        
-        show_debug_message("Roar finished");
     }
 }
 
@@ -90,7 +90,6 @@ if (rocket_jump_state == "pre_jump") {
             rocket.rocket_state = "warning";
             array_push(rocket_instances, rocket);
         }
-        show_debug_message("Jump animation complete, rockets created");
     }
 } else if (rocket_jump_state == "warning") {
     // Hold at last frame of jump animation during warning
@@ -137,8 +136,6 @@ if (rocket_jump_state == "pre_jump") {
         boss_aoe.rocket_state = "active";  // Start immediately as active
         boss_aoe.warning_alpha = 1;  // Full alpha since it's instant
         boss_aoe.is_boss_aoe = true;  // Flag to identify this as boss AOE
-        
-        show_debug_message("Landing animation complete - Boss AOE created");
     }
 }
 
@@ -182,8 +179,6 @@ if (can_use_default_laser) {
                 default_laser_instance.owner = id;
                 default_laser_instance.laser_state = "warning";
                 default_laser_instance.target_direction = default_laser_direction;
-                
-                show_debug_message("Default laser warning started, targeting player");
             }
             break;
             
@@ -222,8 +217,6 @@ if (can_use_default_laser) {
                 if (instance_exists(default_laser_instance)) {
                     default_laser_instance.laser_state = "active";
                 }
-                
-                show_debug_message("Default laser active phase started");
             }
             break;
             
@@ -253,8 +246,6 @@ if (can_use_default_laser) {
                 // Return to normal sprite
                 sprite_index = s_moveORidle;
                 image_speed = 1;
-                
-                show_debug_message("Default laser finished, starting cooldown");
             }
             break;
     }
@@ -293,9 +284,6 @@ if (state != states.DEAD && roar_state == "none") {
                 // Choose random skill from pool
                 var skill_index = irandom(array_length(next_skill_pool) - 1);
                 current_skill = next_skill_pool[skill_index];
-                
-                show_debug_message("Chosen skill: " + current_skill);
-                
                 // Remove chosen skill from pool and add the other skill
                 next_skill_pool = [];
                 if (current_skill == "laser") {
@@ -311,7 +299,6 @@ if (state != states.DEAD && roar_state == "none") {
                     rocket_jump_timer = room_speed * (10 / 6); // 10 frames at 6fps
                     skill_state = "warning";
                     skill_timer = room_speed * 3;  // 3 second warning after jump
-                    show_debug_message("Starting rocket jump sequence");
                 } else {
                     // Laser starts warning immediately
                     skill_state = "warning";
@@ -330,7 +317,7 @@ if (state != states.DEAD && roar_state == "none") {
                 // Start active phase
                 skill_state = "active";
     
-                show_debug_message("Starting active phase for: " + current_skill);
+
     
                 if (current_skill == "laser") {
                     skill_timer = room_speed * 5;  // 5 second active for laser
@@ -373,9 +360,6 @@ if (state != states.DEAD && roar_state == "none") {
                     // Set the frame directly
                     image_index = min(floor(target_frame), 21);  // Cap at frame 21
                     image_speed = 0;  // We're controlling frames manually
-        
-                    // Debug output
-                    show_debug_message("Warning - Frame: " + string(image_index) + " Progress: " + string(progress));
                 }
                 // Rocket warning phase is handled by rocket_jump_state = "warning"
             }
@@ -385,9 +369,7 @@ if (state != states.DEAD && roar_state == "none") {
             if (skill_timer <= 0) {
                 // Start cooldown phase
                 skill_state = "cooldown";
-                
-                show_debug_message("Starting cooldown phase for: " + current_skill);
-                
+            
                 if (current_skill == "laser") {
                     skill_timer = room_speed * 15;  // 15 second cooldown for laser
                     if (instance_exists(laser_instance)) {
@@ -398,6 +380,7 @@ if (state != states.DEAD && roar_state == "none") {
                     sprite_index = s_moveORidle;
                     image_speed = 1;
                 } else if (current_skill == "rocket") {
+					//audio here
                     skill_timer = room_speed * 20;  // 20 second cooldown for rocket
                     for (var i = 0; i < array_length(rocket_instances); i++) {
                         if (instance_exists(rocket_instances[i])) {
@@ -411,7 +394,6 @@ if (state != states.DEAD && roar_state == "none") {
                     sprite_index = SPR_Godzilla_Land;
                     image_index = 0;
                     image_speed = 1;
-                    show_debug_message("Starting landing animation");
                 }
             } else {
                 // During active phase - hold frame 22 for laser or jump frame for rocket
@@ -425,8 +407,6 @@ if (state != states.DEAD && roar_state == "none") {
                     hspeed = 0;
                     vspeed = 0;
                     speed = 0;
-                    
-                    show_debug_message("Active - Holding frame 22, movement stopped");
                 }
                 // Rocket active phase is handled by rocket_jump_state = "active"
             }
@@ -438,8 +418,7 @@ if (state != states.DEAD && roar_state == "none") {
                 skill_state = "waiting";
                 skill_timer = room_speed * 3;  // 3 second wait before next skill
                 current_skill = "";  // Reset current skill
-                
-                show_debug_message("Cooldown finished, back to waiting");
+      
             }
             break;
     }
