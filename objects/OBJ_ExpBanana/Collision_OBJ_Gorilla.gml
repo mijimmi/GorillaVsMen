@@ -4,7 +4,7 @@ audio_sound_pitch(snd_inst, random_range(0.9, 1.1)); // Apply random pitch to th
 
 //just edit this for xp value
 if (global.finalboss_alive){
-	OBJ_Gorilla.add_xp(20);
+	OBJ_Gorilla.add_xp(25);
 }
 instance_destroy();
 
